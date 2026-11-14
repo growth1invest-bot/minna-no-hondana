@@ -45,7 +45,7 @@ def add_export(doc):
 
 if re.search(r"検索|search",issue,re.I):
     updated,message,changed=add_search(data)
-elif re.search(r"書き出し|エクスポート|export",issue,re.I):
+elif re.search(r"書き出|書出|エクスポート|export",issue,re.I):
     updated,message,changed=add_export(data)
 else:
     print(json.dumps({"status":"unsupported","message":"自動実装対象外です。対応指示：検索機能を追加／サンプルJSONを書き出す。Codexによる自由開発は未接続。"},ensure_ascii=False))
