@@ -1,0 +1,109 @@
+name: AI HQ app implementation
+on:
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+concurrency:
+  group: book-hq-${{ github.event.issue.number }}
+  cancel-in-progress: false
+jobs:
+  implement:
+    if: >-
+      github.event.issue.user.login == github.repository_owner &&
+      (github.event_name == 'issues' ||
+       (github.event.comment.user.login == github.repository_owner &&
+        startsWith(github.event.comment.body, '/implement')))
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run requested code feature
+        id: execute
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          set +e
+          python3 scripts/hq_issue_executor.py > /tmp/hq-result.txt 2>/tmp/hq-error.txt
+          result=$?
+          set -e
+          echo "exit_code=$result" >> "$GITHUB_OUTPUT"
+          cat /tmp/hq-result.txt || true
+          if [ "$result" -ne 0 ]; then cat /tmp/hq-error.txt || true; fi
+          if [ "$result" -eq 0 ]; then
+            python3 -m py_compile scripts/hq_issue_executor.py
+            python3 - <<'PY'
+          from pathlib import Path
+          s=Path("index.html").read_text()
+          assert s.count("<html")==1 and s.count("</html>")==1
+          assert s.count("<script>")==1 and s.count("</script>")==1
+          assert s.count("<main>")==1 and s.count("</main>")==1
+          print("HTML smoke test OK")
+          PY
+          fi
+      - name: Commit changes on a review branch
+        if: steps.execute.outputs.exit_code == '0'
+        id: commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "status=no-change" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          branch="hq/issue-$ISSUE_NUMBER-$RUN_ID"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add index.html
+          git commit -m "Implement book app request #$ISSUE_NUMBER"
+          git push origin "$branch"
+          echo "branch=$branch" >> "$GITHUB_OUTPUT"
+          echo "status=changed" >> "$GITHUB_OUTPUT"
+          set +e
+          pr=$(gh pr create --base main --head "$branch" --title "本棚の機能追加: Issue #$ISSUE_NUMBER" --body "Closes #$ISSUE_NUMBER. 自動編集と構造確認済み。実機動作テストは未実施。レビューしてから反映。" 2>/tmp/pr-error)
+          status=$?
+          set -e
+          if [ "$status" -eq 0 ]; then
+            echo "pr_url=$pr" >> "$GITHUB_OUTPUT"
+          else
+            echo "pr_error=$(head -c 180 /tmp/pr-error | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Report implementation results
+        if: always()
+        uses: actions/github-script@v7
+        env:
+          EXEC_EXIT: ${{ steps.execute.outputs.exit_code }}
+          CHANGE_STATUS: ${{ steps.commit.outputs.status }}
+          REVIEW_URL: ${{ steps.commit.outputs.pr_url }}
+          BRANCH: ${{ steps.commit.outputs.branch }}
+          PR_ERROR: ${{ steps.commit.outputs.pr_error }}
+        with:
+          script: |
+            const {owner,repo}=context.repo;
+            const output=['## 🏗️ AI制作本部 実装ワーカー結果',''];
+            const status=process.env.EXEC_EXIT;
+            if(status==='12'){
+              output.push('⚠️ 未対応の指示です。対応内容：本の検索機能、サンプルJSON書き出し。');
+            }else if(status!=='0'){
+              output.push('❌ コード生成・検証に失敗。mainは変更していません。');
+            }else if(process.env.CHANGE_STATUS==='no-change'){
+              output.push('✅ 対象機能はすでに実装済みです。');
+            }else if(process.env.REVIEW_URL){
+              output.push('✅ 実際にコードを編集し、変更PRを作成しました。');
+              output.push('PR: '+process.env.REVIEW_URL);
+            }else if(process.env.BRANCH){
+              output.push('✅ コードを変更してブランチに保存。PRの作成はGitHub設定によって失敗しました。');
+              output.push('ブランチ: '+process.env.BRANCH);
+              output.push('PR作成エラー: '+(process.env.PR_ERROR||'不明'));
+            }else output.push('⚠️ 出力状態不明。ログ確認が必要です。');
+            output.push('', '実行ログ: '+context.serverUrl+'/'+owner+'/'+repo+'/actions/runs/'+context.runId,
+              '注: コードの自動編集と構造検証まで。実機テスト・公開は行っていません。');
+            await github.rest.issues.createComment({owner,repo,issue_number:context.issue.number,body:output.join('\n')});
