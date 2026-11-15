@@ -1,0 +1,7 @@
+{
+  "name": "minna-no-hondana",
+  "version": "0.3.0",
+  "private": true,
+  "scripts": {"test": "playwright test", "test:webkit": "playwright test --project=iphone-webkit --project=ipad-webkit"},
+  "devDependencies": {"@playwright/test": "1.65.1"}
+}
