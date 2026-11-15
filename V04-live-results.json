@@ -1,0 +1,151 @@
+{
+  "mode": "live-external-APIs-no-mocks",
+  "timestamp": "2026-11-15T23:48:07.651Z",
+  "origin": "http://127.0.0.1:8764",
+  "responses": [
+    {
+      "url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%E5%90%BE%E8%BC%A9%E3%81%AF%E7%8C%AB%E3%81%A7%E3%81%82%E3%82%8B&startIndex=0&maxResults=20&printType=books",
+      "status": 429
+    },
+    {
+      "url": "https://openlibrary.org/search.json?title=%E5%90%BE%E8%BC%A9%E3%81%AF%E7%8C%AB%E3%81%A7%E3%81%82%E3%82%8B&offset=0&limit=20&lang=ja&fields=key%2Ctitle%2Cauthor_name%2Ccover_i%2Ceditions%2Ceditions.key%2Ceditions.title%2Ceditions.isbn%2Ceditions.cover_i",
+      "status": 200
+    },
+    {
+      "url": "https://covers.openlibrary.org/b/id/6911262-M.jpg?default=false",
+      "status": 200
+    },
+    {
+      "url": "https://covers.openlibrary.org/b/id/6911261-M.jpg?default=false",
+      "status": 200
+    },
+    {
+      "url": "https://covers.openlibrary.org/b/id/11963058-M.jpg?default=false",
+      "status": 302
+    },
+    {
+      "url": "https://covers.openlibrary.org/b/id/11963058-M.jpg?default=false",
+      "status": 302
+    },
+    {
+      "url": "https://covers.openlibrary.org/b/id/11963058-M.jpg?default=false",
+      "status": 302
+    },
+    {
+      "url": "https://www.googleapis.com/books/v1/volumes?q=inauthor%3A%E5%A4%8F%E7%9B%AE%E6%BC%B1%E7%9F%B3&startIndex=0&maxResults=20&printType=books",
+      "status": 429
+    },
+    {
+      "url": "https://openlibrary.org/search.json?author=%E5%A4%8F%E7%9B%AE%E6%BC%B1%E7%9F%B3&offset=0&limit=20&lang=ja&fields=key%2Ctitle%2Cauthor_name%2Ccover_i%2Ceditions%2Ceditions.key%2Ceditions.title%2Ceditions.isbn%2Ceditions.cover_i",
+      "status": 200
+    },
+    {
+      "url": "https://covers.openlibrary.org/b/id/14634122-M.jpg?default=false",
+      "status": 302
+    },
+    {
+      "url": "https://covers.openlibrary.org/b/id/4124112-M.jpg?default=false",
+      "status": 200
+    },
+    {
+      "url": "https://covers.openlibrary.org/b/id/12636960-M.jpg?default=false",
+      "status": 302
+    },
+    {
+      "url": "https://covers.openlibrary.org/b/id/6701052-M.jpg?default=false",
+      "status": 200
+    },
+    {
+      "url": "https://covers.openlibrary.org/b/id/8116767-M.jpg?default=false",
+      "status": 302
+    },
+    {
+      "url": "https://covers.openlibrary.org/b/id/11962135-M.jpg?default=false",
+      "status": 302
+    },
+    {
+      "url": "https://covers.openlibrary.org/b/id/4788315-M.jpg?default=false",
+      "status": 200
+    },
+    {
+      "url": "https://covers.openlibrary.org/b/id/635047-M.jpg?default=false",
+      "status": 200
+    },
+    {
+      "url": "https://api.openbd.jp/v1/get?isbn=9784101010014",
+      "status": 200
+    }
+  ],
+  "title": {
+    "query": "吾輩は猫である",
+    "kind": "intitle",
+    "message": "Google Books：利用上限（429） → Open Library：6件を表示中。複数選んで登録できます。",
+    "titles": [
+      "吾輩は猫である 下",
+      "吾輩は猫である",
+      "『吾輩は猫である』下篇自序",
+      "「吾輩は猫である」論",
+      "「吾輩は猫である」論",
+      "『吾輩は猫である』中篇自序"
+    ]
+  },
+  "cover": {
+    "url": "https://covers.openlibrary.org/b/id/11963058-M.jpg?default=false",
+    "width": 180,
+    "height": 298
+  },
+  "registration": {
+    "bulk": 2,
+    "reload": true,
+    "favorite": true,
+    "statusSwitch": true
+  },
+  "author": {
+    "query": "夏目漱石",
+    "kind": "inauthor",
+    "message": "Google Books：利用上限（429） → Open Library：17件を表示中。複数選んで登録できます。",
+    "titles": [
+      "Kokoro",
+      "吾輩は猫である 下",
+      "Botchan",
+      "The three cornered world.",
+      "Kusamakura",
+      "Zen haiku",
+      "The miner",
+      "Light and darkness",
+      "Mon",
+      "Sanshiro",
+      "Sanshiro",
+      "Sanshirō",
+      "Sanshiro",
+      "Mon - The Gate",
+      "こころ",
+      "Natsume Sōseki shū",
+      "I Am a Cat"
+    ]
+  },
+  "isbn": {
+    "query": "9784101010014",
+    "kind": "isbn",
+    "message": "openBD：1件を表示中。複数選んで登録できます。",
+    "titles": [
+      "吾輩は猫である"
+    ]
+  },
+  "googleQuotaProbe": {
+    "client": "HTTPS client with GitHub Pages Origin/Referer",
+    "status": 429,
+    "url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%E5%90%BE%E8%BC%A9%E3%81%AF%E7%8C%AB%E3%81%A7%E3%81%82%E3%82%8B&maxResults=20&startIndex=0&printType=books",
+    "errorStatus": "RESOURCE_EXHAUSTED",
+    "reason": "RATE_LIMIT_EXCEEDED",
+    "metadata": {
+      "service": "books.googleapis.com",
+      "quota_metric": "books.googleapis.com/default",
+      "quota_unit": "1/d/{project}",
+      "quota_location": "global",
+      "quota_limit_value": "0",
+      "quota_limit": "defaultPerDayPerProject"
+    },
+    "accessControlAllowOrigin": "https://growth1invest-bot.github.io"
+  }
+}

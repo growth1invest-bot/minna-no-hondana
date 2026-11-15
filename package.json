@@ -1,7 +1,14 @@
 {
   "name": "minna-no-hondana",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
-  "scripts": {"test": "playwright test", "test:webkit": "playwright test --project=iphone-webkit --project=ipad-webkit"},
-  "devDependencies": {"@playwright/test": "1.65.1"}
+  "scripts": {
+    "test": "playwright test",
+    "test:webkit": "playwright test --project=iphone-webkit --project=ipad-webkit",
+    "test:v04": "playwright test --config=playwright.v04.config.cjs",
+    "test:v04:live": "node tests/v04.live.cjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1"
+  }
 }
