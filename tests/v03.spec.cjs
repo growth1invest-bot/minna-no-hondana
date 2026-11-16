@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const url='http://127.0.0.1:8000/index-v03.html';
+const url='/index-v03.html';
 const items=[{id:'one',volumeInfo:{title:'テスト本 <安全>',authors:['著者一'],description:'<b>説明</b>',imageLinks:{thumbnail:'http://example.invalid/cover.jpg'}}},{id:'two',volumeInfo:{title:'二冊目',authors:['著者二']}},{id:'three',volumeInfo:{title:'三冊目'}}];
 async function mock(page){await page.route('https://www.googleapis.com/books/v1/volumes?**',r=>r.fulfill({json:{totalItems:3,items}}));await page.route('https://example.invalid/**',r=>r.abort());}
 async function search(page){await page.getByRole('button',{name:'＋ 本を追加'}).click();await page.getByLabel('検索キーワード').fill('テスト');await page.getByRole('button',{name:'検索',exact:true}).click();await expect(page.locator('.result')).toHaveCount(3);}
