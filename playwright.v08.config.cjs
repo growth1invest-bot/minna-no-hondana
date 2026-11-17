@@ -1,0 +1,2 @@
+const base=require('./playwright.config.cjs');
+module.exports={...base,projects:[...base.projects,{name:'desktop-chromium',use:{browserName:'chromium',viewport:{width:1440,height:900}}}],testMatch:'**/v08.test.cjs',use:{...base.use,baseURL:'http://127.0.0.1:8768'},webServer:{command:'python3 -m http.server 8768 --bind 127.0.0.1',url:'http://127.0.0.1:8768/index-v08.html',reuseExistingServer:!process.env.CI}};
