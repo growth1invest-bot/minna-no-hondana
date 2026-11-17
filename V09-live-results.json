@@ -1,0 +1,143 @@
+{
+  "environment": "HTTPS Pages-origin simulation; local HTML only; real APIs, scripts and images",
+  "records": [
+    {
+      "engine": "webkit",
+      "searchMs": 1975,
+      "responses": [
+        {
+          "url": "https://ndlsearch.ndl.go.jp/api/sru?operation=searchRetrieve&query=title%3D%22%E3%82%A8%E3%83%83%E3%82%BB%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E6%80%9D%E8%80%83%22+AND+dpid%3D%22iss-ndl-opac%22+AND+mediatype%3D%22books%22&maximumRecords=20&startRecord=1&recordSchema=dcndl&recordPacking=xml&onlyBib=true",
+          "status": 200
+        },
+        {
+          "url": "https://api.openbd.jp/v1/get?isbn=9784761270438%2C9784761277802%2C9784761272463%2C9784904899236",
+          "status": 200
+        },
+        {
+          "url": "https://openlibrary.org/api/books?bibkeys=ISBN%3A9784761270438%2CISBN%3A9784761277802%2CISBN%3A9784761272463%2CISBN%3A9784904899236&format=json&jscmd=data",
+          "status": 200
+        },
+        {
+          "url": "https://books.google.com/books?jscmd=viewapi&bibkeys=ISBN%3A9784761270438%2CISBN%3A4761270438%2CISBN%3A9784761277802%2CISBN%3A4761277807%2CISBN%3A9784761272463%2CISBN%3A4761272465%2CISBN%3A9784904899236%2CISBN%3A4904899237&callback=__hondanaCover1",
+          "status": 200
+        },
+        {
+          "url": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "status": 200
+        },
+        {
+          "url": "https://books.google.com/books/content?id=XFAH0QEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "status": 200
+        },
+        {
+          "url": "https://books.google.com/googlebooks/images/poweredby.png",
+          "status": 200
+        },
+        {
+          "url": "https://books.google.com/books/content?id=XpjbAQAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "status": 200
+        },
+        {
+          "url": "https://books.google.com/books/content?id=IMqFtgAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "status": 200
+        },
+        {
+          "url": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "status": 200
+        },
+        {
+          "url": "https://books.google.com/googlebooks/images/poweredby.png",
+          "status": 200
+        }
+      ],
+      "failures": [],
+      "searchMessage": "4件を一致度順で表示。 選択・登録できます。",
+      "found": {
+        "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025894653",
+        "source": "ndl",
+        "identifiers": {
+          "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I025894653"
+        },
+        "title": "エッセンシャル思考 : 最少の時間で成果を最大にする",
+        "authors": [
+          "グレッグ・マキューン 著",
+          "高橋璃子 訳"
+        ],
+        "author": "グレッグ・マキューン 著・高橋璃子 訳",
+        "isbns": [
+          "9784761270438"
+        ],
+        "languages": [
+          "jpn"
+        ],
+        "publisher": "かんき出版",
+        "published": "2014.11",
+        "edition": "",
+        "sourceURL": "https://ndlsearch.ndl.go.jp/books/R100000002-I025894653",
+        "description": "国立国会図書館蔵書の書誌情報（NDLサーチAPI・CC BY 4.0）。著者の責任表示を保持しています。",
+        "image": "",
+        "type": "read",
+        "favorite": false
+      },
+      "passed": true,
+      "image": {
+        "src": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+        "width": 128,
+        "height": 185
+      },
+      "downloadName": "minna-no-hondana-2026-11-17.json",
+      "restored": {
+        "version": 9,
+        "books": [
+          {
+            "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025894653",
+            "source": "ndl",
+            "identifiers": {
+              "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I025894653"
+            },
+            "title": "エッセンシャル思考 : 最少の時間で成果を最大にする",
+            "authors": [
+              "グレッグ・マキューン 著",
+              "高橋璃子 訳"
+            ],
+            "author": "グレッグ・マキューン 著・高橋璃子 訳",
+            "isbns": [
+              "9784761270438"
+            ],
+            "languages": [
+              "jpn"
+            ],
+            "publisher": "かんき出版",
+            "published": "2014.11",
+            "edition": "",
+            "sourceURL": "https://ndlsearch.ndl.go.jp/books/R100000002-I025894653",
+            "description": "国立国会図書館蔵書の書誌情報（NDLサーチAPI・CC BY 4.0）。著者の責任表示を保持しています。",
+            "image": "",
+            "type": "read",
+            "favorite": true,
+            "reading": {
+              "recommendedTagIds": [
+                "career",
+                "habits"
+              ],
+              "review": {
+                "text": "実API検証用メモ\nこのブラウザにだけ保存",
+                "visibility": "private",
+                "updatedAt": "2026-11-17T07:37:27.733Z"
+              },
+              "placement": {
+                "registrationOrder": 0,
+                "position": null
+              },
+              "addedAt": "2026-11-17T07:37:26.122Z"
+            }
+          }
+        ],
+        "settings": {
+          "sort": "favorite"
+        }
+      },
+      "imageDisplayed": true
+    }
+  ]
+}
