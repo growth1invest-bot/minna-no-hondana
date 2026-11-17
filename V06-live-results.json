@@ -1,0 +1,2589 @@
+{
+  "mode": "live-no-mocks",
+  "time": "2026-11-16T23:53:12.593Z",
+  "cacheDefinition": "Cold means no app localStorage or memory cache; provider/CDN/browser HTTP caches are uncontrolled.",
+  "baseline": [
+    {
+      "query": "嫌われる勇気",
+      "kind": "intitle",
+      "version": 5,
+      "metadataMs": 3288,
+      "count": 2,
+      "message": "NDLサーチ：2件を表示中（日本語 2件）。複数選んで登録できます。",
+      "books": [
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025056492",
+          "title": "嫌われる勇気 : 自己啓発の源流「アドラー」の教え",
+          "author": "岸見一郎, 古賀史健 著",
+          "isbns": [
+            "9784478025819"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I025056492"
+          },
+          "publisher": "ダイヤモンド社",
+          "published": "2013.12",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I033909247",
+          "title": "壊さないから再生しない日本。足りないのはリーダーの嫌われる勇気",
+          "author": "中島済 [著]",
+          "isbns": [],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I033909247"
+          },
+          "publisher": "野村総合研究所",
+          "published": "2025.1",
+          "image": ""
+        }
+      ],
+      "covers": []
+    },
+    {
+      "query": "エッセンシャル思考",
+      "kind": "intitle",
+      "version": 5,
+      "metadataMs": 1392,
+      "count": 4,
+      "message": "NDLサーチ：4件を表示中（日本語 4件）。複数選んで登録できます。",
+      "books": [
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025894653",
+          "title": "エッセンシャル思考 : 最少の時間で成果を最大にする",
+          "author": "グレッグ・マキューン 著・高橋璃子 訳",
+          "isbns": [
+            "9784761270438"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I025894653"
+          },
+          "publisher": "かんき出版",
+          "published": "2014.11",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I033875072",
+          "title": "エッセンシャル思考ワークブック : 1-2-3メソッドを日々実行して最少の時間で成果を最大にする",
+          "author": "グレッグ・マキューン 著・高橋璃子 訳",
+          "isbns": [
+            "9784761277802"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I033875072"
+          },
+          "publisher": "かんき出版",
+          "published": "2025.1",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I023333152",
+          "title": "「楽」と「美」を生むエッセンシャル思考",
+          "author": "城所奈乃子 著",
+          "isbns": [
+            "9784904899236"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I023333152"
+          },
+          "publisher": "ナナコーポレートコミュニケーション",
+          "published": "2012.1",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I028035517",
+          "title": "マンガでよくわかるエッセンシャル思考 : 最少の時間で成果を最大にする",
+          "author": "グレッグ・マキューン 著・高橋璃子 訳・星井博文 シナリオ制作・サノマリナ 作画",
+          "isbns": [
+            "9784761272463"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I028035517"
+          },
+          "publisher": "かんき出版",
+          "published": "2017.3",
+          "image": ""
+        }
+      ],
+      "covers": []
+    }
+  ],
+  "queries": [
+    {
+      "query": "嫌われる勇気",
+      "kind": "intitle",
+      "version": 6,
+      "metadataMs": 855,
+      "count": 2,
+      "message": "NDLサーチ：2件を表示中。表紙を待たずに登録できます。",
+      "books": [
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025056492",
+          "title": "嫌われる勇気 : 自己啓発の源流「アドラー」の教え",
+          "author": "岸見一郎, 古賀史健 著",
+          "isbns": [
+            "9784478025819"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I025056492"
+          },
+          "publisher": "ダイヤモンド社",
+          "published": "2013.12",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I033909247",
+          "title": "壊さないから再生しない日本。足りないのはリーダーの嫌われる勇気",
+          "author": "中島済 [著]",
+          "isbns": [],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I033909247"
+          },
+          "publisher": "野村総合研究所",
+          "published": "2025.1",
+          "image": ""
+        }
+      ],
+      "covers": [],
+      "coverPhaseMs": 1405,
+      "warmMetadataMs": 102,
+      "warmNDLRequests": 0
+    },
+    {
+      "query": "7つの習慣",
+      "kind": "intitle",
+      "version": 6,
+      "metadataMs": 616,
+      "count": 20,
+      "message": "NDLサーチ：20件を表示中。表紙を待たずに登録できます。",
+      "books": [
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I024765841",
+          "title": "完訳7つの習慣 : 人格主義の回復",
+          "author": "スティーブン・R・コヴィー 著・フランクリン・コヴィー・ジャパン 訳",
+          "isbns": [
+            "9784863940246"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I024765841"
+          },
+          "publisher": "キングベアー出版",
+          "published": "2013.8",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025614873",
+          "title": "完訳7つの習慣 : 人格主義の回復",
+          "author": "スティーブン・R・コヴィー 著・フランクリン・コヴィー・ジャパン 訳",
+          "isbns": [
+            "9784863940307"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I025614873"
+          },
+          "publisher": "キングベアー出版",
+          "published": "2014.8",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I026619320",
+          "title": "完訳7つの習慣 : 人格主義の回復",
+          "author": "スティーブン・R・コヴィー 著・フランクリン・コヴィー・ジャパン 訳",
+          "isbns": [
+            "9784863940390"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I026619320"
+          },
+          "publisher": "キングベアー出版",
+          "published": "2015.8",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I023113321",
+          "title": "体を治す7つの習慣 : 今日からできる石原医学の集大成",
+          "author": "石原結實 著",
+          "isbns": [
+            "9784921192730"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I023113321"
+          },
+          "publisher": "青萠堂",
+          "published": "2011.9",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000002693386",
+          "title": "運を強くする7つの習慣",
+          "author": "中島孝志 著",
+          "isbns": [
+            "9784478731574"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000002693386"
+          },
+          "publisher": "ダイヤモンド社",
+          "published": "1998.6",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I029370046",
+          "title": "生き残った人の7つの習慣",
+          "author": "小西浩文 著",
+          "isbns": [
+            "9784635310390"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I029370046"
+          },
+          "publisher": "山と溪谷社",
+          "published": "2018.12",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I034414434",
+          "title": "奪われない!お金を守る7つの習慣 : 金融犯罪対策のプロが教える〈これからのマネーライフ〉",
+          "author": "千葉祥子 著",
+          "isbns": [
+            "9784866633107"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I034414434"
+          },
+          "publisher": "きずな出版",
+          "published": "2025.12",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I027222301",
+          "title": "起きてから寝るまで英語で「7つの習慣」",
+          "author": "フランクリン・コヴィー・ジャパン 監修・春日聡子 英文作成・英文解説・市川順子 日本語フレーズ作成・編集協力・Margaret Stalker, Peter Branscombe 英文校正",
+          "isbns": [
+            "9784757428072"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I027222301"
+          },
+          "publisher": "アルク",
+          "published": "2016.4",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I027806109",
+          "title": "英語で学ぶ!まんがでわかる7つの習慣 = Read in English,Learn through Comic The Seven Habits of Highly Effective People",
+          "author": "小山鹿梨子 まんが・アルク 英文監修・フランクリン・コヴィー・ジャパン 監修",
+          "isbns": [
+            "9784800262615"
+          ],
+          "languages": [
+            "jpn",
+            "eng"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I027806109"
+          },
+          "publisher": "宝島社",
+          "published": "2017.1",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000009396468",
+          "title": "営業マン必ず身につけておきたい7つの習慣 : 1年目から上場企業150社開拓した男が明かす!",
+          "author": "中島孝志 著",
+          "isbns": [
+            "9784804717234"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000009396468"
+          },
+          "publisher": "大和出版",
+          "published": "2008.7",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000010992952",
+          "title": "犬が教えてくれた愛犬を太らせない7つの習慣",
+          "author": "続田敦, 続田孝子 著",
+          "isbns": [
+            "9784434143175"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000010992952"
+          },
+          "publisher": "エル書房",
+          "published": "2010.9",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I027648691",
+          "title": "医者通いせずに90歳まで元気で生きる人の7つの習慣",
+          "author": "長尾和宏 著",
+          "isbns": [
+            "9784584137543"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I027648691"
+          },
+          "publisher": "ベストセラーズ",
+          "published": "2016.10",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000002683747",
+          "title": "赤ワインとチーズが老化を止める : 聖なる7つの習慣",
+          "author": "佐藤富雄 著",
+          "isbns": [
+            "9784413017152"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000002683747"
+          },
+          "publisher": "青春出版社",
+          "published": "1998.4",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025123476",
+          "title": "赤ちゃんができるリラックスヨガ : 妊娠力を高める16のポーズと7つの習慣",
+          "author": "岡部朋子 著・原利夫 医学監修",
+          "isbns": [
+            "9784569816609"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I025123476"
+          },
+          "publisher": "PHP研究所",
+          "published": "2014.2",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I026155950",
+          "title": "エンパワーメント・コーチング : 人・チーム・組織の潜在能力を解き放つ、7つのコーチング・スキル : 7つの習慣コーチング",
+          "author": "マイケル・シンプソン 著・フランクリン・コヴィー・ジャパン 訳",
+          "isbns": [
+            "9784863940338"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I026155950"
+          },
+          "publisher": "キングベアー出版",
+          "published": "2015.2",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000010411693",
+          "title": "相手を尊重する力 : 第四の習慣:Win-Winを考える",
+          "author": "フランクリン・コヴィー・ジャパン 編著",
+          "isbns": [
+            "9784906638963"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000010411693"
+          },
+          "publisher": "キングベアー出版",
+          "published": "2009.2",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000010860445",
+          "title": "インサイド・アウトのパラダイム : 基礎編",
+          "author": "フランクリン・コヴィー・ジャパン 編著",
+          "isbns": [
+            "9784906638130"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000010860445"
+          },
+          "publisher": "キングベアー出版",
+          "published": "2009.5",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I026914882",
+          "title": "Win-Winセールス",
+          "author": "フランクリン・コヴィー・ジャパン 編",
+          "isbns": [
+            "9784863940574"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I026914882"
+          },
+          "publisher": "キングベアー出版",
+          "published": "2015.11",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I027697750",
+          "title": "Win-Winプロジェクト・マネジメント",
+          "author": "フランクリン・コヴィー・ジャパン 編",
+          "isbns": [
+            "9784863940550"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I027697750"
+          },
+          "publisher": "キングベアー出版",
+          "published": "2016.11",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000010026483",
+          "title": "家族を支える16のストーリー",
+          "author": "スティーブン・R.コヴィー 著・フランクリン・コヴィー・ジャパン株式会社 訳",
+          "isbns": [
+            "9784906638444"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000010026483"
+          },
+          "publisher": "キングベアー出版",
+          "published": "2008.8",
+          "image": ""
+        }
+      ],
+      "covers": [
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I026619320",
+          "title": "完訳7つの習慣 : 人格主義の回復",
+          "isbn": "9784863940390",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=7V8XswEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784863940390",
+            "bibKey": "ISBN:9784863940390",
+            "volumeId": "7V8XswEACAAJ",
+            "infoURL": "https://books.google.com/books?id=7V8XswEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 190
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I023113321",
+          "title": "体を治す7つの習慣 : 今日からできる石原医学の集大成",
+          "isbn": "9784921192730",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=FGYqywAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784921192730",
+            "bibKey": "ISBN:9784921192730",
+            "volumeId": "FGYqywAACAAJ",
+            "infoURL": "https://books.google.com/books?id=FGYqywAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 191
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000002693386",
+          "title": "運を強くする7つの習慣",
+          "isbn": "9784478731574",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=nQYrNwAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784478731574",
+            "bibKey": "ISBN:9784478731574",
+            "volumeId": "nQYrNwAACAAJ",
+            "infoURL": "https://books.google.com/books?id=nQYrNwAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 197
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I029370046",
+          "title": "生き残った人の7つの習慣",
+          "isbn": "9784635310390",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=YBunvwEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784635310390",
+            "bibKey": "ISBN:9784635310390",
+            "volumeId": "YBunvwEACAAJ",
+            "infoURL": "https://books.google.com/books?id=YBunvwEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 186
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I034414434",
+          "title": "奪われない!お金を守る7つの習慣 : 金融犯罪対策のプロが教える〈これからのマネーライフ〉",
+          "isbn": "9784866633107",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=15ay0QEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784866633107",
+            "bibKey": "ISBN:9784866633107",
+            "volumeId": "15ay0QEACAAJ",
+            "infoURL": "https://books.google.com/books?id=15ay0QEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 188
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I027222301",
+          "title": "起きてから寝るまで英語で「7つの習慣」",
+          "isbn": "9784757428072",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=g5rMjwEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784757428072",
+            "bibKey": "ISBN:9784757428072",
+            "volumeId": "g5rMjwEACAAJ",
+            "infoURL": "https://books.google.com/books?id=g5rMjwEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 180
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I027806109",
+          "title": "英語で学ぶ!まんがでわかる7つの習慣 = Read in English,Learn through Comic The Seven Habits of Highly Effective People",
+          "isbn": "9784800262615",
+          "languages": [
+            "jpn",
+            "eng"
+          ],
+          "image": "https://books.google.com/books/content?id=Kxr3nAAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784800262615",
+            "bibKey": "ISBN:9784800262615",
+            "volumeId": "Kxr3nAAACAAJ",
+            "infoURL": "https://books.google.com/books?id=Kxr3nAAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 183
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000009396468",
+          "title": "営業マン必ず身につけておきたい7つの習慣 : 1年目から上場企業150社開拓した男が明かす!",
+          "isbn": "9784804717234",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=FolwOgAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784804717234",
+            "bibKey": "ISBN:9784804717234",
+            "volumeId": "FolwOgAACAAJ",
+            "infoURL": "https://books.google.com/books?id=FolwOgAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 184
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000010992952",
+          "title": "犬が教えてくれた愛犬を太らせない7つの習慣",
+          "isbn": "9784434143175",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=VOKpcQAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784434143175",
+            "bibKey": "ISBN:9784434143175",
+            "volumeId": "VOKpcQAACAAJ",
+            "infoURL": "https://books.google.com/books?id=VOKpcQAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 188
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I027648691",
+          "title": "医者通いせずに90歳まで元気で生きる人の7つの習慣",
+          "isbn": "9784584137543",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=EYFGvgAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784584137543",
+            "bibKey": "ISBN:9784584137543",
+            "volumeId": "EYFGvgAACAAJ",
+            "infoURL": "https://books.google.com/books?id=EYFGvgAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 188
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000002683747",
+          "title": "赤ワインとチーズが老化を止める : 聖なる7つの習慣",
+          "isbn": "9784413017152",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=RJd3QgAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784413017152",
+            "bibKey": "ISBN:9784413017152",
+            "volumeId": "RJd3QgAACAAJ",
+            "infoURL": "https://books.google.com/books?id=RJd3QgAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 209
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025123476",
+          "title": "赤ちゃんができるリラックスヨガ : 妊娠力を高める16のポーズと7つの習慣",
+          "isbn": "9784569816609",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=dyfuBAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784569816609",
+            "bibKey": "ISBN:9784569816609",
+            "volumeId": "dyfuBAAAQBAJ",
+            "infoURL": "https://books.google.com/books?id=dyfuBAAAQBAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 159
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I026155950",
+          "title": "エンパワーメント・コーチング : 人・チーム・組織の潜在能力を解き放つ、7つのコーチング・スキル : 7つの習慣コーチング",
+          "isbn": "9784863940338",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=mAIErgEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784863940338",
+            "bibKey": "ISBN:9784863940338",
+            "volumeId": "mAIErgEACAAJ",
+            "infoURL": "https://books.google.com/books?id=mAIErgEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 187
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000010411693",
+          "title": "相手を尊重する力 : 第四の習慣:Win-Winを考える",
+          "isbn": "9784906638963",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=oLWOPgAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784906638963",
+            "bibKey": "ISBN:9784906638963",
+            "volumeId": "oLWOPgAACAAJ",
+            "infoURL": "https://books.google.com/books?id=oLWOPgAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 188
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000010860445",
+          "title": "インサイド・アウトのパラダイム : 基礎編",
+          "isbn": "9784906638130",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=-CeIQgAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784906638130",
+            "bibKey": "ISBN:9784906638130",
+            "volumeId": "-CeIQgAACAAJ",
+            "infoURL": "https://books.google.com/books?id=-CeIQgAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 185
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I026914882",
+          "title": "Win-Winセールス",
+          "isbn": "9784863940574",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=FFLmjgEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784863940574",
+            "bibKey": "ISBN:9784863940574",
+            "volumeId": "FFLmjgEACAAJ",
+            "infoURL": "https://books.google.com/books?id=FFLmjgEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 191
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I027697750",
+          "title": "Win-Winプロジェクト・マネジメント",
+          "isbn": "9784863940550",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=0xH_MAAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784863940550",
+            "bibKey": "ISBN:9784863940550",
+            "volumeId": "0xH_MAAACAAJ",
+            "infoURL": "https://books.google.com/books?id=0xH_MAAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 185
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000010026483",
+          "title": "家族を支える16のストーリー",
+          "isbn": "9784906638444",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=TPdYPgAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784906638444",
+            "bibKey": "ISBN:9784906638444",
+            "volumeId": "TPdYPgAACAAJ",
+            "infoURL": "https://books.google.com/books?id=TPdYPgAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 187
+          }
+        }
+      ],
+      "coverPhaseMs": 6184,
+      "warmMetadataMs": 93,
+      "warmNDLRequests": 0
+    },
+    {
+      "query": "エッセンシャル思考",
+      "kind": "intitle",
+      "version": 6,
+      "metadataMs": 300,
+      "count": 4,
+      "message": "NDLサーチ：4件を表示中。表紙を待たずに登録できます。",
+      "books": [
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025894653",
+          "title": "エッセンシャル思考 : 最少の時間で成果を最大にする",
+          "author": "グレッグ・マキューン 著・高橋璃子 訳",
+          "isbns": [
+            "9784761270438"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I025894653"
+          },
+          "publisher": "かんき出版",
+          "published": "2014.11",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I033875072",
+          "title": "エッセンシャル思考ワークブック : 1-2-3メソッドを日々実行して最少の時間で成果を最大にする",
+          "author": "グレッグ・マキューン 著・高橋璃子 訳",
+          "isbns": [
+            "9784761277802"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I033875072"
+          },
+          "publisher": "かんき出版",
+          "published": "2025.1",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I023333152",
+          "title": "「楽」と「美」を生むエッセンシャル思考",
+          "author": "城所奈乃子 著",
+          "isbns": [
+            "9784904899236"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I023333152"
+          },
+          "publisher": "ナナコーポレートコミュニケーション",
+          "published": "2012.1",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I028035517",
+          "title": "マンガでよくわかるエッセンシャル思考 : 最少の時間で成果を最大にする",
+          "author": "グレッグ・マキューン 著・高橋璃子 訳・星井博文 シナリオ制作・サノマリナ 作画",
+          "isbns": [
+            "9784761272463"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I028035517"
+          },
+          "publisher": "かんき出版",
+          "published": "2017.3",
+          "image": ""
+        }
+      ],
+      "covers": [
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025894653",
+          "title": "エッセンシャル思考 : 最少の時間で成果を最大にする",
+          "isbn": "9784761270438",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784761270438",
+            "bibKey": "ISBN:9784761270438",
+            "volumeId": "XlDMrQEACAAJ",
+            "infoURL": "https://books.google.com/books?id=XlDMrQEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 185
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I033875072",
+          "title": "エッセンシャル思考ワークブック : 1-2-3メソッドを日々実行して最少の時間で成果を最大にする",
+          "isbn": "9784761277802",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=XFAH0QEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784761277802",
+            "bibKey": "ISBN:9784761277802",
+            "volumeId": "XFAH0QEACAAJ",
+            "infoURL": "https://books.google.com/books?id=XFAH0QEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 182
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I023333152",
+          "title": "「楽」と「美」を生むエッセンシャル思考",
+          "isbn": "9784904899236",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=IMqFtgAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784904899236",
+            "bibKey": "ISBN:9784904899236",
+            "volumeId": "IMqFtgAACAAJ",
+            "infoURL": "https://books.google.com/books?id=IMqFtgAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 187
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I028035517",
+          "title": "マンガでよくわかるエッセンシャル思考 : 最少の時間で成果を最大にする",
+          "isbn": "9784761272463",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=XpjbAQAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784761272463",
+            "bibKey": "ISBN:9784761272463",
+            "volumeId": "XpjbAQAACAAJ",
+            "infoURL": "https://books.google.com/books?id=XpjbAQAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 186
+          }
+        }
+      ],
+      "coverPhaseMs": 2385,
+      "warmMetadataMs": 66,
+      "warmNDLRequests": 0
+    },
+    {
+      "query": "人を動かす",
+      "kind": "intitle",
+      "version": 6,
+      "metadataMs": 1188,
+      "count": 20,
+      "message": "NDLサーチ：20件を表示中。表紙を待たずに登録できます。",
+      "books": [
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I033417720",
+          "title": "「承認」が人を動かす : コーチングのプロが教える相手を認め、行動変容をもたらす技術",
+          "author": "鈴木義幸 [著]",
+          "isbns": [
+            "9784799330296"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I033417720"
+          },
+          "publisher": "ディスカヴァー・トゥエンティワン",
+          "published": "2024.4",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000001700565",
+          "title": "アメリカ人を動かすコミュニケーション",
+          "author": "岩下貢, P.D.クリボノス 著",
+          "isbns": [],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000001700565"
+          },
+          "publisher": "日本英語教育協会",
+          "published": "1983.10",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I027597330",
+          "title": "「いい質問」が人を動かす",
+          "author": "谷原誠 著",
+          "isbns": [
+            "9784905073499"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I027597330"
+          },
+          "publisher": "文響社",
+          "published": "2016.10",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I033447850",
+          "title": "「いい質問」が人を動かす",
+          "author": "谷原誠 著",
+          "isbns": [
+            "9784866517476"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I033447850"
+          },
+          "publisher": "文響社",
+          "published": "[2024]",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000007376253",
+          "title": "頭のいい人の「人を動かす」42の方法 : 世界共通の成功ルールが夢を現実化する",
+          "author": "デイヴィッド・テイラー 著・山本雅子 訳",
+          "isbns": [
+            "9784569635859"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000007376253"
+          },
+          "publisher": "PHP研究所",
+          "published": "2004.6",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000008307720",
+          "title": "朝倉千恵子の「人を動かす話し方」の技術5日間レッスン",
+          "author": "朝倉千恵子 著",
+          "isbns": [
+            "9784072530504"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000008307720"
+          },
+          "publisher": "主婦の友インフォス情報社",
+          "published": "2006.10",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025392371",
+          "title": "ありがとうの言葉が人を動かす : 3万人の花嫁に感動を",
+          "author": "高見重光 著",
+          "isbns": [
+            "9784777931699"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I025392371"
+          },
+          "publisher": "枻出版社",
+          "published": "2014.5",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I027190080",
+          "title": "アレックス・ファーガソン人を動かす : つねに「限界より5%上の力」を目指して-",
+          "author": "アレックス・ファーガソン, マイケル・モーリッツ 著・喜多直子 訳",
+          "isbns": [
+            "9784537261394"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I027190080"
+          },
+          "publisher": "日本文芸社",
+          "published": "2016.4",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000002434277",
+          "title": "頭の良い人の頭の中 : 人を動かす キレるだけでは人は動かない",
+          "author": "野口敬 著",
+          "isbns": [
+            "9784879135407"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000002434277"
+          },
+          "publisher": "経営書院",
+          "published": "1995.7",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000001422408",
+          "title": "悪の技術が出世の条件 : 人を動かす政治学",
+          "author": "八幡綜太郎 著",
+          "isbns": [],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000001422408"
+          },
+          "publisher": "エール出版社",
+          "published": "1979.2",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000002695771",
+          "title": "あなたの部下になりたい! : 人を動かす達人",
+          "author": "中谷彰宏 著",
+          "isbns": [
+            "9784837917465"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000002695771"
+          },
+          "publisher": "三笠書房",
+          "published": "1998.7",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I032903516",
+          "title": "悪人の技法 : 99%思い通りに人を動かす心理術",
+          "author": "内藤誼人 著",
+          "isbns": [
+            "9784862809100"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I032903516"
+          },
+          "publisher": "総合法令出版",
+          "published": "2023.7",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I027687027",
+          "title": "頭を下げない仕事術 : 「頼まない」で人を動かす24の方法",
+          "author": "高野誠鮮 著",
+          "isbns": [
+            "9784800231475"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I027687027"
+          },
+          "publisher": "宝島社",
+          "published": "2016.11",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000001291114",
+          "title": "新しいリーダーとリーダーシップ : 人を動かすためには",
+          "author": "赤木正樹 著",
+          "isbns": [],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000001291114"
+          },
+          "publisher": "大阪府経営合理化協会",
+          "published": "1969",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I027108600",
+          "title": "アテンション = ATTENTION : 「注目」で人を動かす7つの新戦略",
+          "author": "ベン・パー 著・依田卓巳, 依田光江, 茂木靖枝 訳",
+          "isbns": [
+            "9784864104562"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I027108600"
+          },
+          "publisher": "飛鳥新社",
+          "published": "2016.3",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000001912051",
+          "title": "IBM流ビジネス行動学 : 自分を奮い立たせ、人を動かす",
+          "author": "バック・ロジャーズ 著・植山周一郎 訳",
+          "isbns": [
+            "9784478730485"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000001912051"
+          },
+          "publisher": "ダイヤモンド社",
+          "published": "1988.3",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000010686614",
+          "title": "あるニセ占い師の告白 : 偉い奴ほど使ってる!人を動かす究極の話術&心理術「ブラック・コールドリーディング」",
+          "author": "ジョン・W・カルヴァー, 石井裕之 著",
+          "isbns": [
+            "9784894513501"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000010686614"
+          },
+          "publisher": "フォレスト出版",
+          "published": "2009.5",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I030080541",
+          "title": "アロマ調香デザインの教科書 : 個人サロンから大ホールまで、人を動かす香りの空間演出",
+          "author": "齋藤智子 著",
+          "isbns": [
+            "9784814202492"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I030080541"
+          },
+          "publisher": "BABジャパン",
+          "published": "2019.12",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I031938442",
+          "title": "あの頃な",
+          "author": "マンボウやしろ [著]",
+          "isbns": [
+            "9784758414159"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I031938442"
+          },
+          "publisher": "角川春樹事務所",
+          "published": "2022.2",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I033201723",
+          "title": "あの頃な",
+          "author": "マンボウやしろ 著",
+          "isbns": [
+            "9784758446075"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I033201723"
+          },
+          "publisher": "角川春樹事務所",
+          "published": "2023.12",
+          "image": ""
+        }
+      ],
+      "covers": [
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I033417720",
+          "title": "「承認」が人を動かす : コーチングのプロが教える相手を認め、行動変容をもたらす技術",
+          "isbn": "9784799330296",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=Pn-00AEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784799330296",
+            "bibKey": "ISBN:9784799330296",
+            "volumeId": "Pn-00AEACAAJ",
+            "infoURL": "https://books.google.com/books?id=Pn-00AEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 188
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I027597330",
+          "title": "「いい質問」が人を動かす",
+          "isbn": "9784905073499",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=QtNSvgAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784905073499",
+            "bibKey": "ISBN:9784905073499",
+            "volumeId": "QtNSvgAACAAJ",
+            "infoURL": "https://books.google.com/books?id=QtNSvgAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 188
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I033447850",
+          "title": "「いい質問」が人を動かす",
+          "isbn": "9784866517476",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=-qeu0AEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784866517476",
+            "bibKey": "ISBN:9784866517476",
+            "volumeId": "-qeu0AEACAAJ",
+            "infoURL": "https://books.google.com/books?id=-qeu0AEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 180
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000007376253",
+          "title": "頭のいい人の「人を動かす」42の方法 : 世界共通の成功ルールが夢を現実化する",
+          "isbn": "9784569635859",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=g0eKQgAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784569635859",
+            "bibKey": "ISBN:9784569635859",
+            "volumeId": "g0eKQgAACAAJ",
+            "infoURL": "https://books.google.com/books?id=g0eKQgAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 189
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000008307720",
+          "title": "朝倉千恵子の「人を動かす話し方」の技術5日間レッスン",
+          "isbn": "9784072530504",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=3gADGQAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784072530504",
+            "bibKey": "ISBN:9784072530504",
+            "volumeId": "3gADGQAACAAJ",
+            "infoURL": "https://books.google.com/books?id=3gADGQAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 191
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I027190080",
+          "title": "アレックス・ファーガソン人を動かす : つねに「限界より5%上の力」を目指して-",
+          "isbn": "9784537261394",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=0Y28jwEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784537261394",
+            "bibKey": "ISBN:9784537261394",
+            "volumeId": "0Y28jwEACAAJ",
+            "infoURL": "https://books.google.com/books?id=0Y28jwEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 192
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000002695771",
+          "title": "あなたの部下になりたい! : 人を動かす達人",
+          "isbn": "9784837917465",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=-IQhNwAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784837917465",
+            "bibKey": "ISBN:9784837917465",
+            "volumeId": "-IQhNwAACAAJ",
+            "infoURL": "https://books.google.com/books?id=-IQhNwAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 188
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I032903516",
+          "title": "悪人の技法 : 99%思い通りに人を動かす心理術",
+          "isbn": "9784862809100",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=_e4E0AEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784862809100",
+            "bibKey": "ISBN:9784862809100",
+            "volumeId": "_e4E0AEACAAJ",
+            "infoURL": "https://books.google.com/books?id=_e4E0AEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 188
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I027687027",
+          "title": "頭を下げない仕事術 : 「頼まない」で人を動かす24の方法",
+          "isbn": "9784800231475",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=WMQgMQAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784800231475",
+            "bibKey": "ISBN:9784800231475",
+            "volumeId": "WMQgMQAACAAJ",
+            "infoURL": "https://books.google.com/books?id=WMQgMQAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 185
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I027108600",
+          "title": "アテンション = ATTENTION : 「注目」で人を動かす7つの新戦略",
+          "isbn": "9784864104562",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=EOCKjwEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784864104562",
+            "bibKey": "ISBN:9784864104562",
+            "volumeId": "EOCKjwEACAAJ",
+            "infoURL": "https://books.google.com/books?id=EOCKjwEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 182
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000010686614",
+          "title": "あるニセ占い師の告白 : 偉い奴ほど使ってる!人を動かす究極の話術&心理術「ブラック・コールドリーディング」",
+          "isbn": "9784894513501",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=Qk-CQgAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784894513501",
+            "bibKey": "ISBN:9784894513501",
+            "volumeId": "Qk-CQgAACAAJ",
+            "infoURL": "https://books.google.com/books?id=Qk-CQgAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 218
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I030080541",
+          "title": "アロマ調香デザインの教科書 : 個人サロンから大ホールまで、人を動かす香りの空間演出",
+          "isbn": "9784814202492",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=vHM2zAEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784814202492",
+            "bibKey": "ISBN:9784814202492",
+            "volumeId": "vHM2zAEACAAJ",
+            "infoURL": "https://books.google.com/books?id=vHM2zAEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 184
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I031938442",
+          "title": "あの頃な",
+          "isbn": "9784758414159",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=as7hzgEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784758414159",
+            "bibKey": "ISBN:9784758414159",
+            "volumeId": "as7hzgEACAAJ",
+            "infoURL": "https://books.google.com/books?id=as7hzgEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 188
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I033201723",
+          "title": "あの頃な",
+          "isbn": "9784758446075",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=Bt020AEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784758446075",
+            "bibKey": "ISBN:9784758446075",
+            "volumeId": "Bt020AEACAAJ",
+            "infoURL": "https://books.google.com/books?id=Bt020AEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 185
+          }
+        }
+      ],
+      "coverPhaseMs": 4718,
+      "warmMetadataMs": 95,
+      "warmNDLRequests": 0
+    },
+    {
+      "query": "嫌われる",
+      "kind": "intitle",
+      "version": 6,
+      "metadataMs": 1178,
+      "count": 20,
+      "message": "NDLサーチ：20件を表示中。表紙を待たずに登録できます。",
+      "books": [
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000009157585",
+          "title": "医者に嫌われる健康法 : スポーツ自転車でカッコ良くダイエット!",
+          "author": "尾上茂 著",
+          "isbns": [
+            "9784286037004"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000009157585"
+          },
+          "publisher": "文芸社",
+          "published": "2007.11",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025486654",
+          "title": "あなたが嫌われるのは、そのクセのせい。",
+          "author": "渋谷昌三 著",
+          "isbns": [
+            "9784838726776"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I025486654"
+          },
+          "publisher": "マガジンハウス",
+          "published": "2014.6",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000008393509",
+          "title": "愛される人嫌われる人 : その「ちがい」がわかる43の言葉・103の知恵 : 山内一豊の妻・千代が残した贈りもの",
+          "author": "高垣尚平 著",
+          "isbns": [
+            "9784900138964"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000008393509"
+          },
+          "publisher": "泉書房",
+          "published": "2006.7",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I031989347",
+          "title": "いい人なのに嫌われるわけ",
+          "author": "石川幹人 著",
+          "isbns": [
+            "9784594090944"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I031989347"
+          },
+          "publisher": "扶桑社",
+          "published": "2022.3",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I033858859",
+          "title": "運に好かれる人、嫌われる人 : ゲッターズ飯田の運気が上がる「過去」「いま」「未来」の話",
+          "author": "ゲッターズ飯田 [著]・倉田茉美 絵",
+          "isbns": [
+            "9784833483155"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I033858859"
+          },
+          "publisher": "プレジデント社",
+          "published": "2024.12",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000009345632",
+          "title": "あなたが職場で嫌われる理由 : 性格・タイプ別「人間関係」のコツ",
+          "author": "内藤誼人 ほか著",
+          "isbns": [
+            "9784833450386"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000009345632"
+          },
+          "publisher": "プレジデント社",
+          "published": "2008.5",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000003626948",
+          "title": "アメリカはなぜ嫌われるのか",
+          "author": "桜井哲夫 著",
+          "isbns": [
+            "9784480059352"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000003626948"
+          },
+          "publisher": "筑摩書房",
+          "published": "2002.3",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I032675051",
+          "title": "愛されるマーケ嫌われるマーケ",
+          "author": "日経クロストレンド 編",
+          "isbns": [
+            "9784296117536"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I032675051"
+          },
+          "publisher": "日経BP日本経済新聞出版",
+          "published": "2023.3",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000003030029",
+          "title": "お金に好かれる人嫌われる人",
+          "author": "マリア・ニームス 著・石井礼子 訳",
+          "isbns": [
+            "9784531081301"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000003030029"
+          },
+          "publisher": "日本教文社",
+          "published": "2001.5",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025726414",
+          "title": "愛されるアムウェイ嫌われるアムウェイ : ネットワークビジネスあるある",
+          "author": "アムウェイルール研究所 著",
+          "isbns": [
+            "9784904209530"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I025726414"
+          },
+          "publisher": "サイゾー",
+          "published": "2014.9",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I024280710",
+          "title": "恨まれ屋. ヤクザにまで嫌われる漢達編",
+          "author": "楠本哲 著・玄秀盛 監修",
+          "isbns": [
+            "9784785940317"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I024280710"
+          },
+          "publisher": "少年画報社",
+          "published": "2013.3",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I024992331",
+          "title": "お金に愛される人、お金に嫌われる人",
+          "author": "石原加受子 [著]",
+          "isbns": [
+            "9784062815383"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I024992331"
+          },
+          "publisher": "講談社",
+          "published": "2013.11",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000002649483",
+          "title": "お金に好かれる人お金に嫌われる人 : お金と上手につき合うための心理学",
+          "author": "多湖輝 著",
+          "isbns": [
+            "9784341171537"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000002649483"
+          },
+          "publisher": "ごま書房",
+          "published": "1997.12",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000009433551",
+          "title": "お金に好かれる人お金に嫌われる人 : あなたの中に眠るダイヤの原石をお金に換える魔法のランプの使い方",
+          "author": "中井隆栄 著",
+          "isbns": [
+            "9784902089356"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000009433551"
+          },
+          "publisher": "ユウメディア",
+          "published": "2007.3",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I034138854",
+          "title": "あなたは話せば話すほど、嫌われる人?好かれる人?",
+          "author": "木村孝司 著",
+          "isbns": [
+            "9784827215137"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I034138854"
+          },
+          "publisher": "ぱる出版",
+          "published": "2025.7",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000002157153",
+          "title": "いい「人間関係」の獲得 : 嫌われるのを恐れるより好きになる",
+          "author": "加藤諦三 著",
+          "isbns": [
+            "9784804750170"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000002157153"
+          },
+          "publisher": "大和出版",
+          "published": "1992.1",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I029214030",
+          "title": "『愛され上司』になる方法 : 部下に好かれる、嫌われる人は、ここが違う!",
+          "author": "堀内一人 著",
+          "isbns": [
+            "9784408338194"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I029214030"
+          },
+          "publisher": "実業之日本社",
+          "published": "2018.10",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025314799",
+          "title": "お金が貯まるのは、どっち!? : お金に好かれる人、嫌われる人の法則",
+          "author": "菅井敏之 著",
+          "isbns": [
+            "9784776208228"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I025314799"
+          },
+          "publisher": "アスコム",
+          "published": "2014.3",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I027635920",
+          "title": "愛されたいなら嫌われなさい = How to be your own : 嫌われるほど生きるのが楽になる自分プロデュース術",
+          "author": "内藤加奈子 著",
+          "isbns": [
+            "9784334978907"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I027635920"
+          },
+          "publisher": "光文社",
+          "published": "2016.10",
+          "image": ""
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000011094429",
+          "title": "言ってはいけない! : 部下と上司の禁句",
+          "author": "齋藤孝 [著]",
+          "isbns": [
+            "9784062814119"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "ndl",
+          "identifiers": {
+            "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000011094429"
+          },
+          "publisher": "講談社",
+          "published": "2011.1",
+          "image": ""
+        }
+      ],
+      "covers": [
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000009157585",
+          "title": "医者に嫌われる健康法 : スポーツ自転車でカッコ良くダイエット!",
+          "isbn": "9784286037004",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=OYtjQgAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784286037004",
+            "bibKey": "ISBN:9784286037004",
+            "volumeId": "OYtjQgAACAAJ",
+            "infoURL": "https://books.google.com/books?id=OYtjQgAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 187
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025486654",
+          "title": "あなたが嫌われるのは、そのクセのせい。",
+          "isbn": "9784838726776",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=eNO0oAEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784838726776",
+            "bibKey": "ISBN:9784838726776",
+            "volumeId": "eNO0oAEACAAJ",
+            "infoURL": "https://books.google.com/books?id=eNO0oAEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 184
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000008393509",
+          "title": "愛される人嫌われる人 : その「ちがい」がわかる43の言葉・103の知恵 : 山内一豊の妻・千代が残した贈りもの",
+          "isbn": "9784900138964",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=YoUqNwAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784900138964",
+            "bibKey": "ISBN:9784900138964",
+            "volumeId": "YoUqNwAACAAJ",
+            "infoURL": "https://books.google.com/books?id=YoUqNwAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 187
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I031989347",
+          "title": "いい人なのに嫌われるわけ",
+          "isbn": "9784594090944",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=Fy3tzgEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784594090944",
+            "bibKey": "ISBN:9784594090944",
+            "volumeId": "Fy3tzgEACAAJ",
+            "infoURL": "https://books.google.com/books?id=Fy3tzgEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 188
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000003626948",
+          "title": "アメリカはなぜ嫌われるのか",
+          "isbn": "9784480059352",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=TmseAAAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784480059352",
+            "bibKey": "ISBN:9784480059352",
+            "volumeId": "TmseAAAACAAJ",
+            "infoURL": "https://books.google.com/books?id=TmseAAAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 211
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I032675051",
+          "title": "愛されるマーケ嫌われるマーケ",
+          "isbn": "9784296117536",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=hGaczwEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784296117536",
+            "bibKey": "ISBN:9784296117536",
+            "volumeId": "hGaczwEACAAJ",
+            "infoURL": "https://books.google.com/books?id=hGaczwEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 205
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000003030029",
+          "title": "お金に好かれる人嫌われる人",
+          "isbn": "9784531081301",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=Cc_APAAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784531081301",
+            "bibKey": "ISBN:9784531081301",
+            "volumeId": "Cc_APAAACAAJ",
+            "infoURL": "https://books.google.com/books?id=Cc_APAAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 189
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025726414",
+          "title": "愛されるアムウェイ嫌われるアムウェイ : ネットワークビジネスあるある",
+          "isbn": "9784904209530",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=rbywoQEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784904209530",
+            "bibKey": "ISBN:9784904209530",
+            "volumeId": "rbywoQEACAAJ",
+            "infoURL": "https://books.google.com/books?id=rbywoQEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 188
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I024992331",
+          "title": "お金に愛される人、お金に嫌われる人",
+          "isbn": "9784062815383",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=n4n5ngEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784062815383",
+            "bibKey": "ISBN:9784062815383",
+            "volumeId": "n4n5ngEACAAJ",
+            "infoURL": "https://books.google.com/books?id=n4n5ngEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 184
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000009433551",
+          "title": "お金に好かれる人お金に嫌われる人 : あなたの中に眠るダイヤの原石をお金に換える魔法のランプの使い方",
+          "isbn": "9784902089356",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=1ZeGQgAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784902089356",
+            "bibKey": "ISBN:9784902089356",
+            "volumeId": "1ZeGQgAACAAJ",
+            "infoURL": "https://books.google.com/books?id=1ZeGQgAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 187
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I034138854",
+          "title": "あなたは話せば話すほど、嫌われる人?好かれる人?",
+          "isbn": "9784827215137",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=VCpg0QEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784827215137",
+            "bibKey": "ISBN:9784827215137",
+            "volumeId": "VCpg0QEACAAJ",
+            "infoURL": "https://books.google.com/books?id=VCpg0QEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 188
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I029214030",
+          "title": "『愛され上司』になる方法 : 部下に好かれる、嫌われる人は、ここが違う!",
+          "isbn": "9784408338194",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=GRLKvAEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784408338194",
+            "bibKey": "ISBN:9784408338194",
+            "volumeId": "GRLKvAEACAAJ",
+            "infoURL": "https://books.google.com/books?id=GRLKvAEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 183
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025314799",
+          "title": "お金が貯まるのは、どっち!? : お金に好かれる人、嫌われる人の法則",
+          "isbn": "9784776208228",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=pzuIoAEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784776208228",
+            "bibKey": "ISBN:9784776208228",
+            "volumeId": "pzuIoAEACAAJ",
+            "infoURL": "https://books.google.com/books?id=pzuIoAEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 186
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I027635920",
+          "title": "愛されたいなら嫌われなさい = How to be your own : 嫌われるほど生きるのが楽になる自分プロデュース術",
+          "isbn": "9784334978907",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=YjM6vgAACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784334978907",
+            "bibKey": "ISBN:9784334978907",
+            "volumeId": "YjM6vgAACAAJ",
+            "infoURL": "https://books.google.com/books?id=YjM6vgAACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 188
+          }
+        },
+        {
+          "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I000011094429",
+          "title": "言ってはいけない! : 部下と上司の禁句",
+          "isbn": "9784062814119",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://books.google.com/books/content?id=Rch9YgEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "proof": {
+            "source": "google-dynamic",
+            "isbn": "9784062814119",
+            "bibKey": "ISBN:9784062814119",
+            "volumeId": "Rch9YgEACAAJ",
+            "infoURL": "https://books.google.com/books?id=Rch9YgEACAAJ&source=gbs_ViewAPI",
+            "width": 128,
+            "height": 185
+          }
+        }
+      ],
+      "coverPhaseMs": 5243,
+      "warmMetadataMs": 63,
+      "warmNDLRequests": 0
+    }
+  ],
+  "responses": [
+    {
+      "url": "https://ndlsearch.ndl.go.jp/api/sru?operation=searchRetrieve&query=title%3D%22%E5%AB%8C%E3%82%8F%E3%82%8C%E3%82%8B%E5%8B%87%E6%B0%97%22+AND+dpid%3D%22iss-ndl-opac%22+AND+mediatype%3D%22books%22&maximumRecords=20&startRecord=1&recordSchema=dcndl&recordPacking=xml&onlyBib=true",
+      "status": 200
+    },
+    {
+      "url": "https://api.openbd.jp/v1/get?isbn=9784478025819",
+      "status": 200
+    },
+    {
+      "url": "https://ndlsearch.ndl.go.jp/api/sru?operation=searchRetrieve&query=title%3D%22%E3%82%A8%E3%83%83%E3%82%BB%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E6%80%9D%E8%80%83%22+AND+dpid%3D%22iss-ndl-opac%22+AND+mediatype%3D%22books%22&maximumRecords=20&startRecord=1&recordSchema=dcndl&recordPacking=xml&onlyBib=true",
+      "status": 200
+    },
+    {
+      "url": "https://api.openbd.jp/v1/get?isbn=9784761270438%2C9784761277802%2C9784761272463%2C9784904899236",
+      "status": 200
+    },
+    {
+      "url": "https://ndlsearch.ndl.go.jp/api/sru?operation=searchRetrieve&query=title%3D%22%E5%AB%8C%E3%82%8F%E3%82%8C%E3%82%8B%E5%8B%87%E6%B0%97%22+AND+dpid%3D%22iss-ndl-opac%22+AND+mediatype%3D%22books%22&maximumRecords=20&startRecord=1&recordSchema=dcndl&recordPacking=xml&onlyBib=true",
+      "status": 200
+    },
+    {
+      "url": "https://api.openbd.jp/v1/get?isbn=9784478025819",
+      "status": 200
+    },
+    {
+      "url": "https://openlibrary.org/api/books?bibkeys=ISBN%3A9784478025819&format=json&jscmd=data",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books?jscmd=viewapi&bibkeys=ISBN%3A9784478025819%2CISBN%3A4478025819&callback=__hondanaCover1",
+      "status": 200
+    },
+    {
+      "url": "https://ndlsearch.ndl.go.jp/api/sru?operation=searchRetrieve&query=title%3D%227%E3%81%A4%E3%81%AE%E7%BF%92%E6%85%A3%22+AND+dpid%3D%22iss-ndl-opac%22+AND+mediatype%3D%22books%22&maximumRecords=20&startRecord=1&recordSchema=dcndl&recordPacking=xml&onlyBib=true",
+      "status": 200
+    },
+    {
+      "url": "https://api.openbd.jp/v1/get?isbn=9784863940246%2C9784863940307%2C9784863940390%2C9784921192730%2C9784478731574%2C9784635310390%2C9784866633107%2C9784757428072%2C9784800262615%2C9784804717234%2C9784434143175%2C9784584137543%2C9784413017152%2C9784569816609%2C9784863940338%2C9784906638963%2C9784906638130%2C9784863940574%2C9784863940550%2C9784906638444",
+      "status": 200
+    },
+    {
+      "url": "https://openlibrary.org/api/books?bibkeys=ISBN%3A9784863940246%2CISBN%3A9784863940307%2CISBN%3A9784863940390%2CISBN%3A9784921192730%2CISBN%3A9784478731574%2CISBN%3A9784635310390%2CISBN%3A9784866633107%2CISBN%3A9784757428072%2CISBN%3A9784800262615%2CISBN%3A9784804717234%2CISBN%3A9784434143175%2CISBN%3A9784584137543%2CISBN%3A9784413017152%2CISBN%3A9784569816609%2CISBN%3A9784863940338%2CISBN%3A9784906638963%2CISBN%3A9784906638130%2CISBN%3A9784863940574%2CISBN%3A9784863940550%2CISBN%3A9784906638444&format=json&jscmd=data",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books?jscmd=viewapi&bibkeys=ISBN%3A9784863940246%2CISBN%3A4863940246%2CISBN%3A9784863940307%2CISBN%3A4863940300%2CISBN%3A9784863940390%2CISBN%3A4863940394%2CISBN%3A9784921192730%2CISBN%3A4921192731%2CISBN%3A9784478731574%2CISBN%3A4478731578%2CISBN%3A9784635310390%2CISBN%3A4635310396%2CISBN%3A9784866633107%2CISBN%3A4866633107%2CISBN%3A9784757428072%2CISBN%3A4757428073%2CISBN%3A9784800262615%2CISBN%3A4800262615%2CISBN%3A9784804717234%2CISBN%3A4804717234%2CISBN%3A9784434143175%2CISBN%3A4434143174%2CISBN%3A9784584137543%2CISBN%3A4584137544%2CISBN%3A9784413017152%2CISBN%3A4413017153%2CISBN%3A9784569816609%2CISBN%3A4569816606%2CISBN%3A9784863940338%2CISBN%3A4863940335%2CISBN%3A9784906638963%2CISBN%3A4906638961%2CISBN%3A9784906638130%2CISBN%3A4906638139%2CISBN%3A9784863940574%2CISBN%3A4863940572%2CISBN%3A9784863940550%2CISBN%3A4863940556%2CISBN%3A9784906638444%2CISBN%3A4906638449&callback=__hondanaCover1",
+      "status": 200
+    },
+    {
+      "url": "https://ndlsearch.ndl.go.jp/api/sru?operation=searchRetrieve&query=title%3D%22%E3%82%A8%E3%83%83%E3%82%BB%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E6%80%9D%E8%80%83%22+AND+dpid%3D%22iss-ndl-opac%22+AND+mediatype%3D%22books%22&maximumRecords=20&startRecord=1&recordSchema=dcndl&recordPacking=xml&onlyBib=true",
+      "status": 200
+    },
+    {
+      "url": "https://api.openbd.jp/v1/get?isbn=9784761270438%2C9784761277802%2C9784904899236%2C9784761272463",
+      "status": 200
+    },
+    {
+      "url": "https://openlibrary.org/api/books?bibkeys=ISBN%3A9784761270438%2CISBN%3A9784761277802%2CISBN%3A9784904899236%2CISBN%3A9784761272463&format=json&jscmd=data",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books?jscmd=viewapi&bibkeys=ISBN%3A9784761270438%2CISBN%3A4761270438%2CISBN%3A9784761277802%2CISBN%3A4761277807%2CISBN%3A9784904899236%2CISBN%3A4904899237%2CISBN%3A9784761272463%2CISBN%3A4761272465&callback=__hondanaCover1",
+      "status": 200
+    },
+    {
+      "url": "https://ndlsearch.ndl.go.jp/api/sru?operation=searchRetrieve&query=title%3D%22%E4%BA%BA%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99%22+AND+dpid%3D%22iss-ndl-opac%22+AND+mediatype%3D%22books%22&maximumRecords=20&startRecord=1&recordSchema=dcndl&recordPacking=xml&onlyBib=true",
+      "status": 200
+    },
+    {
+      "url": "https://api.openbd.jp/v1/get?isbn=9784799330296%2C9784905073499%2C9784866517476%2C9784569635859%2C9784072530504%2C9784777931699%2C9784537261394%2C9784879135407%2C9784837917465%2C9784862809100%2C9784800231475%2C9784864104562%2C9784478730485%2C9784894513501%2C9784814202492%2C9784758414159%2C9784758446075",
+      "status": 200
+    },
+    {
+      "url": "https://openlibrary.org/api/books?bibkeys=ISBN%3A9784799330296%2CISBN%3A9784905073499%2CISBN%3A9784866517476%2CISBN%3A9784569635859%2CISBN%3A9784072530504%2CISBN%3A9784777931699%2CISBN%3A9784537261394%2CISBN%3A9784879135407%2CISBN%3A9784837917465%2CISBN%3A9784862809100%2CISBN%3A9784800231475%2CISBN%3A9784864104562%2CISBN%3A9784478730485%2CISBN%3A9784894513501%2CISBN%3A9784814202492%2CISBN%3A9784758414159%2CISBN%3A9784758446075&format=json&jscmd=data",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books?jscmd=viewapi&bibkeys=ISBN%3A9784799330296%2CISBN%3A4799330292%2CISBN%3A9784905073499%2CISBN%3A4905073499%2CISBN%3A9784866517476%2CISBN%3A4866517476%2CISBN%3A9784569635859%2CISBN%3A4569635857%2CISBN%3A9784072530504%2CISBN%3A4072530506%2CISBN%3A9784777931699%2CISBN%3A4777931692%2CISBN%3A9784537261394%2CISBN%3A4537261390%2CISBN%3A9784879135407%2CISBN%3A4879135402%2CISBN%3A9784837917465%2CISBN%3A4837917461%2CISBN%3A9784862809100%2CISBN%3A4862809103%2CISBN%3A9784800231475%2CISBN%3A4800231477%2CISBN%3A9784864104562%2CISBN%3A4864104565%2CISBN%3A9784478730485%2CISBN%3A4478730482%2CISBN%3A9784894513501%2CISBN%3A4894513501%2CISBN%3A9784814202492%2CISBN%3A4814202490%2CISBN%3A9784758414159%2CISBN%3A4758414157%2CISBN%3A9784758446075%2CISBN%3A4758446075&callback=__hondanaCover1",
+      "status": 200
+    },
+    {
+      "url": "https://ndlsearch.ndl.go.jp/api/sru?operation=searchRetrieve&query=title%3D%22%E5%AB%8C%E3%82%8F%E3%82%8C%E3%82%8B%22+AND+dpid%3D%22iss-ndl-opac%22+AND+mediatype%3D%22books%22&maximumRecords=20&startRecord=1&recordSchema=dcndl&recordPacking=xml&onlyBib=true",
+      "status": 200
+    },
+    {
+      "url": "https://api.openbd.jp/v1/get?isbn=9784286037004%2C9784838726776%2C9784900138964%2C9784594090944%2C9784833483155%2C9784833450386%2C9784480059352%2C9784296117536%2C9784531081301%2C9784904209530%2C9784785940317%2C9784062815383%2C9784341171537%2C9784902089356%2C9784827215137%2C9784804750170%2C9784408338194%2C9784776208228%2C9784334978907%2C9784062814119",
+      "status": 200
+    },
+    {
+      "url": "https://openlibrary.org/api/books?bibkeys=ISBN%3A9784286037004%2CISBN%3A9784838726776%2CISBN%3A9784900138964%2CISBN%3A9784594090944%2CISBN%3A9784833483155%2CISBN%3A9784833450386%2CISBN%3A9784480059352%2CISBN%3A9784296117536%2CISBN%3A9784531081301%2CISBN%3A9784904209530%2CISBN%3A9784785940317%2CISBN%3A9784062815383%2CISBN%3A9784341171537%2CISBN%3A9784902089356%2CISBN%3A9784827215137%2CISBN%3A9784804750170%2CISBN%3A9784408338194%2CISBN%3A9784776208228%2CISBN%3A9784334978907%2CISBN%3A9784062814119&format=json&jscmd=data",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books?jscmd=viewapi&bibkeys=ISBN%3A9784286037004%2CISBN%3A4286037002%2CISBN%3A9784838726776%2CISBN%3A4838726775%2CISBN%3A9784900138964%2CISBN%3A4900138967%2CISBN%3A9784594090944%2CISBN%3A459409094X%2CISBN%3A9784833483155%2CISBN%3A4833483157%2CISBN%3A9784833450386%2CISBN%3A4833450380%2CISBN%3A9784480059352%2CISBN%3A4480059350%2CISBN%3A9784296117536%2CISBN%3A429611753X%2CISBN%3A9784531081301%2CISBN%3A4531081307%2CISBN%3A9784904209530%2CISBN%3A4904209532%2CISBN%3A9784785940317%2CISBN%3A478594031X%2CISBN%3A9784062815383%2CISBN%3A4062815389%2CISBN%3A9784341171537%2CISBN%3A4341171534%2CISBN%3A9784902089356%2CISBN%3A4902089351%2CISBN%3A9784827215137%2CISBN%3A4827215138%2CISBN%3A9784804750170%2CISBN%3A4804750177%2CISBN%3A9784408338194%2CISBN%3A4408338192%2CISBN%3A9784776208228%2CISBN%3A4776208229%2CISBN%3A9784334978907%2CISBN%3A4334978908%2CISBN%3A9784062814119%2CISBN%3A4062814110&callback=__hondanaCover1",
+      "status": 200
+    },
+    {
+      "url": "https://openlibrary.org/search.json?isbn=9784422100517&offset=0&limit=20&lang=ja&fields=key%2Ctitle%2Ceditions%2Ceditions.key%2Ceditions.title%2Ceditions.language%2Ceditions.isbn%2Ceditions.cover_i%2Ceditions.by_statement%2Ceditions.author_name%2Ceditions.publishers%2Ceditions.publish_date",
+      "status": 200
+    },
+    {
+      "url": "https://covers.openlibrary.org/b/id/11932305-M.jpg?default=false",
+      "status": 302
+    },
+    {
+      "url": "https://api.openbd.jp/v1/get?isbn=9784761270438",
+      "status": 200
+    },
+    {
+      "url": "https://openlibrary.org/api/books?bibkeys=ISBN%3A9784761270438&format=json&jscmd=data",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books?jscmd=viewapi&bibkeys=ISBN%3A9784761270438%2CISBN%3A4761270438&callback=__hondanaCover1",
+      "status": 200
+    },
+    {
+      "url": "https://ndlsearch.ndl.go.jp/api/sru?operation=searchRetrieve&query=title%3D%22%E5%AB%8C%E3%82%8F%E3%82%8C%E3%82%8B%22+AND+dpid%3D%22iss-ndl-opac%22+AND+mediatype%3D%22books%22&maximumRecords=20&startRecord=1&recordSchema=dcndl&recordPacking=xml&onlyBib=true",
+      "status": 200
+    },
+    {
+      "url": "https://api.openbd.jp/v1/get?isbn=9784286037004%2C9784838726776%2C9784900138964%2C9784594090944%2C9784833483155%2C9784833450386%2C9784480059352%2C9784296117536%2C9784531081301%2C9784904209530%2C9784785940317%2C9784062815383%2C9784341171537%2C9784902089356%2C9784827215137%2C9784804750170%2C9784408338194%2C9784776208228%2C9784334978907%2C9784062814119",
+      "status": 200
+    },
+    {
+      "url": "https://openlibrary.org/api/books?bibkeys=ISBN%3A9784286037004%2CISBN%3A9784838726776%2CISBN%3A9784900138964%2CISBN%3A9784594090944%2CISBN%3A9784833483155%2CISBN%3A9784833450386%2CISBN%3A9784480059352%2CISBN%3A9784296117536%2CISBN%3A9784531081301%2CISBN%3A9784904209530%2CISBN%3A9784785940317%2CISBN%3A9784062815383%2CISBN%3A9784341171537%2CISBN%3A9784902089356%2CISBN%3A9784827215137%2CISBN%3A9784804750170%2CISBN%3A9784408338194%2CISBN%3A9784776208228%2CISBN%3A9784334978907%2CISBN%3A9784062814119&format=json&jscmd=data",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books?jscmd=viewapi&bibkeys=ISBN%3A9784286037004%2CISBN%3A4286037002%2CISBN%3A9784838726776%2CISBN%3A4838726775%2CISBN%3A9784900138964%2CISBN%3A4900138967%2CISBN%3A9784594090944%2CISBN%3A459409094X%2CISBN%3A9784833483155%2CISBN%3A4833483157%2CISBN%3A9784833450386%2CISBN%3A4833450380%2CISBN%3A9784480059352%2CISBN%3A4480059350%2CISBN%3A9784296117536%2CISBN%3A429611753X%2CISBN%3A9784531081301%2CISBN%3A4531081307%2CISBN%3A9784904209530%2CISBN%3A4904209532%2CISBN%3A9784785940317%2CISBN%3A478594031X%2CISBN%3A9784062815383%2CISBN%3A4062815389%2CISBN%3A9784341171537%2CISBN%3A4341171534%2CISBN%3A9784902089356%2CISBN%3A4902089351%2CISBN%3A9784827215137%2CISBN%3A4827215138%2CISBN%3A9784804750170%2CISBN%3A4804750177%2CISBN%3A9784408338194%2CISBN%3A4408338192%2CISBN%3A9784776208228%2CISBN%3A4776208229%2CISBN%3A9784334978907%2CISBN%3A4334978908%2CISBN%3A9784062814119%2CISBN%3A4062814110&callback=__hondanaCover2",
+      "status": 200
+    }
+  ],
+  "isbnChecks": [
+    {
+      "query": "9784422100517",
+      "kind": "isbn",
+      "version": 6,
+      "metadataMs": 8322,
+      "count": 1,
+      "message": "NDLサーチ：タイムアウト（8秒） → Open Library：1件を表示中。表紙を待たずに登録できます。",
+      "books": [
+        {
+          "id": "openlibrary:/books/OL27116041M",
+          "title": "人を動かす",
+          "author": "Dale Carnegie",
+          "isbns": [
+            "9784422100517"
+          ],
+          "languages": [
+            "jpn"
+          ],
+          "source": "openlibrary",
+          "identifiers": {
+            "openlibraryWork": "/works/OL1063267W",
+            "openlibraryEdition": "/books/OL27116041M"
+          },
+          "publisher": "",
+          "published": [
+            "1999"
+          ],
+          "image": "https://covers.openlibrary.org/b/id/11932305-M.jpg?default=false",
+          "imageIdentity": {
+            "source": "openlibrary",
+            "edition": "/books/OL27116041M",
+            "coverId": 11932305
+          }
+        }
+      ],
+      "covers": [
+        {
+          "id": "openlibrary:/books/OL27116041M",
+          "title": "人を動かす",
+          "isbn": "9784422100517",
+          "languages": [
+            "jpn"
+          ],
+          "image": "https://covers.openlibrary.org/b/id/11932305-M.jpg?default=false",
+          "proof": {
+            "source": "openlibrary",
+            "edition": "/books/OL27116041M",
+            "coverId": 11932305,
+            "isbn": "9784422100517",
+            "infoURL": "https://openlibrary.org/books/OL27116041M",
+            "width": 180,
+            "height": 269
+          }
+        }
+      ],
+      "coverPhaseMs": 2739
+    }
+  ],
+  "migration": {
+    "imported": 2,
+    "bulkAdded": 2,
+    "statusAndFavoritePreserved": true,
+    "isbnPreserved": true,
+    "sourceKeyUnchanged": true,
+    "reloaded": true,
+    "covers": [
+      {
+        "title": "エッセンシャル思考 : 最少の時間で成果を最大にする",
+        "isbn": "9784761270438",
+        "image": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+        "proof": {
+          "source": "google-dynamic",
+          "isbn": "9784761270438",
+          "bibKey": "ISBN:9784761270438",
+          "volumeId": "XlDMrQEACAAJ",
+          "infoURL": "https://books.google.com/books?id=XlDMrQEACAAJ&source=gbs_ViewAPI",
+          "width": 128,
+          "height": 185
+        }
+      },
+      {
+        "title": "医者に嫌われる健康法 : スポーツ自転車でカッコ良くダイエット!",
+        "isbn": "9784286037004",
+        "image": "https://books.google.com/books/content?id=OYtjQgAACAAJ&printsec=frontcover&img=1&zoom=5",
+        "proof": {
+          "source": "google-dynamic",
+          "isbn": "9784286037004",
+          "bibKey": "ISBN:9784286037004",
+          "volumeId": "OYtjQgAACAAJ",
+          "infoURL": "https://books.google.com/books?id=OYtjQgAACAAJ&source=gbs_ViewAPI",
+          "width": 128,
+          "height": 187
+        }
+      },
+      {
+        "title": "あなたが嫌われるのは、そのクセのせい。",
+        "isbn": "9784838726776",
+        "image": "https://books.google.com/books/content?id=eNO0oAEACAAJ&printsec=frontcover&img=1&zoom=5",
+        "proof": {
+          "source": "google-dynamic",
+          "isbn": "9784838726776",
+          "bibKey": "ISBN:9784838726776",
+          "volumeId": "eNO0oAEACAAJ",
+          "infoURL": "https://books.google.com/books?id=eNO0oAEACAAJ&source=gbs_ViewAPI",
+          "width": 128,
+          "height": 184
+        }
+      }
+    ]
+  },
+  "metadataAttribution": "国立国会図書館サーチAPI（CC BY 4.0）、Open Library。表紙は出典URLとISBN対応情報を記録。画像は同梱・再配布しない。",
+  "manualImageChecks": [
+    {
+      "title": "エッセンシャル思考",
+      "isbn": "9784761270438",
+      "japaneseCoverVisuallyChecked": true
+    },
+    {
+      "title": "完訳7つの習慣・オーディオブックパッケージ版",
+      "isbn": "9784863940390",
+      "japaneseCoverVisuallyChecked": true
+    },
+    {
+      "title": "人を動かす・カーネギー著",
+      "isbn": "9784422100517",
+      "japaneseCoverVisuallyChecked": true
+    }
+  ],
+  "unavailable": [
+    {
+      "title": "嫌われる勇気",
+      "isbn": "9784478025819",
+      "openBD": "summary.cover is empty",
+      "openLibrary": "OL27161408M has no covers",
+      "googleDynamic": "No thumbnail for matching ISBN-10/13",
+      "fallback": "text cover"
+    },
+    {
+      "title": "完訳7つの習慣",
+      "isbn": "9784863940246",
+      "reason": "No matching thumbnail from tested providers; do not reuse 9784863940390 cover"
+    }
+  ]
+}
