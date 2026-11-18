@@ -1,0 +1,248 @@
+{
+  "environment": "HTTPS Pages-origin simulation: HTML local only; real external APIs and automatic images; manual art generated solely for testing",
+  "targetSearch": {
+    "query": "9784478107829",
+    "ms": 1249,
+    "message": "1件を一致度順で表示。 選択・登録できます。",
+    "books": [
+      {
+        "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I029609349",
+        "source": "ndl",
+        "identifiers": {
+          "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I029609349"
+        },
+        "title": "苦しかったときの話をしようか : ビジネスマンの父が我が子のために書きためた「働くことの本質」",
+        "authors": [
+          "森岡毅 著"
+        ],
+        "author": "森岡毅 著",
+        "isbns": [
+          "9784478107829"
+        ],
+        "languages": [
+          "jpn"
+        ],
+        "publisher": "ダイヤモンド社",
+        "published": "2019.4",
+        "edition": "",
+        "sourceURL": "https://ndlsearch.ndl.go.jp/books/R100000002-I029609349",
+        "description": "国立国会図書館蔵書の書誌情報（NDLサーチAPI・CC BY 4.0）。著者の責任表示を保持しています。",
+        "image": "",
+        "type": "read",
+        "favorite": false
+      }
+    ],
+    "diagnostics": [
+      {
+        "time": "2026-11-18T07:05:16.564Z",
+        "provider": "ndl",
+        "isbns": [],
+        "result": "response",
+        "reason": "正常応答（キャッシュを含む）",
+        "ms": 844
+      },
+      {
+        "time": "2026-11-18T07:05:17.138Z",
+        "provider": "openbd",
+        "isbns": [],
+        "result": "response",
+        "reason": "正常応答（キャッシュを含む）",
+        "ms": 488
+      },
+      {
+        "time": "2026-11-18T07:05:17.138Z",
+        "provider": "openbd",
+        "isbns": [
+          "9784478107829"
+        ],
+        "result": "missing",
+        "reason": "coverが空、または画像URLが利用不可",
+        "ms": 0
+      },
+      {
+        "time": "2026-11-18T07:05:17.138Z",
+        "provider": "openbd",
+        "isbns": [
+          "9784478107829"
+        ],
+        "result": "unavailable",
+        "reason": "一致画像なし・書誌不一致・画像読込失敗",
+        "ms": 489
+      },
+      {
+        "time": "2026-11-18T07:05:19.137Z",
+        "provider": "openlibrary-books",
+        "isbns": [],
+        "result": "response",
+        "reason": "正常応答（キャッシュを含む）",
+        "ms": 1998
+      },
+      {
+        "time": "2026-11-18T07:05:19.137Z",
+        "provider": "openlibrary",
+        "isbns": [
+          "9784478107829"
+        ],
+        "result": "missing",
+        "reason": "同一ISBNの書誌回答なし",
+        "ms": 0
+      },
+      {
+        "time": "2026-11-18T07:05:19.137Z",
+        "provider": "openlibrary",
+        "isbns": [
+          "9784478107829"
+        ],
+        "result": "unavailable",
+        "reason": "一致画像なし・書誌不一致・画像読込失敗",
+        "ms": 1998
+      },
+      {
+        "time": "2026-11-18T07:05:19.354Z",
+        "provider": "google-dynamic",
+        "isbns": [
+          "9784478107829"
+        ],
+        "result": "missing",
+        "reason": "一致ISBNのサムネイル回答なし",
+        "ms": 0
+      },
+      {
+        "time": "2026-11-18T07:05:19.354Z",
+        "provider": "google-dynamic",
+        "isbns": [
+          "9784478107829"
+        ],
+        "result": "missing",
+        "reason": "一致ISBNのサムネイル回答なし",
+        "ms": 0
+      },
+      {
+        "time": "2026-11-18T07:05:19.354Z",
+        "provider": "google-dynamic",
+        "isbns": [
+          "9784478107829"
+        ],
+        "result": "unavailable",
+        "reason": "一致画像なし・書誌不一致・画像読込失敗",
+        "ms": 218
+      }
+    ]
+  },
+  "essentialSearch": {
+    "query": "9784761270438",
+    "ms": 1112,
+    "message": "見つかりませんでした。著者名またはISBNで絞って再検索できます。 NDLサーチ：利用上限（429）",
+    "books": [],
+    "diagnostics": [
+      {
+        "time": "2026-11-18T07:05:23.130Z",
+        "provider": "ndl",
+        "isbns": [],
+        "result": "error",
+        "reason": "利用上限（429）",
+        "ms": 589
+      },
+      {
+        "time": "2026-11-18T07:05:23.432Z",
+        "provider": "openlibrary",
+        "isbns": [],
+        "result": "response",
+        "reason": "正常応答（キャッシュを含む）",
+        "ms": 301
+      }
+    ]
+  },
+  "checks": {
+    "targetSearch": true,
+    "targetRegistrationReset": true,
+    "targetNextOpenReset": true,
+    "migration": true,
+    "targetAutomaticCover": false,
+    "manualSaved": true,
+    "essentialSearch": false,
+    "compressedManual": {
+      "width": 448,
+      "height": 640,
+      "bytes": 12249,
+      "sha256": "619d004f277d95eadc30eb9b6b0f611a723f80e8bcc44b9496fd4d516644a362"
+    },
+    "restoreRoundtrip": true,
+    "oldKeyUnchanged": true,
+    "manualDecoded": {
+      "width": 448,
+      "height": 640
+    },
+    "passed": true
+  },
+  "responses": [
+    {
+      "url": "https://ndlsearch.ndl.go.jp/api/sru?operation=searchRetrieve&query=isbn%3D%229784478107829%22+AND+dpid%3D%22iss-ndl-opac%22+AND+mediatype%3D%22books%22&maximumRecords=20&startRecord=1&recordSchema=dcndl&recordPacking=xml&onlyBib=true",
+      "status": 200
+    },
+    {
+      "url": "https://api.openbd.jp/v1/get?isbn=9784478107829",
+      "status": 200
+    },
+    {
+      "url": "https://openlibrary.org/api/books?bibkeys=ISBN%3A9784478107829&format=json&jscmd=data",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books?jscmd=viewapi&bibkeys=ISBN%3A9784478107829%2CISBN%3A4478107823&callback=__hondanaCover1",
+      "status": 200
+    },
+    {
+      "url": "https://api.openbd.jp/v1/get?isbn=9784478107829",
+      "status": 200
+    },
+    {
+      "url": "https://openlibrary.org/api/books?bibkeys=ISBN%3A9784478107829&format=json&jscmd=data",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books?jscmd=viewapi&bibkeys=ISBN%3A9784478107829%2CISBN%3A4478107823&callback=__hondanaCover1",
+      "status": 200
+    },
+    {
+      "url": "https://ndlsearch.ndl.go.jp/api/sru?operation=searchRetrieve&query=isbn%3D%229784761270438%22+AND+dpid%3D%22iss-ndl-opac%22+AND+mediatype%3D%22books%22&maximumRecords=20&startRecord=1&recordSchema=dcndl&recordPacking=xml&onlyBib=true",
+      "status": 429
+    },
+    {
+      "url": "https://openlibrary.org/search.json?isbn=9784761270438&offset=0&limit=20&lang=ja&fields=key%2Ctitle%2Ceditions%2Ceditions.key%2Ceditions.title%2Ceditions.language%2Ceditions.isbn%2Ceditions.cover_i%2Ceditions.by_statement%2Ceditions.author_name%2Ceditions.publishers%2Ceditions.publish_date",
+      "status": 200
+    },
+    {
+      "url": "https://api.openbd.jp/v1/get?isbn=9784478107829",
+      "status": 200
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://openlibrary.org/api/books?bibkeys=ISBN%3A9784478107829&format=json&jscmd=data",
+      "reason": "Load request cancelled"
+    }
+  ],
+  "serviceProbe": {
+    "isbn": "9784478107829",
+    "responses": {
+      "openbd": "[{\"onix\":{\"CollateralDetail\":{},\"RecordReference\":\"9784478107829\",\"NotificationType\":\"03\",\"ProductIdentifier\":{\"ProductIDType\":\"15\",\"IDValue\":\"9784478107829\"},\"DescriptiveDetail\":{\"TitleDetail\":{\"TitleType\":\"01\",\"TitleElement\":{\"TitleElementLevel\":\"01\",\"TitleText\":{\"collationkey\":\"クルシカッタ トキ ノ ハナシ オ シヨウカ : ビジネスマン ノ チチ ガ ワガコ ノ タメ ニ カキタメタ ハタラク コト ト ノ ホンシツ\",\"content\":\"苦しかったときの話をしようか : ビジネスマンの父が我が子のために書きためた「働くことの本質」\"}}},\"Contributor\":[{\"SequenceNumber\":\"1\",\"ContributorRole\":[],\"PersonName\":{\"content\":\"森岡, 毅, 1972-\",\"collationkey\":\"モリオカ, ツヨシ\"}}]},\"PublishingDetail\":{\"Imprint\":{\"ImprintName\":\"ダイヤモンド社\"},\"PublishingDate\":[{\"PublishingDateRole\":\"11\",\"Date\":\"201904\"}]},\"ProductSupply\":{\"SupplyDetail\":{\"ProductAvailability\":\"99\",\"Price\":[{\"PriceType\":\"01\",\"CurrencyCode\":\"JPY\",\"PriceAmount\":\"1500\"}]}}},\"hanmoto\":{\"datemodified\":\"2019-04-02 16:11:09\",\"datecreated\":\"2019-02-25 16:09:22\",\"datekoukai\":\"2019-02-25\"},\"summary\":{\"isbn\":\"9784478107829\",\"title\":\"苦しかったときの話をしようか : ビジネスマンの父が我が子のために書きためた「働くことの本質」\",\"volume\":\"\",\"series\":\"\",\"publisher\":\"ダイヤモンド社\",\"pubdate\":\"201904\",\"cover\":\"\",\"author\":\"森岡,毅,1972-\"}}]",
+      "openlibrary": "{}",
+      "google-dynamic": "inspectCover({\"ISBN:9784478107829\":{\"bib_key\":\"ISBN:9784478107829\",\"info_url\":\"https://books.google.com/books?id=IesfxQEACAAJ\\u0026source=gbs_ViewAPI\",\"preview_url\":\"https://books.google.com/books?id=IesfxQEACAAJ\\u0026source=gbs_ViewAPI\",\"preview\":\"noview\",\"embeddable\":false,\"can_download_pdf\":false,\"can_download_epub\":false,\"is_pdf_drm_enabled\":false,\"is_epub_drm_enabled\":false},\"ISBN:4478107823\":{\"bib_key\":\"ISBN:4478107823\",\"info_url\":\"https://books.google.com/books?id=IesfxQEACAAJ\\u0026source=gbs_ViewAPI\",\"preview_url\":\"https://books.google.com/books?id=IesfxQEACAAJ\\u0026source=gbs_ViewAPI\",\"preview\":\"noview\",\"embeddable\":false,\"can_download_pdf\":false,\"can_download_epub\":false,\"is_pdf_drm_enabled\":false,\"is_epub_drm_enabled\":false}});"
+    },
+    "volumes": {
+      "status": 429,
+      "reason": "Queries per day quota exceeded on unauthenticated request"
+    },
+    "directContentProbe": {
+      "volumeId": "IesfxQEACAAJ",
+      "status": 200,
+      "interpretation": "image not available placeholder; visually inspected; not an actual book cover"
+    },
+    "openLibraryISBNImage": {
+      "isbn": "9784478107829",
+      "status": 404,
+      "defaultPlaceholder": false
+    }
+  }
+}

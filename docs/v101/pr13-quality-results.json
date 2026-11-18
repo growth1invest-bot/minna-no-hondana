@@ -1,0 +1,395 @@
+{
+  "date": "2026-11-18",
+  "pr": 13,
+  "baseHead": "79efb09277c63818db0c49d096f5355b9c87bffe",
+  "playwrightVersion": "1.65.1",
+  "productHTMLChanged": false,
+  "productHTMLSha256": "5ab11ba1f42f1634ab7c88c763a7f1109771f24b7adb2afa4c7e5de3a4a19b51",
+  "originalFailure": {
+    "project": "iphone-webkit",
+    "test": "drag edge autoscroll can be canceled without persisting",
+    "workers": 3,
+    "expectedScrollYGreaterThan": 512,
+    "actualScrollY": 497,
+    "timeoutMs": 5000,
+    "suitePassed": 671,
+    "suiteFailed": 1,
+    "suiteDurationReported": "10.7m",
+    "availableEvidence": [
+      "complete test stdout/stderr",
+      "error-context.md DOM snapshot"
+    ],
+    "missingEvidence": [
+      "trace",
+      "video",
+      "event/frame timing log"
+    ],
+    "reasonCertain": "scroll threshold not reached before assertion timeout",
+    "historicalTriggerCertain": false
+  },
+  "unchangedTestSerialProbe": {
+    "command": "npx playwright test --config=playwright.v101.config.cjs --workers=1 --grep 'drag edge autoscroll' --project=iphone-webkit --repeat-each=10",
+    "passed": 10,
+    "failed": 0,
+    "reportedDuration": "1.3m"
+  },
+  "instrumentedParallelProbe": {
+    "command": "npx playwright test --config=playwright.v101.config.cjs --workers=3 --grep 'drag edge autoscroll' --project=iphone-webkit --repeat-each=5 --reporter=json",
+    "assertionTimeoutMs": 5000,
+    "retryCount": 0,
+    "stats": {
+      "startTime": "2026-11-18T08:35:05.290Z",
+      "duration": 27755.219999999998,
+      "expected": 5,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "runs": [
+      {
+        "status": "passed",
+        "durationMs": 12614,
+        "edgeToAssertionSuccessMs": 4007,
+        "observedMaxFrameGapMs": 2715,
+        "maxGapBetweenActiveEdgeFramesMs": 2447,
+        "scrollStart": 492,
+        "scrollEnd": 533,
+        "activeAtSuccess": true,
+        "eventsDuringEdgeWait": [],
+        "pageErrors": [],
+        "phases": [
+          {
+            "name": "hold-active",
+            "at": 6710,
+            "scrollY": 492,
+            "innerHeight": 664,
+            "focused": true,
+            "hidden": false,
+            "drag": {
+              "active": true,
+              "x": 88,
+              "y": 331,
+              "targetId": "r0"
+            }
+          },
+          {
+            "name": "pointer-at-edge",
+            "at": 6741,
+            "scrollY": 492,
+            "innerHeight": 664,
+            "focused": true,
+            "hidden": false,
+            "drag": {
+              "active": true,
+              "x": 88,
+              "y": 652,
+              "targetId": "r0"
+            }
+          },
+          {
+            "name": "scrolled",
+            "at": 10748,
+            "scrollY": 533,
+            "innerHeight": 664,
+            "focused": true,
+            "hidden": false,
+            "drag": {
+              "active": true,
+              "x": 88,
+              "y": 652,
+              "targetId": "r3"
+            }
+          }
+        ]
+      },
+      {
+        "status": "passed",
+        "durationMs": 12506,
+        "edgeToAssertionSuccessMs": 3960,
+        "observedMaxFrameGapMs": 2685,
+        "maxGapBetweenActiveEdgeFramesMs": 2685,
+        "scrollStart": 492,
+        "scrollEnd": 545,
+        "activeAtSuccess": true,
+        "eventsDuringEdgeWait": [],
+        "pageErrors": [],
+        "phases": [
+          {
+            "name": "hold-active",
+            "at": 6735,
+            "scrollY": 492,
+            "innerHeight": 664,
+            "focused": true,
+            "hidden": false,
+            "drag": {
+              "active": true,
+              "x": 88,
+              "y": 331,
+              "targetId": "r0"
+            }
+          },
+          {
+            "name": "pointer-at-edge",
+            "at": 6783,
+            "scrollY": 492,
+            "innerHeight": 664,
+            "focused": true,
+            "hidden": false,
+            "drag": {
+              "active": true,
+              "x": 88,
+              "y": 652,
+              "targetId": "r0"
+            }
+          },
+          {
+            "name": "scrolled",
+            "at": 10743,
+            "scrollY": 545,
+            "innerHeight": 664,
+            "focused": true,
+            "hidden": false,
+            "drag": {
+              "active": true,
+              "x": 88,
+              "y": 652,
+              "targetId": "r3"
+            }
+          }
+        ]
+      },
+      {
+        "status": "passed",
+        "durationMs": 13669,
+        "edgeToAssertionSuccessMs": 3942,
+        "observedMaxFrameGapMs": 2735,
+        "maxGapBetweenActiveEdgeFramesMs": 2735,
+        "scrollStart": 492,
+        "scrollEnd": 533,
+        "activeAtSuccess": true,
+        "eventsDuringEdgeWait": [],
+        "pageErrors": [],
+        "phases": [
+          {
+            "name": "hold-active",
+            "at": 7709,
+            "scrollY": 492,
+            "innerHeight": 664,
+            "focused": true,
+            "hidden": false,
+            "drag": {
+              "active": true,
+              "x": 88,
+              "y": 331,
+              "targetId": "r0"
+            }
+          },
+          {
+            "name": "pointer-at-edge",
+            "at": 7780,
+            "scrollY": 492,
+            "innerHeight": 664,
+            "focused": true,
+            "hidden": false,
+            "drag": {
+              "active": true,
+              "x": 88,
+              "y": 652,
+              "targetId": "r0"
+            }
+          },
+          {
+            "name": "scrolled",
+            "at": 11722,
+            "scrollY": 533,
+            "innerHeight": 664,
+            "focused": true,
+            "hidden": false,
+            "drag": {
+              "active": true,
+              "x": 88,
+              "y": 652,
+              "targetId": "r3"
+            }
+          }
+        ]
+      },
+      {
+        "status": "passed",
+        "durationMs": 9217,
+        "edgeToAssertionSuccessMs": 3935,
+        "observedMaxFrameGapMs": 1654,
+        "maxGapBetweenActiveEdgeFramesMs": 1620,
+        "scrollStart": 492,
+        "scrollEnd": 593,
+        "activeAtSuccess": true,
+        "eventsDuringEdgeWait": [],
+        "pageErrors": [],
+        "phases": [
+          {
+            "name": "hold-active",
+            "at": 4400,
+            "scrollY": 492,
+            "innerHeight": 664,
+            "focused": true,
+            "hidden": false,
+            "drag": {
+              "active": true,
+              "x": 88,
+              "y": 331,
+              "targetId": "r0"
+            }
+          },
+          {
+            "name": "pointer-at-edge",
+            "at": 4415,
+            "scrollY": 492,
+            "innerHeight": 664,
+            "focused": true,
+            "hidden": false,
+            "drag": {
+              "active": true,
+              "x": 88,
+              "y": 652,
+              "targetId": "r0"
+            }
+          },
+          {
+            "name": "scrolled",
+            "at": 8350,
+            "scrollY": 593,
+            "innerHeight": 664,
+            "focused": true,
+            "hidden": false,
+            "drag": {
+              "active": true,
+              "x": 88,
+              "y": 652,
+              "targetId": "r6"
+            }
+          }
+        ]
+      },
+      {
+        "status": "passed",
+        "durationMs": 8388,
+        "edgeToAssertionSuccessMs": 2914,
+        "observedMaxFrameGapMs": 1944,
+        "maxGapBetweenActiveEdgeFramesMs": 1944,
+        "scrollStart": 492,
+        "scrollEnd": 557,
+        "activeAtSuccess": true,
+        "eventsDuringEdgeWait": [],
+        "pageErrors": [],
+        "phases": [
+          {
+            "name": "hold-active",
+            "at": 4256,
+            "scrollY": 492,
+            "innerHeight": 664,
+            "focused": true,
+            "hidden": false,
+            "drag": {
+              "active": true,
+              "x": 88,
+              "y": 331,
+              "targetId": "r0"
+            }
+          },
+          {
+            "name": "pointer-at-edge",
+            "at": 4300,
+            "scrollY": 492,
+            "innerHeight": 664,
+            "focused": true,
+            "hidden": false,
+            "drag": {
+              "active": true,
+              "x": 88,
+              "y": 652,
+              "targetId": "r0"
+            }
+          },
+          {
+            "name": "scrolled",
+            "at": 7214,
+            "scrollY": 557,
+            "innerHeight": 664,
+            "focused": true,
+            "hidden": false,
+            "drag": {
+              "active": true,
+              "x": 88,
+              "y": 652,
+              "targetId": "r3"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "interpretation": {
+    "observed": "Large WebKit animation-frame gaps while edge drag remains active; no page errors or cancel/focus-loss events during successful measured edge waits.",
+    "supportedExplanation": "The five-second assertion budget is sensitive to shared execution/render scheduling latency.",
+    "notEstablished": "The exact original trigger, a focus-loss cause, or a specific WebKit/OS implementation defect. Parallel probe did not reproduce the original failure.",
+    "change": "Only test diagnostics, bounded 15-second edge completion wait, active/edge checks and cancel/order assertions. Product code and saved keys unchanged."
+  },
+  "finalSerialSuite": {
+    "status": "passed",
+    "command": "npx playwright test --config=playwright.v101.config.cjs --workers=1",
+    "passed": 672,
+    "failed": 0,
+    "skipped": 0,
+    "retries": 0,
+    "reportedDuration": "15.3m",
+    "byProject": {
+      "phone-chromium": 112,
+      "tablet-chromium": 112,
+      "small-chromium": 112,
+      "iphone-webkit": 112,
+      "ipad-webkit": 112,
+      "desktop-chromium": 112
+    },
+    "byFile": {
+      "tests/v101-improvements.test.cjs": 108,
+      "tests/v101-layout.test.cjs": 156,
+      "tests/v101-personal.test.cjs": 168,
+      "tests/v101.test.cjs": 240
+    },
+    "autoscrollRuns": [
+      {
+        "project": "phone-chromium",
+        "status": "passed",
+        "duration": "1.3s"
+      },
+      {
+        "project": "tablet-chromium",
+        "status": "passed",
+        "duration": "1.4s"
+      },
+      {
+        "project": "small-chromium",
+        "status": "passed",
+        "duration": "1.4s"
+      },
+      {
+        "project": "iphone-webkit",
+        "status": "passed",
+        "duration": "7.2s"
+      },
+      {
+        "project": "ipad-webkit",
+        "status": "passed",
+        "duration": "5.9s"
+      },
+      {
+        "project": "desktop-chromium",
+        "status": "passed",
+        "duration": "1.4s"
+      }
+    ],
+    "testFileSha256": "c348d37ef35e913fbd46620cb89c1cfe9dfef04042f47a4ba80c0669dd057c2e",
+    "fullLogSha256": "c1ab034d3019be2ecba3fbc522c382f5aa542d89c5884866c765b0dd2d0e06d5"
+  },
+  "scope": "Mock API fixtures and generated test images; no new live API or physical iPhone/iPad Safari validation."
+}

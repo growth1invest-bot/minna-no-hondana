@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#62442f"><title>みんなの本棚 Ver.1.0.1</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5efe6;color:#3a2a20;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",sans-serif}header,main,nav{max-width:820px;margin:auto}header{padding:28px 18px 8px}h1{margin:6px 0;font-size:28px}h2{font-size:21px}p{line-height:1.7}.muted,.note{color:#756050;font-size:13px}.tabs{display:flex;gap:8px;padding:18px 14px}button,input,select{font:inherit}button{cursor:pointer;touch-action:manipulation;min-height:44px}button:disabled{cursor:default;opacity:.55}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #277c91;outline-offset:3px}.tab{flex:1;border:1px solid #b69a80;background:#fffaf4;border-radius:25px;padding:12px 3px;font-size:13px;color:#684b39}.tab[aria-pressed=true],.primary{background:#62442f;color:white}main{padding:0 14px max(32px,env(safe-area-inset-bottom))}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.primary,.secondary{border:1px solid #96765c;border-radius:12px;padding:10px 16px}.secondary{background:#fffaf3;color:#62442f}.case{border:12px solid #8c5a35;border-radius:9px;padding:14px 10px 20px;background:repeating-linear-gradient(93deg,#ffffff05 0 2px,#5930140b 3px 5px,transparent 6px 31px),linear-gradient(90deg,#b67d47,#e0b47a,#b67d47);box-shadow:0 14px 24px #3b24152c,inset 0 0 14px #56361a66}.shelf{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:end;gap:12px;padding:18px 6px 8px;min-height:188px;background:linear-gradient(#59391c45,transparent 40%),repeating-linear-gradient(2deg,#d8a774 0 3px,#dbaf80 4px 7px,#e1b786 8px 21px);border-bottom:15px solid #8b572f;box-shadow:0 7px 0 #60391f,inset 0 -7px 8px #75432144}.shelf+.shelf{margin-top:18px}.book{border:0;background:transparent;padding:0;min-width:0;display:flex;justify-content:center;position:relative}.cover{width:min(100%,132px);aspect-ratio:.7;background:#466a6a;color:#fff8e7;box-shadow:3px 4px 7px #24150975;border-left:5px solid #0002;border-radius:2px 4px 4px 2px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:7px;position:relative;overflow:hidden}.cover strong{font-size:clamp(12px,3vw,18px);overflow-wrap:anywhere;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;overflow:hidden}.cover small{font-size:10px;overflow-wrap:anywhere}.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#eee4d5}.star{position:absolute;right:0;top:0;background:#fff5c0;color:#68430a;padding:3px 6px;border-radius:50%;font-size:16px}.empty{grid-column:1/-1;text-align:center;color:#65472f;font-size:13px;line-height:1.8;padding:16px 0}.note{text-align:center;line-height:1.8;margin:24px 0 0}dialog{border:1px solid #d4c2ad;border-radius:18px;padding:22px;width:min(94vw,620px);max-height:88vh;max-height:88dvh;overflow:auto;background:#fffaf3;color:#3a2a20}dialog::backdrop{background:#1d120b99}.dialog-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.dialog-head h2{margin:0}.fields{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}input,select{border:1px solid #a98d74;border-radius:8px;background:white;color:#3a2a20;min-height:44px;padding:9px;font-size:16px;max-width:100%}input[type=search]{width:100%;min-width:0}.query{flex:1;min-width:180px}label{font-size:14px;line-height:1.7}#results{display:grid;gap:10px;margin:12px 0}.result{display:flex;gap:12px;align-items:center;border:1px solid #d7c7b5;border-radius:10px;padding:10px;min-width:0}.result:has(input:checked){background:#eee5d5;border-color:#62442f}.result input{flex:none;width:23px;height:23px}.result .cover{flex:none;width:58px;min-height:82px}.result .cover strong{font-size:10px}.result .cover small{display:none}.result-info{min-width:0;overflow-wrap:anywhere}.result-info strong{display:block}.result-info small{color:#756050}.register{position:sticky;bottom:-22px;background:#fffaf3;padding:12px 0;box-shadow:0 -5px 10px #fffaf3;display:flex;gap:8px;align-items:center;flex-wrap:wrap}#notice{min-height:24px;font-size:14px;line-height:1.7}#search-message{line-height:1.7;font-size:14px}#detail-actions{display:grid;gap:12px;margin:20px 0}.danger{color:#9b3022}.check{display:flex;gap:10px;align-items:center}.check input{width:22px;height:22px;min-height:22px}#detail-description{white-space:pre-wrap;overflow-wrap:anywhere}.cover-credit{display:flex;gap:5px;align-items:center;flex-wrap:wrap;font-size:11px;margin-top:4px}.cover-credit img{height:auto;width:88px}.cover-credit a{color:#42616d}#storage-error{padding:12px;background:#fff0d9;border:1px solid #ad6c23;border-radius:10px}#storage-error[hidden]{display:none}@media(min-width:620px){.shelf{grid-template-columns:repeat(4,minmax(0,1fr));min-height:235px;padding:22px 12px 8px}.cover strong{font-size:18px}}@media(max-width:360px){.case{border-width:8px;padding:10px 5px 18px}.shelf{gap:8px;padding-inline:3px;min-height:165px}h1{font-size:25px}}
+.fields{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}.fields>label:nth-child(1),.fields>label:nth-child(2){grid-column:span 2;min-width:0}.fields select{width:100%}.fields>.query{grid-column:span 3;min-width:0}.fields>button[type=submit]{grid-column:span 1;align-self:end;padding-inline:8px}.fields>#cancel-search{grid-column:1/-1}
+#search-dialog{padding:0;overflow:hidden;width:min(96vw,760px);height:90vh;height:90dvh;max-height:94dvh;display:none;flex-direction:column}#search-dialog[open]{display:flex}#search-dialog>.dialog-head{padding:14px 16px;border-bottom:1px solid #ddcfbd;flex:none}.search-scroll{overflow-y:auto;overscroll-behavior:contain;min-height:0;padding:0 16px 20px;scroll-padding-block:12px}.register{position:static;flex:none;margin:0;padding:12px 16px max(12px,env(safe-area-inset-bottom));border-top:1px solid #ddcfbd;box-shadow:none}.register button{flex:1}.result{gap:9px;padding:9px}.result .cover{width:48px;min-height:68px}.result-info small{display:block;line-height:1.5}.result-info .match-reason{font-size:11px;color:#496449}.result-info strong{font-size:15px;line-height:1.5}.result-group h3{font-size:16px;margin:16px 0 8px}.result-list,.edition-list{display:grid;gap:8px}.edition-group{min-width:0}.edition-group>details{margin:6px 0 10px 12px}.edition-group summary,#related-results>summary{cursor:pointer;min-height:44px;padding:10px 4px;color:#62442f}.edition-list{margin-top:5px}.fields>.author-query{grid-column:1/-1;min-width:0}.author-query input{width:100%}#search-help{font-size:12px;line-height:1.6;margin:8px 0}#results{display:block}.search-tools{font-size:12px;margin:10px 0}.search-tools details{margin-top:8px}#search-message{margin:10px 0}#refine-search{font-size:13px;padding:0}.result input{min-height:23px}#search-dialog input[type=checkbox]{min-height:23px}@media(max-width:360px){.register{padding-inline:10px}.register button{font-size:13px;padding-inline:8px}.search-scroll{padding-inline:10px}}
+#search-options>summary{cursor:pointer;min-height:44px;padding:10px 0;font-size:13px}#search-options>.fields{margin-top:4px}#search-options .check{grid-column:1/-1}#search-form>.fields{margin-bottom:0}#cover-message{font-size:12px}#cancel-search{width:100%;margin-top:8px}
+.shelf-tools{display:flex;gap:12px;flex-wrap:wrap;align-items:end;margin-bottom:16px}.shelf-tools label{flex:1;min-width:180px}.shelf-tools select{width:100%}.backup-panel{padding:12px;border:1px solid #ccb79e;border-radius:12px;background:#fffaf3;margin:0 0 18px}.backup-panel summary{cursor:pointer;min-height:44px;display:flex;align-items:center}.backup-actions{display:grid;gap:12px}.backup-actions input{width:100%;min-width:0}#backup-status,#restore-status{white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px;line-height:1.6}#book-tags{padding:12px;border:1px solid #cbb69e;border-radius:10px}#tag-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#tag-options label{border:1px solid #dbcbb9;border-radius:8px;padding:8px;min-height:48px;font-size:13px}#tag-options .check input{flex:none}#book-note{width:100%;min-height:160px;padding:10px;font:inherit;font-size:16px;line-height:1.6;border:1px solid #a98d74;border-radius:8px;background:white;color:#3a2a20;resize:vertical}.note-field{display:grid;gap:6px}#restore-dialog p{overflow-wrap:anywhere}.restore-actions{display:flex;gap:10px;flex-wrap:wrap}.restore-actions button{flex:1}#restore-dialog .primary{min-width:180px}#detail{scroll-padding-bottom:20px}@media(max-width:360px){#tag-options{grid-template-columns:1fr}}
+.case{position:relative;border:11px solid #805335;border-top:16px solid #986b44;border-bottom:18px solid #73492e;padding:7px 11px 18px;background:repeating-linear-gradient(91deg,transparent 0 17px,#51331c0c 18px 20px,transparent 21px 47px),linear-gradient(90deg,#a1744d,#c99b67 40%,#b08657 75%,#a1734a);box-shadow:inset 5px 0 8px #40261355,inset -5px 0 8px #40261355,0 10px 18px #39251830,0 2px 0 #d5ad7a;border-radius:5px 5px 7px 7px}
+.shelf{position:relative;align-items:end;gap:16px 10px;min-height:218px;padding:24px 4px 13px;border-bottom:17px solid #98623a;background:linear-gradient(180deg,#4e301e50,#593b2320 40%,#28170e32 99%),repeating-linear-gradient(1deg,#cfaa7e 0 3px,#c9a174 4px 7px,#d4af80 8px 25px);box-shadow:inset 0 13px 18px #4c2d1a44,0 5px 0 #59371f,0 11px 10px #44281255}
+.shelf::after{content:'';position:absolute;left:0;right:0;bottom:-17px;height:17px;pointer-events:none;background:repeating-linear-gradient(0deg,#ffffff09 0 1px,transparent 2px 4px),linear-gradient(#c99760 0 2px,#a06d40 3px 11px,#744727 16px);box-shadow:inset 0 1px 1px #f8d49a80}
+.shelf+.shelf{margin-top:12px}.book-cell{min-width:0;position:relative;display:flex;flex-direction:column;align-items:center;gap:6px}.book{width:100%;min-height:44px;touch-action:pan-y}.book .cover{width:min(100%,132px);aspect-ratio:0.7;padding:8px 6px;box-shadow:3px 3px 4px #28180d75,0 7px 9px #26170e40;flex:none}.book .cover img{object-fit:contain;object-position:center;aspect-ratio:auto}.book .cover small{font-size:clamp(10px,1.8vw,12px);line-height:1.4}.book .cover strong{line-height:1.5}.empty{min-height:160px;padding:25px 6px;color:#573d27}.move-handle{border:1px solid #9d7856;border-radius:8px;background:#fff5e3;color:#593d27;min-height:44px;padding:5px 10px;font-size:12px;touch-action:none;-webkit-touch-callout:none;user-select:none}.is-editing .book{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}.is-selected>.book{outline:3px solid #fff2b7;outline-offset:4px;border-radius:3px}.is-target::before{content:'';position:absolute;inset:-8px -4px;border:3px dashed #144f5c;border-radius:7px;background:#f2f9eb35;pointer-events:none}.is-source>.book .cover{opacity:.35}.drag-ghost{position:fixed;left:0;top:0;z-index:2000;pointer-events:none;margin:0;opacity:.95;box-shadow:8px 12px 20px #23170d66;will-change:transform}.drag-ghost img{object-fit:contain}#reorder-panel{position:sticky;top:0;z-index:20;background:#fffaf3;border:1px solid #bda482;border-radius:12px;padding:8px 10px;margin:0 0 16px;box-shadow:0 4px 8px #3a24161c}#reorder-panel[hidden]{display:none}#reorder-status{font-size:13px;line-height:1.45;margin:5px 0 8px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}.reorder-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.reorder-actions button{font-size:13px;padding:8px}.reorder-help summary{font-size:12px;cursor:pointer;min-height:32px;padding:6px 0}.reorder-help p{font-size:12px;line-height:1.5}#favorite-layout-note{line-height:1.6}.shelf-tools>button{flex:none}@media(min-width:620px){.shelf{min-height:248px;padding:28px 12px 13px;gap:16px}.reorder-actions{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:360px){.case{border-inline-width:8px;padding-inline:7px}.shelf{min-height:186px;padding-inline:1px;gap:8px}.book .cover strong{font-size:12px}.move-handle{padding-inline:8px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+.book .cover{gap:6px;padding:6px}.book .cover strong{flex:none;width:100%;-webkit-line-clamp:3;line-height:1.45}.book .cover small{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;flex:none;width:100%;line-height:1.3}#manual-cover-panel{border:1px solid #cbb69e;border-radius:10px;padding:12px;min-width:0}#manual-cover-panel button{width:100%;margin:5px 0}.manual-file{display:grid;gap:8px;margin-top:12px}.manual-file input{width:100%;min-width:0}#manual-preview{display:flex;justify-content:center;margin:10px 0}#manual-preview img{max-width:120px;max-height:180px;object-fit:contain}#manual-cover-status,#detail-save-status{font-size:13px;line-height:1.6;overflow-wrap:anywhere}#detail-save-status{color:#923f23}</style>
+</head>
+<body>
+<header><div class="muted">MY LITTLE LIBRARY · Ver.1.0.1</div><h1>📚 みんなの本棚</h1><div class="muted">読んだ本から、次の一冊へ。</div></header>
+<nav class="tabs" aria-label="本棚の表示切り替え"><button class="tab" data-type="read" aria-pressed="true">読んだ本</button><button class="tab" data-type="want" aria-pressed="false">読みたい本</button><button class="tab" data-type="favorite" aria-pressed="false">お気に入り</button></nav>
+<main><div id="storage-error" role="alert" hidden></div><div class="toolbar"><span id="count" class="muted"></span><button class="primary" id="open-search">＋ 本を追加</button></div><div id="notice" role="status" aria-live="polite"></div><div class="shelf-tools"><label>本棚の並び順<select id="shelf-sort"><option value="registered">登録順</option><option value="title">タイトル順</option><option value="favorite">お気に入り優先</option><option value="manual">自由配置順</option></select></label><button id="start-reorder" class="secondary" type="button">並び替えモード</button></div><p id="favorite-layout-note" class="muted" hidden>お気に入りは読んだ本の自由配置順を使います。配置の変更は「読んだ本」で行えます。</p><section id="reorder-panel" hidden aria-label="本の配置を編集"><details class="reorder-help"><summary>移動方法・スクロールについて</summary><p>表紙または移動ハンドルを長押しして移動し、指を離して仮置きします。表紙・棚の余白は長押し前ならスクロールできます。ハンドルは移動専用です。「配置を保存」で確定、キャンセルで元に戻ります。</p></details><p id="reorder-status" role="status" aria-live="polite"></p><div class="reorder-actions"><button id="move-before" class="secondary" type="button">前へ</button><button id="move-after" class="secondary" type="button">後ろへ</button><button id="save-reorder" class="primary" type="button">配置を保存</button><button id="cancel-reorder" class="secondary" type="button">キャンセル</button></div></section><details id="backup-panel" class="backup-panel"><summary>バックアップ・復元</summary><p class="muted">読書データをJSONファイルに保存し、このブラウザへ復元できます。自動同期ではありません。ファイルにはメモも含まれます。iPhoneではダウンロードしたJSONを「ファイル」で保管してください。</p><div class="backup-actions"><button id="export-backup" class="secondary" type="button">JSONを書き出す</button><label>JSONファイルから復元<input id="import-backup" type="file" accept=".json,application/json"></label></div><div id="backup-status" role="status" aria-live="polite"></div></details><div class="case" id="case" aria-label="本棚"></div><p class="note">本をタップして、読書状況やお気に入りを変更できます。<br>本棚はこのブラウザに保存されます。端末間の同期はありません。<br>ブラウザのデータ削除で本棚も消えます。プライベートブラウズは保存に適しません。<br>表紙の確認時はISBNを各提供元に送信します。表紙画像は外部表示します。<br>書誌：<a href="https://ndlsearch.ndl.go.jp" target="_blank" rel="noopener noreferrer">国立国会図書館サーチAPI</a>（<a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>・表示用整形） / Google Books / <a href="https://openlibrary.org" target="_blank" rel="noopener noreferrer">Open Library</a> / <a href="https://openbd.jp" target="_blank" rel="noopener noreferrer">openBD</a>（通信が必要です）<br>Ver.1.0（なければ0.9・0.8・0.7・0.6・0.5・0.4・0.3）の本棚を初回に引き継ぎ、以後は別に保存します。</p></main>
+<dialog id="search-dialog" aria-labelledby="search-heading"><div class="dialog-head"><h2 id="search-heading">本を探す</h2><button class="secondary" id="close-search">閉じる</button></div><div class="search-scroll"><form id="search-form"><div class="fields"><label class="query">検索キーワード<input id="query" type="search" required maxlength="200" placeholder="書名や著者名" enterkeyhint="search"></label><button class="primary" type="submit">検索</button></div><details id="search-options"><summary>著者・ISBN・検索先で絞る</summary><div class="fields"><label>検索先<br><select id="provider"><option value="auto">自動</option><option value="ndl">NDLサーチ</option><option value="openlibrary">Open Library</option></select></label><label>検索対象<br><select id="search-kind"><option value="all">タイトル・著者</option><option value="intitle">タイトル</option><option value="inauthor">著者</option><option value="isbn">ISBN</option></select></label><label class="author-query">著者で絞る（任意）<input id="author-filter" type="search" maxlength="120" placeholder="例：カーネギー"></label><label class="check"><input type="checkbox" id="include-other">外国語版・言語不明の版も表示する</label></div></details><button class="secondary" type="button" id="cancel-search" hidden>検索を中止</button></form><div id="search-message" role="status" aria-live="polite">キーワードを入力して検索してください。</div><p id="search-help" class="muted">書名の一致度順。見つからないときは著者名やISBNで絞れます。</p><div id="results" aria-label="検索結果"></div><button class="secondary" id="more" hidden>さらに表示</button><div class="search-tools"><p id="cover-message" class="muted" role="status" aria-live="polite"></p><button class="secondary" id="retry-covers" type="button">表紙を再確認</button><details><summary>診断情報（確認用）</summary><button class="secondary" id="refresh-diagnostics" type="button">診断を更新</button><textarea id="diagnostics" readonly aria-label="診断記録" style="width:100%;height:140px"></textarea></details></div></div><div class="register"><label>登録先 <select id="destination"><option value="read">読んだ本</option><option value="want">読みたい本</option></select></label><button class="primary" id="register" disabled>選択した本を登録（0冊）</button></div></dialog>
+<dialog id="detail" aria-labelledby="detail-title"><div class="dialog-head"><h2 id="detail-title"></h2><button class="secondary" id="close-detail">閉じる</button></div><p id="detail-author"></p><p id="detail-description"></p><p id="detail-identifiers" class="muted"></p><div id="detail-credit"></div><div id="detail-actions"><label>読書状況 <select id="book-type"><option value="read">読んだ本</option><option value="want">読みたい本</option></select></label><label class="check"><input type="checkbox" id="book-favorite">お気に入り（読んだ本のみ）</label><fieldset id="book-tags"><legend>おすすめタグ（複数選択）</legend><div id="tag-options"></div></fieldset><label class="note-field">感想・メモ（任意）<textarea id="book-note" maxlength="20000" placeholder="自分用の感想や覚えておきたいこと"></textarea><span class="muted">このブラウザに保存します。外部公開・SNS投稿はしません。空欄で保存するとメモを削除できます。</span></label><fieldset id="manual-cover-panel"><legend>表紙画像</legend><p class="muted">自動表紙がない場合は端末の画像を設定できます。手動画像は書誌画像と別に保存し、外部へ送信しません。画像の内容は自動照合しません。</p><button id="detail-retry-cover" class="secondary" type="button">未取得の表紙を再確認</button><label class="manual-file">端末の画像から手動表紙を設定<input id="manual-cover-file" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,image/avif"></label><p class="muted">12MB以下の写真を端末内で圧縮します。1冊120KB、合計1.5MB・最大40冊。空き容量によっては保存できません。</p><div id="manual-preview"></div><button id="remove-manual-cover" class="secondary" type="button">手動表紙を解除</button><p id="manual-cover-status" role="status" aria-live="polite"></p></fieldset><div id="detail-save-status" role="alert"></div><button class="primary" id="save-detail">変更を保存</button><button class="secondary danger" id="delete-book">本棚から削除</button></div></dialog>
+<dialog id="restore-dialog" aria-labelledby="restore-title"><h2 id="restore-title">読書データを復元しますか？</h2><p id="restore-summary"></p><p>現在のVer.1.0.1のデータを、このファイルの内容に置き換えます。必要なら先にバックアップしてください。旧バージョンの保存データは変更しません。</p><div id="restore-status" role="alert"></div><div class="restore-actions"><button id="cancel-restore" class="secondary" type="button">キャンセル</button><button id="confirm-restore" class="primary" type="button">この内容で置き換える</button></div></dialog>
+<script>
+'use strict';
+const KEY='minna-no-hondana.v101';
+const MAX_MANUAL_BYTES=120*1024,MAX_MANUAL_TOTAL=1536*1024,MAX_MANUAL_COUNT=40;
+let manualDraft=null,manualBusy=false,manualLoadToken=0,detailCoverCheckId=null;
+
+const PRESET_TAGS=[['career','仕事・キャリア'],['relationships','人間関係'],['growth','自己成長'],['money','お金・投資'],['habits','習慣・時間管理'],['psychology','心理学・考え方'],['leadership','リーダーシップ'],['parenting','子育て・教育']];
+const SORTS=['registered','title','favorite','manual'],BACKUP_FORMAT='minna-no-hondana-backup',BACKUP_SCHEMA=3,MAX_BACKUP_BYTES=10*1024*1024;
+let settings={sort:'registered'},manualOrder={read:[],want:[]},reorderSession=null,dragState=null,suppressBookClickUntil=0;
+function withReading(b,index,added=false){return {...b,favorite:typeof b.favorite==='boolean'?b.favorite:false,reading:b.reading??{recommendedTagIds:[],review:{text:'',visibility:'private',updatedAt:null},placement:{registrationOrder:index,position:null},addedAt:added?new Date().toISOString():null}}}
+function validDate(value){return value===null||(typeof value==='string'&&value.length<=40&&/^\d{4}-\d{2}-\d{2}T/.test(value)&&Number.isFinite(Date.parse(value)))}
+function plainObject(v){return v!==null&&typeof v==='object'&&!Array.isArray(v)}
+function assertSafeJSON(value,depth=0){if(depth>24)throw Error('データの階層が深すぎます。');if(value&&typeof value==='object')for(const key of Object.keys(value)){if(['__proto__','prototype','constructor'].includes(key))throw Error('読み込めない項目が含まれます。');assertSafeJSON(value[key],depth+1)}}
+function validateRecords(data,version=101){
+ assertSafeJSON(data);if(!plainObject(data)||data.version!==version||!plainObject(data.settings)||!(version===9?SORTS.slice(0,3):SORTS).includes(data.settings.sort)||!Array.isArray(data.books)||data.books.length>5000)throw Error('対応する読書データの形式ではありません。');
+ const ids=new Set();for(const b of data.books){
+  if(!validBook(b)||b.id.length>2000||b.title.length>2000||b.author.length>4000||typeof b.favorite!=='boolean'||ids.has(b.id))throw Error('書籍の情報が不正か、IDが重複しています。');ids.add(b.id);
+  if(b.isbns!==undefined&&(!Array.isArray(b.isbns)||b.isbns.length>30||b.isbns.some(i=>typeof i!=='string'||!isbn13(i))))throw Error('ISBNが不正です。');
+  for(const field of ['image','publisher','description','source','edition'])if(b[field]!==undefined&&typeof b[field]!=='string')throw Error('書誌項目の形式が不正です。');
+  if(b.published!==undefined&&typeof b.published!=='string'&&(!Array.isArray(b.published)||b.published.some(v=>typeof v!=='string')))throw Error('刊行情報が不正です。');
+  if(b.languages!==undefined&&(!Array.isArray(b.languages)||b.languages.some(l=>typeof l!=='string')))throw Error('言語情報が不正です。');
+  if(b.identifiers!==undefined&&!plainObject(b.identifiers))throw Error('識別情報が不正です。');
+  const r=b.reading;if(!plainObject(r)||!Array.isArray(r.recommendedTagIds)||r.recommendedTagIds.length>PRESET_TAGS.length||new Set(r.recommendedTagIds).size!==r.recommendedTagIds.length||r.recommendedTagIds.some(id=>!PRESET_TAGS.some(([known])=>known===id)))throw Error('おすすめタグが不正です。');
+  if(!plainObject(r.review)||typeof r.review.text!=='string'||r.review.text.length>20000||r.review.visibility!=='private'||!validDate(r.review.updatedAt)||!validDate(r.addedAt))throw Error('メモの形式が不正です。');
+  if(!plainObject(r.placement)||!Number.isSafeInteger(r.placement.registrationOrder)||r.placement.registrationOrder<0||r.placement.position!==null)throw Error('配置情報の形式が不正です。');
+ }
+ return data;
+}
+function registrationBooks(list){return list.map((b,i)=>({b,i})).sort((a,b)=>a.b.reading.placement.registrationOrder-b.b.reading.placement.registrationOrder||a.i-b.i).map(x=>x.b)}
+function reconcileOrder(previous,list){const result={read:[],want:[]};for(const type of ['read','want']){const valid=new Set(list.filter(b=>b.type===type).map(b=>b.id)),seen=new Set();for(const id of previous?.[type]||[])if(valid.has(id)&&!seen.has(id)){result[type].push(id);seen.add(id)}for(const b of registrationBooks(list))if(b.type===type&&!seen.has(b.id)){result[type].push(b.id);seen.add(b.id)}}return result}
+function validateOrder(data){if(!plainObject(data.manualOrder)||Object.keys(data.manualOrder).some(k=>!['read','want'].includes(k)))throw Error('自由配置の形式が不正です。');for(const type of ['read','want']){const ids=data.manualOrder[type],expected=data.books.filter(b=>b.type===type).map(b=>b.id),valid=new Set(expected);if(!Array.isArray(ids)||ids.length!==expected.length||new Set(ids).size!==ids.length||ids.some(id=>typeof id!=='string'||!valid.has(id)))throw Error('自由配置に重複・欠落・異なる読書状況の本が含まれます。')}return data}
+function validateData(data){validateRecords(data);validateOrder(data);validateManualTotals(data.books);return data}
+function upgradeV10(data){validateRecords(data,10);validateOrder(data);return validateData({...data,version:101})}
+function upgradeV09(data){validateRecords(data,9);return upgradeV10({...data,version:10,manualOrder:reconcileOrder(null,data.books)})}
+
+function backupDocument(data){return {format:BACKUP_FORMAT,schemaVersion:BACKUP_SCHEMA,exportedAt:new Date().toISOString(),data}}
+function checkedBackup(data){const document=backupDocument(validateData(data));const text=JSON.stringify(document,null,2);if(new Blob([text]).size>MAX_BACKUP_BYTES)throw Error('データが10MBを超えています。');return text}
+function parseBackup(text){let value;try{value=JSON.parse(text)}catch{throw Error('JSONファイルを読み取れません。')}assertSafeJSON(value);if(!plainObject(value)||value.format!==BACKUP_FORMAT||!validDate(value.exportedAt)||value.exportedAt===null)throw Error('対応するバックアップではありません。');if(value.schemaVersion===1&&value.data?.version===9)return {data:upgradeV09(value.data),sourceVersion:'Ver.0.9'};if(value.schemaVersion===2&&value.data?.version===10)return {data:upgradeV10(value.data),sourceVersion:'Ver.1.0'};if(value.schemaVersion===3&&value.data?.version===101)return {data:validateData(value.data),sourceVersion:'Ver.1.0.1'};throw Error('バックアップ形式とアプリの版が対応していません。')}
+
+
+const $=id=>document.getElementById(id);
+let books=[],filter='read',activeId=null,controller=null,requestId=0,offset=0,searchState=null,activeProvider=null,hasMore=false;
+const cache=new Map(), nextRequest=new Map();
+const providerBlockedUntil=new Map();
+const COOLDOWN_KEY='minna-no-hondana.v101.cooldowns';
+function providerKey(provider){return provider.startsWith('openlibrary')?'openlibrary':provider}
+function saveCooldowns(){try{localStorage.setItem(COOLDOWN_KEY,JSON.stringify([...providerBlockedUntil].filter(([,until])=>until>Date.now())))}catch{}}
+function loadCooldowns(){try{const rows=JSON.parse(localStorage.getItem(COOLDOWN_KEY)||'[]');if(Array.isArray(rows))for(const [key,until] of rows)if(['ndl','openlibrary','openbd','google','google-dynamic'].includes(key)&&Number.isFinite(until)&&until>Date.now())providerBlockedUntil.set(key,until)}catch{}}
+const selected=new Map(),results=new Map(),resultNodes=new Map();
+const SEARCH_LIMITS={pages:3,ndlFirstSize:20,ndlSize:200,librarySize:20,requests:10,timeMs:30000};
+let searchPages=0,metadataRequests=0;
+
+function message(text){$('notice').textContent=text}
+function storageError(text){$('storage-error').hidden=false;$('storage-error').textContent=text}
+function safeImage(value){try{const url=new URL(value);if(!['http:','https:'].includes(url.protocol))return '';url.protocol='https:';return url.href}catch{return ''}}
+function validBook(b){return b&&typeof b.id==='string'&&b.id.length>0&&typeof b.title==='string'&&typeof b.author==='string'&&['read','want'].includes(b.type)}
+// Read older shelves without rewriting their edition metadata or storage keys.
+try {
+  const current=localStorage.getItem(KEY);
+  let raw=current,version=101,imported='';
+  if(raw===null){for(const [old,key] of [[10,'minna-no-hondana.v10'],...[9,8,7,6,5,4,3].map(v=>[v,'minna-no-hondana.v0'+v])]){const value=localStorage.getItem(key);if(value!==null){raw=value;version=old;imported=old===10?'Ver.1.0':'Ver.0.'+old;break}}}
+  if(raw!==null){
+    const data=JSON.parse(raw);
+    if(data.version!==version||!Array.isArray(data.books)||!data.books.every(validBook)||new Set(data.books.map(b=>b.id)).size!==data.books.length)throw Error('invalid');
+    let loaded;if(version===101)loaded=validateData(data);else if(version===10)loaded=upgradeV10(data);else if(version===9)loaded=upgradeV09(data);else{const importedBooks=data.books.map((b,i)=>withReading(b,i));loaded=upgradeV09({version:9,books:importedBooks,settings});}
+    settings={...loaded.settings};books=loaded.books;manualOrder=loaded.manualOrder;
+    if(imported)message(imported+'の本棚を引き継ぎました。既存のタイトル・表紙・版情報は変更しません。');
+  }
+}catch{storageError('保存データを読み込めませんでした。元のデータを保護するため、変更の保存を停止しています。');}
+let readBlocked=!$('storage-error').hidden;
+function persist(next,nextSettings=settings,recover=false,nextOrder=reconcileOrder(manualOrder,next)){
+ if(readBlocked&&!recover){message('保存データを読み込めないため変更できません。');return false}
+ const payload={version:101,books:next,settings:nextSettings,manualOrder:nextOrder};let data;
+ try{checkedBackup(payload);data=JSON.stringify(payload);}catch{storageError('保存する読書データの形式または容量を確認してください。変更は保存されていません。');return false}
+ try{try{localStorage.setItem(KEY,data)}catch(error){if(!['QuotaExceededError','NS_ERROR_DOM_QUOTA_REACHED'].includes(error.name))throw error;localStorage.removeItem('minna-no-hondana.v101.search');localStorage.removeItem('minna-no-hondana.v101.covers');localStorage.setItem(KEY,data)}books=next;settings=nextSettings;manualOrder=nextOrder;readBlocked=false;$('storage-error').hidden=true;return true}
+ catch{storageError('ブラウザに保存できません。空き容量やブラウザの保存設定を確認してください。変更は保存されていません。');return false}
+}
+function shelfList(){const type=filter==='want'?'want':'read';if(reorderSession||settings.sort==='manual'){const byId=new Map(books.map(b=>[b.id,b])),ids=reorderSession?reorderSession.order:manualOrder[type];return ids.map(id=>byId.get(id)).filter(b=>b&&(filter!=='favorite'||b.favorite));}return books.map((b,index)=>({b,index})).filter(({b})=>filter==='favorite'?b.type==='read'&&b.favorite:b.type===filter).sort((a,b)=>{const order=a.b.reading.placement.registrationOrder-b.b.reading.placement.registrationOrder||a.index-b.index;return (settings.sort==='title'?a.b.title.localeCompare(b.b.title,'ja'):settings.sort==='favorite'?Number(b.b.favorite)-Number(a.b.favorite):0)||order}).map(({b})=>b)}
+$('shelf-sort').onchange=()=>{if(persist(books,{...settings,sort:$('shelf-sort').value}))render();else $('shelf-sort').value=settings.sort};
+let pendingRestore=null,restoreLoadId=0;
+$('export-backup').onclick=()=>{try{if(readBlocked)throw Error('保存データを読み込めないため書き出せません。');const text=checkedBackup({version:101,books,settings,manualOrder}),blob=new Blob([text],{type:'application/json'}),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download='minna-no-hondana-'+new Date().toISOString().slice(0,10)+'.json';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);$('backup-status').textContent='JSONのダウンロードを開始しました。ブラウザのダウンロード先を確認してください。自動同期は行いません。';}catch(e){$('backup-status').textContent='書き出せませんでした。'+e.message}};
+$('import-backup').onchange=async()=>{
+ if(reorderSession)return;
+ const file=$('import-backup').files[0],token=++restoreLoadId;pendingRestore=null;$('import-backup').value='';if(!file)return;
+ $('backup-status').textContent='ファイルを検証中…';
+ try{if(file.size>MAX_BACKUP_BYTES)throw Error('10MB以下のJSONファイルを選んでください。');const snapshot=localStorage.getItem(KEY),parsed=parseBackup(await file.text()),data=parsed.data;await verifyManualImages(data);if(token!==restoreLoadId)return;
+  pendingRestore={data,snapshot};const list=data.books,tags=list.filter(b=>b.reading.recommendedTagIds.length).length,notes=list.filter(b=>b.reading.review.text).length;
+  $('restore-summary').textContent=parsed.sourceVersion+'のバックアップ。現在 '+books.length+'冊 → ファイル '+list.length+'冊（読んだ本 '+list.filter(b=>b.type==='read').length+'冊、読みたい本 '+list.filter(b=>b.type==='want').length+'冊、お気に入り '+list.filter(b=>b.favorite).length+'冊、タグあり '+tags+'冊、メモあり '+notes+'冊）。並び順も復元します。';$('restore-status').textContent='';$('backup-status').textContent='検証できました。内容を確認してから復元してください。';$('restore-dialog').showModal();
+ }catch(e){if(token===restoreLoadId)$('backup-status').textContent='復元できませんでした。現在のデータは変更していません。'+e.message}
+};
+function cancelRestore(){pendingRestore=null;restoreLoadId++;$('restore-dialog').close()}
+$('cancel-restore').onclick=cancelRestore;
+$('restore-dialog').addEventListener('cancel',e=>{e.preventDefault();cancelRestore()});
+$('confirm-restore').onclick=()=>{
+ if(!pendingRestore)return;try{if(localStorage.getItem(KEY)!==pendingRestore.snapshot)throw Error('別の画面でデータが変更されました。ファイルを選び直してください。');const data=validateData(pendingRestore.data);
+ if(!persist(data.books,{...data.settings},true,data.manualOrder)){ $('restore-status').textContent='復元できませんでした。現在のデータは保持しています。保存容量や設定を確認して再試行してください。';return;}
+ selected.clear();results.clear();resultNodes.clear();$('results').replaceChildren();updateSelection();filter='read';closeDetail();render();cancelRestore();$('backup-status').textContent=data.books.length+'冊を復元しました。このブラウザへの復元で、自動同期は行いません。';message('読書データを復元しました。');
+ }catch(e){$('restore-status').textContent='復元を中止しました。現在のデータは保持しています。'+e.message;pendingRestore=null;}
+};
+
+function cover(book){
+ const el=document.createElement('span');el.className='cover';const title=document.createElement('strong');title.textContent=book.title;const author=document.createElement('small');author.textContent=book.author;el.append(title,author);
+ let current='';const update=()=>{if(!el.isConnected)return false;const found=coverFor(book),url=found?.image||'';if(!url||current===url)return true;current=url;el.querySelector('img')?.remove();const img=document.createElement('img');img.alt=book.title+' の表紙';img.loading='lazy';img.referrerPolicy='no-referrer';img.style.opacity='0';const failed=()=>{img.remove();rejectedImages.add(url);current='';queueCovers([book])};img.onload=()=>{if(img.naturalWidth>10&&img.naturalHeight>10)img.style.opacity='1';else failed()};img.onerror=failed;img.src=url;el.append(img);return true};
+ setTimeout(update,0);listenForCover(book,update);return el;
+}
+function render(){cancelDrag();const list=shelfList();$('shelf-sort').value=settings.sort;$('count').textContent=list.length+'冊';$('case').replaceChildren();$('case').classList.toggle('is-editing',!!reorderSession);document.querySelectorAll('.tab').forEach(t=>{t.setAttribute('aria-pressed',String(t.dataset.type===filter));t.disabled=!!reorderSession});for(const id of ['shelf-sort','open-search','export-backup','import-backup'])$(id).disabled=!!reorderSession;$('start-reorder').hidden=!!reorderSession||filter==='favorite';$('start-reorder').disabled=list.length<2||readBlocked;$('favorite-layout-note').hidden=filter!=='favorite';$('reorder-panel').hidden=!reorderSession;
+ const cols=matchMedia('(min-width:620px)').matches?4:3;for(let row=0;row<Math.max(2,Math.ceil(list.length/cols));row++){const shelf=document.createElement('section');shelf.className='shelf';shelf.setAttribute('aria-label','本棚 '+(row+1)+'段目');const items=list.slice(row*cols,(row+1)*cols);if(!items.length){const empty=document.createElement('div');empty.className='empty';empty.textContent=row===0?'まだ本がありません。「＋ 本を追加」から本棚をつくれます。':'';empty.setAttribute('aria-label','空きスペース');shelf.append(empty)}for(const b of items){const cell=document.createElement('div');cell.className='book-cell';cell.dataset.bookId=b.id;const button=document.createElement('button');button.className='book';button.dataset.bookId=b.id;button.setAttribute('aria-label',reorderSession?b.title+'を選択して配置':b.title+'の詳細');if(reorderSession)button.setAttribute('aria-pressed',String(reorderSession.selectedId===b.id));button.append(cover(b));if(b.favorite){const star=document.createElement('span');star.className='star';star.textContent='★';star.setAttribute('aria-label','お気に入り');button.append(star)}button.onclick=()=>{if(performance.now()<suppressBookClickUntil)return;if(reorderSession)selectReorderBook(b.id);else openDetail(b.id)};cell.append(button);if(reorderSession){const handle=document.createElement('button');handle.className='move-handle';handle.type='button';handle.textContent='⠿ 移動';handle.dataset.bookId=b.id;handle.setAttribute('aria-label',b.title+'を長押しで移動');handle.onclick=()=>{if(performance.now()>=suppressBookClickUntil)selectReorderBook(b.id)};cell.append(handle)}shelf.append(cell)}$('case').append(shelf)}if(reorderSession)selectReorderBook(reorderSession.selectedId,false);queueCovers(list)}
+
+function openDetail(id){const b=books.find(b=>b.id===id);if(!b)return;activeId=id;$('detail-title').textContent=b.title;$('detail-author').textContent='著者：'+b.author;$('detail-description').textContent=b.description||'説明はありません。';$('detail-identifiers').textContent='検索元：'+providerName(b.source)+' / '+languageLabel(b)+(b.publisher?' / '+b.publisher:'')+(b.published?' / '+b.published:'')+(b.edition?' / 版：'+b.edition:'')+(b.isbns?.length?' / ISBN：'+b.isbns.join('、'):' / ISBN：情報なし');$('detail-credit').replaceChildren(coverCredit(b));queueCovers([b]);$('book-type').value=b.type;$('book-favorite').checked=b.favorite;syncFavorite();renderTagOptions(b);$('book-note').value=b.reading.review.text;beginManualEditor(b);$('detail').showModal()}
+function manualCover(b){const c=b.reading?.coverOverride;return c&&validManualCover(c,b.id)?c:null}
+function validManualCover(c,id){if(!plainObject(c)||c.kind!=='device'||c.bookId!==id||c.mime!=='image/jpeg'||!validDate(c.updatedAt)||c.updatedAt===null||!Number.isInteger(c.width)||!Number.isInteger(c.height)||c.width<16||c.height<16||Math.max(c.width,c.height)>640||!Number.isInteger(c.bytes)||c.bytes<=0||c.bytes>MAX_MANUAL_BYTES||typeof c.dataUrl!=='string'||c.dataUrl.length>MAX_MANUAL_BYTES*4/3+100)return false;const m=/^data:image\/jpeg;base64,([A-Za-z0-9+/]+={0,2})$/.exec(c.dataUrl);if(!m||m[1].length%4!==0)return false;try{const raw=atob(m[1]);return raw.length===c.bytes&&raw.charCodeAt(0)===255&&raw.charCodeAt(1)===216&&raw.charCodeAt(raw.length-2)===255&&raw.charCodeAt(raw.length-1)===217}catch{return false}}
+function validateManualTotals(list){let bytes=0,count=0;for(const b of list){const c=b.reading?.coverOverride;if(c!==undefined&&c!==null){if(!validManualCover(c,b.id))throw Error('手動表紙の形式が不正です。');bytes+=c.bytes;count++;}}if(bytes>MAX_MANUAL_TOTAL||count>MAX_MANUAL_COUNT)throw Error('手動表紙の合計容量または冊数の上限です。');}
+function decodeLocalImage(url,timeout=8000){return new Promise((resolve,reject)=>{const image=new Image();const timer=setTimeout(()=>{image.src='';reject(Error('画像の読み取りが時間切れになりました。'))},timeout);image.onload=()=>{clearTimeout(timer);resolve(image)};image.onerror=()=>{clearTimeout(timer);reject(Error('この画像を読み取れません。JPEG・PNG・WebP等で選び直してください。'))};image.src=url;});}
+async function verifyManualImages(data){for(const b of data.books){const c=b.reading?.coverOverride;if(!c)continue;const image=await decodeLocalImage(c.dataUrl);if(image.naturalWidth!==c.width||image.naturalHeight!==c.height)throw Error('手動表紙の寸法が一致しません。');}return data}
+async function compressManualFile(file,bookId){if(file.size>12*1024*1024)throw Error('12MB以下の画像を選んでください。');const head=new Uint8Array(await file.slice(0,32).arrayBuffer()),ascii=String.fromCharCode(...head);const raster=(head[0]===255&&head[1]===216)||(head[0]===137&&ascii.slice(1,4)==='PNG')||(ascii.slice(0,4)==='RIFF'&&ascii.slice(8,12)==='WEBP')||(ascii.slice(4,8)==='ftyp'&&/heic|heix|heif|mif1|avif/.test(ascii));if(!raster)throw Error('対応する写真形式ではありません。SVG等は使用できません。');const url=URL.createObjectURL(file);try{const image=await decodeLocalImage(url);if(image.naturalWidth<16||image.naturalHeight<16||image.naturalWidth*image.naturalHeight>40000000||Math.max(image.naturalWidth,image.naturalHeight)>16000)throw Error('画像の寸法が小さすぎるか大きすぎます。');const canvas=document.createElement('canvas'),ctx=canvas.getContext('2d');if(!ctx)throw Error('このブラウザで画像を圧縮できません。');for(const max of [640,512,384,256]){const scale=Math.min(1,max/Math.max(image.naturalWidth,image.naturalHeight));canvas.width=Math.round(image.naturalWidth*scale);canvas.height=Math.round(image.naturalHeight*scale);if(Math.min(canvas.width,canvas.height)<16)throw Error('縦横比が極端な画像です。別の画像を選んでください。');for(const quality of [.82,.68,.5,.35]){ctx.fillStyle='#fff';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(image,0,0,canvas.width,canvas.height);const dataUrl=canvas.toDataURL('image/jpeg',quality);if(!dataUrl.startsWith('data:image/jpeg;base64,'))throw Error('JPEGへの圧縮に対応していません。');const bytes=atob(dataUrl.split(',')[1]).length;if(bytes<=MAX_MANUAL_BYTES)return {kind:'device',bookId,mime:'image/jpeg',dataUrl,bytes,width:canvas.width,height:canvas.height,updatedAt:new Date().toISOString()};}}throw Error('画像を120KB以下に圧縮できませんでした。');}finally{URL.revokeObjectURL(url)}}
+function updateManualPreview(updateStatus=true){const b=books.find(b=>b.id===activeId);if(!b)return;const automatic=coverFor({...b,reading:{...b.reading,coverOverride:null}});$('manual-preview').replaceChildren();if(manualDraft||automatic){const img=document.createElement('img');img.src=manualDraft?.dataUrl||automatic.image;img.alt=manualDraft?'端末から選択した手動表紙':'書誌に対応する自動表紙';$('manual-preview').append(img)}$('remove-manual-cover').disabled=!manualDraft;if(updateStatus)$('manual-cover-status').textContent=manualDraft?'手動表紙：'+manualDraft.width+'×'+manualDraft.height+'、約'+Math.ceil(manualDraft.bytes/1024)+'KB。変更を保存すると確定します。':'手動表紙は未設定です。自動表紙または文字表紙を使います。';}
+function beginManualEditor(b){detailCoverCheckId=null;manualLoadToken++;manualDraft=manualCover(b);manualBusy=false;$('save-detail').disabled=false;$('manual-cover-file').value='';$('detail-save-status').textContent='';updateManualPreview();listenForCover(b,()=>{if(!$('detail').open||activeId!==b.id)return false;if(!manualDraft)updateManualPreview(false);return true;});}
+function closeDetail(){detailCoverCheckId=null;manualLoadToken++;manualBusy=false;manualDraft=null;$('save-detail').disabled=false;$('detail').close();}
+$('manual-cover-file').onchange=async()=>{detailCoverCheckId=null;const file=$('manual-cover-file').files[0],token=++manualLoadToken,id=activeId;$('manual-cover-file').value='';if(!file)return;manualBusy=true;$('save-detail').disabled=true;$('manual-cover-status').textContent='端末内で画像を圧縮しています…';try{const next=await compressManualFile(file,id);if(token!==manualLoadToken||activeId!==id||!$('detail').open)return;validateManualTotals(books.map(b=>b.id===id?{...b,reading:{...b.reading,coverOverride:next}}:b));manualDraft=next;updateManualPreview();}catch(e){if(token===manualLoadToken&&$('detail').open)$('manual-cover-status').textContent='手動表紙を設定できませんでした。元の画像は保持しています。'+e.message;}finally{if(token===manualLoadToken){manualBusy=false;$('save-detail').disabled=false;}}};
+$('remove-manual-cover').onclick=()=>{if(manualBusy)return;detailCoverCheckId=null;manualLoadToken++;manualDraft=null;updateManualPreview();$('manual-cover-status').textContent='手動表紙を解除します。「変更を保存」で確定し、自動表紙または文字表紙へ戻ります。';};
+$('detail').addEventListener('cancel',e=>{e.preventDefault();closeDetail()});
+function requestCoverCheck(list){if(coverRunning)return false;const keys=new Set(list.map(coverKey).filter(Boolean));for(const key of keys){const state=coverStates.get(key);if(state&&!state.image)coverStates.delete(key);}for(const b of list){if(b.image)rejectedImages.delete(safeImage(b.image));const state=coverStates.get(coverKey(b));if(state?.image)rejectedImages.delete(state.image);}for(const url of cache.keys())if(url.includes('api.openbd.jp')||url.includes('openlibrary.org/api/books'))cache.delete(url);queueCovers(list);return true;}
+$('detail-retry-cover').onclick=()=>{if(Date.now()-lastCoverRetry<30000||coverRunning){$('manual-cover-status').textContent='表紙の確認中、または再確認の間隔内です。少し待ってください。';return;}const b=books.find(b=>b.id===activeId);if(!b)return;if(coverFor(b)){$('manual-cover-status').textContent=manualCover(b)?'手動表紙を維持します。解除して保存すると自動表紙へ戻れます。':'取得済みの表紙を維持しています。';return;}if(!coverKey(b)){$('manual-cover-status').textContent='日本語版・単一ISBNの照合情報が不足しています。手動表紙も利用できます。';return;}lastCoverRetry=Date.now();detailCoverCheckId=b.id;requestCoverCheck([b]);$('manual-cover-status').textContent=manualCover(b)?'手動表紙を維持します。解除して保存すると、自動表紙を再確認できます。':'未取得の表紙を再確認しています。利用制限の休止時間は守ります。';};
+
+function renderTagOptions(b){$('tag-options').replaceChildren();for(const [id,name] of PRESET_TAGS){const label=document.createElement('label');label.className='check';const check=document.createElement('input');check.type='checkbox';check.value=id;check.checked=b.reading.recommendedTagIds.includes(id);label.append(check,document.createTextNode(name));$('tag-options').append(label)}}
+function syncFavorite(){const want=$('book-type').value==='want';$('book-favorite').disabled=want;if(want)$('book-favorite').checked=false}
+$('book-type').onchange=syncFavorite;
+$('save-detail').onclick=()=>{if(manualBusy)return;const type=$('book-type').value,text=$('book-note').value,tags=[...$('tag-options').querySelectorAll('input:checked')].map(e=>e.value);if(persist(books.map(b=>b.id===activeId?{...b,type,favorite:type==='read'&&$('book-favorite').checked,reading:{...b.reading,recommendedTagIds:tags,coverOverride:manualDraft,review:{...b.reading.review,text,visibility:'private',updatedAt:text===b.reading.review.text?b.reading.review.updatedAt:new Date().toISOString()}}}:b))){closeDetail();render();message('変更を保存しました。')}else $('detail-save-status').textContent='保存できませんでした。元のデータは保持しています。保存容量や画像の上限を確認してください。';};
+$('delete-book').onclick=()=>{if(confirm('この本を本棚から削除しますか？')&&persist(books.filter(b=>b.id!==activeId))){closeDetail();render();message('本棚から削除しました。')}};
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{filter=t.dataset.type;render()});
+$('open-search').onclick=()=>{resetSearchState();$('destination').value=filter==='want'?'want':'read';$('search-dialog').showModal();$('query').focus({preventScroll:true})};
+function cancelSearch(){requestId++;controller?.abort();controller=null;searchBusy(false);if($('search-message').textContent.includes('検索中'))$('search-message').textContent='検索を中断しました。もう一度検索できます。'}
+function resetSearchState(){cancelSearch();$('query').value='';$('author-filter').value='';selected.clear();results.clear();resultNodes.clear();searchState=null;activeProvider=null;offset=0;hasMore=false;$('results').replaceChildren();$('more').hidden=true;updateSelection();$('search-message').textContent='キーワードを入力して検索してください。';$('cover-message').textContent='';$('search-options').open=false;document.querySelector('.search-scroll').scrollTop=0;}
+function closeSearch(){resetSearchState();$('search-dialog').close()}
+$('close-search').onclick=closeSearch;$('search-dialog').addEventListener('cancel',e=>{e.preventDefault();closeSearch()});$('search-dialog').addEventListener('close',()=>{if(!$('search-dialog').open)resetSearchState()});$('close-detail').onclick=()=>closeDetail();
+function updateSelection(){$('register').disabled=selected.size===0;$('register').textContent='選択した本を登録（'+selected.size+'冊）'}
+function selectReorderBook(id,announce=true){if(!reorderSession)return;reorderSession.selectedId=id;const index=reorderSession.order.indexOf(id);for(const cell of $('case').querySelectorAll('.book-cell')){const chosen=cell.dataset.bookId===id;cell.classList.toggle('is-selected',chosen);cell.querySelector('.book').setAttribute('aria-pressed',String(chosen))}$('move-before').disabled=index<=0;$('move-after').disabled=index<0||index>=reorderSession.order.length-1;const b=books.find(b=>b.id===id);if(b&&(announce||!$('reorder-status').textContent))$('reorder-status').textContent=b.title+'：'+(index+1)+' / '+reorderSession.order.length+'番目。移動はまだ保存されていません。'}
+$('start-reorder').onclick=()=>{if(filter==='favorite'||readBlocked)return;restoreLoadId++;pendingRestore=null;try{const order=[...manualOrder[filter]];reorderSession={type:filter,order,selectedId:order[0],snapshot:localStorage.getItem(KEY)};render();$('reorder-status').textContent='本を選択して、長押しまたは前へ・後ろへで移動できます。';}catch{message('保存データを確認できないため並び替えを開始できません。')}};
+function finishReorder(save){if(!reorderSession)return;cancelDrag();if(save){try{if(localStorage.getItem(KEY)!==reorderSession.snapshot){$('reorder-status').textContent='別の画面でデータが変更されました。キャンセルして再読み込みしてください。';return;}const next={read:[...manualOrder.read],want:[...manualOrder.want]};next[reorderSession.type]=[...reorderSession.order];if(!persist(books,{...settings,sort:'manual'},false,next)){$('reorder-status').textContent='配置を保存できませんでした。元の保存データは保持しています。再試行するかキャンセルできます。';return;}}catch{$('reorder-status').textContent='配置を保存できませんでした。キャンセルできます。';return;}}reorderSession=null;render();message(save?'自由配置を保存しました。':'並び替えをキャンセルしました。');$('start-reorder').focus({preventScroll:true});}
+$('save-reorder').onclick=()=>finishReorder(true);$('cancel-reorder').onclick=()=>finishReorder(false);
+function moveReorder(id,to){if(!reorderSession)return;const from=reorderSession.order.indexOf(id);to=Math.max(0,Math.min(to,reorderSession.order.length-1));if(from<0||from===to)return;reorderSession.order.splice(from,1);reorderSession.order.splice(to,0,id);render();selectReorderBook(id);}
+function stepReorder(delta){if(!reorderSession)return;const id=reorderSession.selectedId;moveReorder(id,reorderSession.order.indexOf(id)+delta);}
+$('move-before').onclick=()=>stepReorder(-1);$('move-after').onclick=()=>stepReorder(1);
+function cancelDrag(){const state=dragState;if(!state)return;clearTimeout(state.timer);cancelAnimationFrame(state.raf);state.ghost?.remove();for(const cell of $('case').querySelectorAll('.is-source,.is-target'))cell.classList.remove('is-source','is-target');dragState=null;if(state.active)suppressBookClickUntil=performance.now()+700;}
+function startHold(id,x,y,kind,pointerId){if(!reorderSession||!reorderSession.order.includes(id))return;cancelDrag();selectReorderBook(id);const state={id,x,y,startX:x,startY:y,startScrollY:scrollY,startScrollX:scrollX,kind,pointerId,active:false,targetId:null,raf:0,ghost:null,timer:0};dragState=state;state.timer=setTimeout(()=>{if(dragState!==state||!reorderSession)return;const cell=[...$('case').querySelectorAll('.book-cell')].find(c=>c.dataset.bookId===id),cover=cell?.querySelector('.cover');if(!cover){cancelDrag();return;}const rect=cover.getBoundingClientRect();state.width=rect.width;state.height=rect.height;state.ghost=cover.cloneNode(true);state.ghost.classList.add('drag-ghost');state.ghost.style.width=rect.width+'px';state.ghost.style.height=rect.height+'px';state.ghost.setAttribute('aria-hidden','true');document.body.append(state.ghost);state.active=true;state.targetId=id;cell.classList.add('is-source');suppressBookClickUntil=performance.now()+1000;$('reorder-status').textContent='移動中。移動先で指を離すと仮置きします。Escで中止できます。';dragFrame();},400);}
+function dragFrame(){const state=dragState;if(!state?.active)return;state.ghost.style.transform='translate3d('+(state.x-state.width/2)+'px,'+(state.y-state.height/2)+'px,0)';const panel=$('reorder-panel').getBoundingClientRect(),upper=Math.max(50,panel.bottom+35);let dy=0;if(state.y<upper&&scrollY>0)dy=-12;else if(state.y>innerHeight-75)dy=12;if(dy)window.scrollBy(0,dy);const bounds=$('case').getBoundingClientRect();let target=null;if(state.x>=bounds.left&&state.x<=bounds.right&&state.y>=bounds.top&&state.y<=bounds.bottom&&state.y>=panel.bottom){for(const el of document.elementsFromPoint(state.x,state.y)){const cell=el.closest?.('.book-cell');if(cell&&$('case').contains(cell)){target=cell.dataset.bookId;break;}}if(!target){let distance=Infinity;for(const cell of $('case').querySelectorAll('.book-cell')){const r=cell.getBoundingClientRect();if(r.bottom<panel.bottom||r.top>innerHeight)continue;const d=Math.hypot(state.x-(r.left+r.width/2),state.y-(r.top+r.height/2));if(d<distance){distance=d;target=cell.dataset.bookId;}}}}if(target!==state.targetId){state.targetId=target;for(const cell of $('case').querySelectorAll('.book-cell'))cell.classList.toggle('is-target',cell.dataset.bookId===target);$('reorder-status').textContent=target?'移動先：'+(reorderSession.order.indexOf(target)+1)+'番目。指を離して仮置き。':'本棚の中へ戻すと移動先を選べます。';}state.raf=requestAnimationFrame(dragFrame);}
+function moveHold(x,y,event){const state=dragState;if(!state)return;state.x=x;state.y=y;if(!state.active){if(Math.hypot(x-state.startX,y-state.startY)>10)cancelDrag();return;}if(event.cancelable)event.preventDefault();}
+function dropHold(){const state=dragState;if(!state)return;if(state.active){cancelAnimationFrame(state.raf);dragFrame();}const {id,targetId,active}=state;const target=reorderSession?.order.indexOf(targetId);cancelDrag();if(active&&target>=0)moveReorder(id,target);if(active&&reorderSession)selectReorderBook(id);}
+$('case').addEventListener('pointerdown',e=>{if(!reorderSession||e.isPrimary===false||(e.pointerType!=='touch'&&e.button!==0))return;const cell=e.target.closest('.book-cell');if(!cell)return;if(e.pointerType==='touch'&&!e.target.closest('.move-handle'))return;startHold(cell.dataset.bookId,e.clientX,e.clientY,'pointer',e.pointerId);try{$('case').setPointerCapture(e.pointerId)}catch{}});
+$('case').addEventListener('pointermove',e=>{if(dragState?.kind==='pointer'&&dragState.pointerId===e.pointerId)moveHold(e.clientX,e.clientY,e)},{passive:false});
+$('case').addEventListener('pointerup',e=>{if(dragState?.kind==='pointer'&&dragState.pointerId===e.pointerId)dropHold()});
+$('case').addEventListener('pointercancel',()=>cancelDrag());
+$('case').addEventListener('lostpointercapture',()=>{if(dragState?.kind==='pointer')cancelDrag()});
+$('case').addEventListener('touchstart',e=>{if(!reorderSession)return;if(e.touches.length!==1){cancelDrag();return;}if(window.PointerEvent&&e.target.closest('.move-handle'))return;const cell=e.target.closest('.book-cell');if(!cell)return;const t=e.touches[0];startHold(cell.dataset.bookId,t.clientX,t.clientY,'touch',t.identifier)},{passive:true});
+$('case').addEventListener('touchmove',e=>{if(dragState?.kind!=='touch')return;if(e.touches.length!==1){cancelDrag();return;}const t=[...e.touches].find(t=>t.identifier===dragState.pointerId);if(t)moveHold(t.clientX,t.clientY,e)},{passive:false});
+$('case').addEventListener('touchend',()=>{if(dragState?.kind==='touch')dropHold()});
+$('case').addEventListener('touchcancel',()=>cancelDrag());
+$('case').addEventListener('dragstart',e=>{if(reorderSession)e.preventDefault()});
+$('case').addEventListener('contextmenu',e=>{if(reorderSession)e.preventDefault()});
+$('case').addEventListener('keydown',e=>{if(!reorderSession||!e.target.closest('.book,.move-handle'))return;const direction={ArrowLeft:-1,ArrowUp:-1,ArrowRight:1,ArrowDown:1}[e.key];if(direction){e.preventDefault();stepReorder(direction);const button=[...$('case').querySelectorAll('.book')].find(b=>b.dataset.bookId===reorderSession.selectedId);button?.focus({preventScroll:true});button?.scrollIntoView({block:'nearest'});}});
+window.addEventListener('keydown',e=>{if(e.key==='Escape'&&reorderSession){e.preventDefault();if(dragState){cancelDrag();$('reorder-status').textContent='今回の移動を中止しました。';}else finishReorder(false);}});
+window.addEventListener('scroll',()=>{if(dragState&&!dragState.active&&(Math.abs(scrollY-dragState.startScrollY)>1||Math.abs(scrollX-dragState.startScrollX)>1))cancelDrag()},{passive:true});
+window.addEventListener('resize',()=>{if(reorderSession)render()});
+window.addEventListener('blur',()=>cancelDrag());
+document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelDrag()});
+
+function plainDescription(value){const doc=new DOMParser().parseFromString(typeof value==='string'?value:'','text/html');return doc.body.textContent||''}
+function isbn13(value){
+  const s=String(value||'').normalize('NFKC').replace(/[\s-]/g,'').toUpperCase();
+  if(/^\d{9}[\dX]$/.test(s)){
+    const sum=[...s].reduce((n,c,i)=>n+(c==='X'?10:Number(c))*(10-i),0);if(sum%11)return '';
+    const prefix='978'+s.slice(0,9),check=(10-[...prefix].reduce((n,c,i)=>n+Number(c)*(i%2?3:1),0)%10)%10;return prefix+check;
+  }
+  if(!/^97[89]\d{10}$/.test(s))return '';
+  return [...s].reduce((n,c,i)=>n+Number(c)*(i%2?3:1),0)%10===0?s:'';
+}
+function normalizeISBNs(values){return [...new Set((Array.isArray(values)?values:[]).map(isbn13).filter(Boolean))]}
+function textKey(value){return String(value||'').normalize('NFKC').toLowerCase().replace(/[\s\p{P}\p{S}]/gu,'')}
+function sameBook(a,b){
+  if(a.id===b.id)return true;
+  const ai=a.identifiers||{},bi=b.identifiers||{};
+  if(['ndl','google','openlibraryEdition','openbd'].some(k=>ai[k]&&ai[k]===bi[k]))return true;
+  const x=normalizeISBNs(a.isbns),y=normalizeISBNs(b.isbns);
+  if(x.some(i=>y.includes(i)))return true;
+  // Known distinct editions remain separate; never assign all ISBNs of a work to one edition.
+  if(x.length&&y.length)return false;
+  // A shared Work is not a shared edition.
+  if(ai.openlibraryEdition&&bi.openlibraryEdition&&ai.openlibraryEdition!==bi.openlibraryEdition)return false;
+  if(a.languages?.length&&b.languages?.length&&!a.languages.some(l=>b.languages.includes(l)))return false;
+  const aa=[a.author,...(a.authors||[])].map(textKey).filter(k=>k&&k!==textKey('著者不明'));
+  const ba=[b.author,...(b.authors||[])].map(textKey);
+  return textKey(a.title)===textKey(b.title)&&aa.some(k=>ba.includes(k));
+}
+function providerName(id){return {ndl:'NDLサーチ',google:'Google Books',openlibrary:'Open Library',openbd:'openBD'}[id]||id||'不明'}
+function isJapanese(b){return Array.isArray(b.languages)&&b.languages.includes('jpn')}
+function languageCodes(values){return [...new Set((Array.isArray(values)?values:[]).map(v=>String(v?.key||v).split('/').pop().toLowerCase()).map(v=>v==='ja'?'jpn':v==='en'?'eng':v==='zh'?'chi':v).filter(Boolean))]}
+function languageLabel(b){const langs=languageCodes(b.languages);return langs.includes('jpn')?(langs.length>1?'日本語を含む多言語版':'日本語版'):langs.length?'外国語版（'+langs.join('・')+'）':'言語未確認（旧データを含む）'}
+function titleParts(title){const parts=String(title||'').split(/\s*[:：]\s*/);return {main:textKey(parts.shift()),subtitle:textKey(parts.join(' '))}}
+function matchBook(b,state){
+ const q=textKey(state.text),parts=titleParts(b.title),author=textKey(b.author+' '+(b.authors||[]).join(' ')),tokens=state.text.normalize('NFKC').split(/\s+/).map(textKey).filter(Boolean);
+ let score=0,reason='関連する候補';
+ if(state.kind==='isbn'){score=normalizeISBNs(b.isbns).includes(state.isbn)?6000:0;reason='ISBN一致'}
+ else if(state.kind==='inauthor'){score=author.includes(q)?6000:0;reason='著者一致'}
+ else if(parts.main===q){score=6000;reason='書名が一致'}
+ else if(parts.main.startsWith(q)){score=5000;reason='書名の前方一致'}
+ else if(parts.main.includes(q)){score=4000;reason='書名の部分一致'}
+ else if(parts.subtitle.includes(q)){score=3000;reason='副題に一致'}
+ else if(state.kind==='all'&&author.includes(q)){score=6000;reason='著者一致'}
+ else if(state.kind==='all'&&tokens.length>1&&tokens.every(t=>(parts.main+parts.subtitle+author).includes(t))){score=5000;reason='書名・著者に一致'}
+ const filter=textKey(state.author);return {score:score+(filter&&author.includes(filter)?100:0),high:score>=5000,reason};
+}
+function rankBook(b,state){return matchBook(b,state).score}
+function rankedResults(){return [...results.values()].sort((a,b)=>Number(isJapanese(b))-Number(isJapanese(a))||rankBook(b,searchState)-rankBook(a,searchState)||titleParts(a.title).main.localeCompare(titleParts(b.title).main,'ja')||textKey(a.author).localeCompare(textKey(b.author),'ja')||normalizeISBNs(a.isbns).join().localeCompare(normalizeISBNs(b.isbns).join())||a.id.localeCompare(b.id))}
+function editionGroupKey(b){return JSON.stringify([titleParts(b.title).main,textKey(b.authors?.[0]||b.author),languageCodes(b.languages).sort()])}
+function renderResults(){
+ const list=rankedResults(),opened=new Set([...$('results').querySelectorAll('details[open][data-group]')].map(e=>e.dataset.group));const relatedOpen=$('related-results')?.open;
+ const high=document.createElement('section');high.className='result-group';high.setAttribute('aria-label','一致度が高い候補');const heading=document.createElement('h3');heading.textContent='一致度が高い候補';high.append(heading);
+ const other=document.createElement('details');other.id='related-results';other.className='result-group';other.open=!!relatedOpen||list.some(b=>selected.has(b.id)&&!matchBook(b,searchState).high);const summary=document.createElement('summary');other.append(summary);
+ const buckets=[new Map(),new Map()];for(const b of list){const bucket=buckets[matchBook(b,searchState).high?0:1],key=editionGroupKey(b);if(!bucket.has(key))bucket.set(key,[]);bucket.get(key).push(b)}
+ function fill(parent,groups){for(const [key,editions] of groups){const group=document.createElement('div');group.className='edition-group';group.append(resultNodes.get(editions[0].id));if(editions.length>1){const details=document.createElement('details');details.dataset.group=key;details.open=opened.has(key)||editions.slice(1).some(b=>selected.has(b.id));const summary=document.createElement('summary');summary.textContent='他の版を表示（'+(editions.length-1)+'冊・ISBN別）';const nodes=document.createElement('div');nodes.className='edition-list';for(const b of editions.slice(1))nodes.append(resultNodes.get(b.id));details.append(summary,nodes);group.append(details)}parent.append(group)}}
+ fill(high,buckets[0]);fill(other,buckets[1]);summary.textContent='その他の関連書籍（'+list.filter(b=>!matchBook(b,searchState).high).length+'冊）';if(!buckets[0].size){const note=document.createElement('p');note.className='muted';note.textContent='書名の完全一致・前方一致候補はまだありません。関連書籍を開くか、著者・ISBNで絞れます。';high.append(note)}
+ $('results').replaceChildren(high,other);queueCovers(list.slice(0,12));
+}
+
+function googleBook(item){const v=item.volumeInfo||{},authors=Array.isArray(v.authors)?v.authors.filter(x=>typeof x==='string'):[];return{id:'google:'+item.id,source:'google',identifiers:{google:item.id},isbns:normalizeISBNs((v.industryIdentifiers||[]).filter(i=>i.type==='ISBN_10'||i.type==='ISBN_13').map(i=>i.identifier)),title:v.title||'タイトル不明',authors,author:authors.join('・')||'著者不明',languages:languageCodes(v.language?[v.language]:[]),publisher:v.publisher||'',published:v.publishedDate||'',description:plainDescription(v.description),image:safeImage(v.imageLinks?.thumbnail||v.imageLinks?.smallThumbnail),imageIdentity:{source:'google',edition:item.id},type:'read',favorite:false}}
+function libraryBook(work,edition){
+  if(!edition||typeof edition.title!=='string'||!edition.title||!edition.key)return null;
+  const authors=Array.isArray(edition.author_name)?edition.author_name.filter(x=>typeof x==='string'):[];
+  const coverId=edition.cover_i||(Array.isArray(edition.covers)?edition.covers.find(i=>Number.isInteger(i)&&i>0):null);
+  const isbns=normalizeISBNs([...(edition.isbn||[]),...(edition.isbn_13||[]),...(edition.isbn_10||[])]);
+  return {id:'openlibrary:'+edition.key,source:'openlibrary',identifiers:{openlibraryWork:work.key,openlibraryEdition:edition.key},isbns,
+    title:edition.title,authors,author:edition.by_statement||authors.join('・')||'著者情報なし（版の書誌を確認）',
+    languages:languageCodes(edition.language||edition.languages),publisher:(edition.publishers||[]).join('・'),published:edition.publish_date||'',
+    description:'Open Libraryの版単位の書誌情報です。作品全体のタイトル・ISBN・表紙では補完しません。',
+    image:Number.isInteger(coverId)&&coverId>0?'https://covers.openlibrary.org/b/id/'+coverId+'-M.jpg?default=false':'',
+    imageIdentity:{source:'openlibrary',edition:edition.key,coverId:coverId||null},type:'read',favorite:false};
+}
+const NS={sru:'http://www.loc.gov/zing/srw/',ndl:'http://ndl.go.jp/dcndl/terms/',dc:'http://purl.org/dc/elements/1.1/',terms:'http://purl.org/dc/terms/',rdf:'http://www.w3.org/1999/02/22-rdf-syntax-ns#',foaf:'http://xmlns.com/foaf/0.1/'};
+function elements(root,ns,tag){return [...root.getElementsByTagNameNS(ns,tag)]}
+function firstText(root,ns,tag){return elements(root,ns,tag)[0]?.textContent.trim()||''}
+function xmlDocument(text){const doc=new DOMParser().parseFromString(text,'application/xml');if(doc.getElementsByTagName('parsererror').length)throw Error('XML応答形式エラー');return doc}
+function parseNDL(text){
+  const doc=xmlDocument(text);if(!elements(doc,NS.sru,'searchRetrieveResponse').length||elements(doc,'*','diagnostic').length)throw Error('NDL検索応答エラー');
+  const records=elements(doc,NS.sru,'recordData'),items=[];
+  for(const record of records){
+    // NDL supports both XML-packed and string-packed RDF records.
+    const rdf=elements(record,NS.ndl,'BibResource').length?record:xmlDocument(record.textContent);
+    const bib=elements(rdf,NS.ndl,'BibResource').find(b=>firstText(b,NS.terms,'title'));if(!bib)continue;
+    const rawId=bib.getAttributeNS(NS.rdf,'about')||'',title=firstText(bib,NS.terms,'title');
+    if(!/^https:\/\/ndlsearch\.ndl\.go\.jp\/books\/R100000002-/.test(rawId))continue;
+    const id=rawId.replace(/#.*$/,'');
+    const authors=elements(bib,NS.dc,'creator').map(e=>e.textContent.trim()).filter(Boolean);
+    const isbns=normalizeISBNs(elements(bib,NS.terms,'identifier').filter(e=>/\/ISBN(?:13)?$/.test(e.getAttributeNS(NS.rdf,'datatype')||'')).map(e=>e.textContent));
+    const publisher=elements(bib,NS.terms,'publisher')[0];
+    items.push({id:'ndl:'+id,source:'ndl',identifiers:{ndl:id},title,authors,author:authors.join('・')||'著者情報なし',isbns,
+      languages:languageCodes(elements(bib,NS.terms,'language').map(e=>e.textContent.trim()||e.getAttributeNS(NS.rdf,'resource'))),
+      publisher:publisher?firstText(publisher,NS.foaf,'name'):'',published:firstText(bib,NS.terms,'date')||firstText(bib,NS.terms,'issued'),
+      edition:firstText(bib,NS.ndl,'edition'),sourceURL:id,description:'国立国会図書館蔵書の書誌情報（NDLサーチAPI・CC BY 4.0）。著者の責任表示を保持しています。',image:'',type:'read',favorite:false});
+  }
+  return {items,rawCount:records.length,total:Number(firstText(doc,NS.sru,'numberOfRecords'))||0};
+}
+function titleStem(title){return textKey(String(title||'').split(/\s[:：]\s/)[0])}
+// Cover lookups are optional background work. They never gate search or registration.
+const COVER_KEY='minna-no-hondana.v101.covers';
+const coverStates=new Map(),coverListeners=new Map(),pendingCovers=new Map(),rejectedImages=new Set();
+let coverTimer=null,coverRunning=false,jsonpSequence=0,dynamicBlockedUntil=0;
+function coverKey(b){const ids=normalizeISBNs(b.isbns);return isJapanese(b)&&ids.length===1?ids[0]+'|'+titleStem(b.title):''}
+function coverFor(b){const local=manualCover(b);if(local&&!rejectedImages.has(local.dataUrl))return {image:local.dataUrl,proof:{source:'device',bookId:b.id,width:local.width,height:local.height,manual:true}};if(safeImage(b.image)&&!rejectedImages.has(safeImage(b.image))){let proof=b.imageIdentity||null;if(proof?.source==='openlibrary'&&/^\/books\/OL\d+M$/.test(proof.edition||''))proof={...proof,isbn:normalizeISBNs(b.isbns).length===1?normalizeISBNs(b.isbns)[0]:undefined,infoURL:'https://openlibrary.org'+proof.edition};return {image:safeImage(b.image),proof}};const state=coverStates.get(coverKey(b));return state&&state.image&&!rejectedImages.has(state.image)&&state.proof?.isbn===normalizeISBNs(b.isbns)[0]?{image:state.image,proof:state.proof}:null}
+function loadCoverCache(){for(const storageKey of ['minna-no-hondana.v06.covers','minna-no-hondana.v07.covers','minna-no-hondana.v08.covers','minna-no-hondana.v09.covers','minna-no-hondana.v10.covers',COVER_KEY]){try{const entries=JSON.parse(localStorage.getItem(storageKey)||'[]');if(!Array.isArray(entries))continue;for(const entry of entries){if(!Array.isArray(entry)||entry.length!==2)continue;const [key,value]=entry;if(typeof key==='string'&&value&&safeImage(value.image)&&value.proof?.isbn===key.split('|')[0]&&isbn13(value.proof.isbn)===value.proof.isbn&&value.proof.width>10&&value.proof.height>10)coverStates.set(key,value)}}catch{}}}
+
+function saveCoverCache(){try{localStorage.setItem(COVER_KEY,JSON.stringify([...coverStates].filter(([,v])=>v.image).slice(-100)))}catch{}}
+function listenForCover(b,fn){const key=coverKey(b);if(!key)return;let set=coverListeners.get(key);if(!set){set=new Set();coverListeners.set(key,set)}set.add(fn)}
+function notifyCover(key){const listeners=coverListeners.get(key);if(!listeners)return;for(const fn of [...listeners])if(fn()===false)listeners.delete(fn);if(!listeners.size)coverListeners.delete(key)}
+function setCover(b,image,proof){const key=coverKey(b);if(!key)return;coverStates.set(key,{image:safeImage(image),proof,expires:Date.now()+(image?600000:30000)});notifyCover(key)}
+function queueCovers(list){
+  for(const b of list.slice(0,20)){if(coverFor(b))continue;const key=coverKey(b),state=coverStates.get(key);if(key&&(!safeImage(b.image)||rejectedImages.has(safeImage(b.image)))&&(!state||state.expires<=Date.now()||(state.image&&rejectedImages.has(state.image))))pendingCovers.set(key,b)}
+  if(!coverRunning&&pendingCovers.size&&!coverTimer)coverTimer=setTimeout(()=>{coverTimer=null;runCoverQueue()},80);
+}
+function equivalentISBN10(isbn){if(!isbn.startsWith('978'))return '';const body=isbn.slice(3,12),sum=[...body].reduce((n,c,i)=>n+Number(c)*(10-i),0),check=(11-sum%11)%11;return body+(check===10?'X':check)}
+function trustedCoverURL(raw,host){try{const u=new URL(raw);if(u.protocol==='http:')u.protocol='https:';return u.protocol==='https:'&&u.hostname===host?u:null}catch{return null}}
+function dynamicCover(row,key,isbn){
+  if(!row||row.bib_key!==key||isbn13(key.replace(/^ISBN:/,''))!==isbn)return null;
+  const image=trustedCoverURL(row.thumbnail_url,'books.google.com'),info=trustedCoverURL(row.info_url,'books.google.com');
+  const id=info?.searchParams.get('id');if(!image||!info||!id||image.searchParams.get('id')!==id||image.pathname!=='/books/content')return null;
+  return {image:image.href,proof:{source:'google-dynamic',isbn,bibKey:key,volumeId:id,infoURL:info.href}};
+}
+async function dynamicLinks(isbns,signal){
+  if(Date.now()<Math.max(dynamicBlockedUntil,providerBlockedUntil.get('google-dynamic')||0))throw Error('Google Booksの表紙照会を一時休止中');
+  const keys=[...new Set(isbns.flatMap(i=>[i,equivalentISBN10(i)].filter(Boolean)).map(i=>'ISBN:'+i))];
+  const url=new URL('https://books.google.com/books'),callback='__hondanaCover'+(++jsonpSequence);
+  url.search=new URLSearchParams({jscmd:'viewapi',bibkeys:keys.join(','),callback});
+  return new Promise((resolve,reject)=>{
+    const script=document.createElement('script');let done=false;
+    const finish=(error,data)=>{if(done)return;done=true;clearTimeout(timer);signal.removeEventListener('abort',stop);script.remove();window[callback]=()=>{};setTimeout(()=>{delete window[callback]},60000);if(error){if(error.name!=='AbortError'){dynamicBlockedUntil=Date.now()+60000;providerBlockedUntil.set('google-dynamic',dynamicBlockedUntil);saveCooldowns();}reject(error)}else resolve(data?.books||data||{})};
+    const stop=()=>finish(abortError());
+    const timer=setTimeout(()=>finish(Error('表紙照会タイムアウト')),6000);
+    window[callback]=data=>finish(null,data);script.onerror=()=>finish(Error('表紙サービスに接続できません'));
+    if(signal.aborted){stop();return}signal.addEventListener('abort',stop,{once:true});script.src=url.href;document.head.append(script);
+  });
+}
+async function acceptCover(b,url,proof,signal){
+ const image=safeImage(url);if(!image||signal.aborted)return false;
+ const loaded=await new Promise(resolve=>{const img=new Image();let done=false;const finish=ok=>{if(done)return;done=true;clearTimeout(timer);signal.removeEventListener('abort',stop);img.onload=img.onerror=null;resolve(ok?{width:img.naturalWidth,height:img.naturalHeight}:null)};const stop=()=>{finish(false);img.src=''};const timer=setTimeout(stop,3500);img.onload=()=>finish(img.naturalWidth>10&&img.naturalHeight>10);img.onerror=()=>finish(false);img.referrerPolicy='no-referrer';signal.addEventListener('abort',stop,{once:true});img.src=image;});
+ diagnose(proof.source,[proof.isbn],loaded?'decoded':'image-error',loaded?'画像デコード成功':'画像読込失敗・タイムアウト・小さすぎる画像',0);if(loaded&&!signal.aborted){rejectedImages.delete(image);setCover(b,image,{...proof,...loaded});return true}return false;
+}
+const diagnosticEvents=[];
+function diagnose(provider,isbns,result,reason,ms){diagnosticEvents.push({time:new Date().toISOString(),provider,isbns,result,reason,ms});if(diagnosticEvents.length>200)diagnosticEvents.shift()}
+$('refresh-diagnostics').onclick=()=>$('diagnostics').value=JSON.stringify(diagnosticEvents,null,2);
+async function coverStage(provider,batch,action){const c=new AbortController(),start=performance.now(),timer=setTimeout(()=>c.abort(),12000);let error='';try{await action(c.signal)}catch(e){error=c.signal.aborted?'提供元別12秒タイムアウト':e.message}finally{clearTimeout(timer);for(const b of batch)diagnose(provider,normalizeISBNs(b.isbns),coverFor(b)?'available':'unavailable',error|| (coverFor(b)?'同一ISBNの画像を確認':'一致画像なし・書誌不一致・画像読込失敗'),Math.round(performance.now()-start))}}
+async function discoverCovers(batch){const unresolved=()=>batch.filter(b=>!coverFor(b));let remaining=unresolved();
+if(remaining.length)await coverStage('openbd',remaining,async signal=>{
+    const url=new URL('https://api.openbd.jp/v1/get');url.search=new URLSearchParams({isbn:remaining.map(b=>normalizeISBNs(b.isbns)[0]).join(',')});
+    const data=await fetchJSON('openbd',url,signal);
+    for(const b of remaining){const isbn=normalizeISBNs(b.isbns)[0],row=data.find(r=>r?.summary&&isbn13(r.summary.isbn)===isbn);if(!row){diagnose('openbd',[isbn],'rejected',data.some(r=>r?.summary)?'ISBN不一致':'同一ISBNの書誌回答なし',0);continue;}if(titleParts(row.summary.title).main!==titleParts(b.title).main){diagnose('openbd',[isbn],'title-mismatch','ISBNは一致するが書名本体が不一致',0);continue;}if(!safeImage(row.summary.cover)){diagnose('openbd',[isbn],'missing','coverが空、または画像URLが利用不可',0);continue;}await acceptCover(b,row.summary.cover,{source:'openbd',isbn,title:row.summary.title,infoURL:'https://openbd.jp/'},signal);}
+
+});remaining=unresolved();
+if(remaining.length)await coverStage('openlibrary',remaining,async signal=>{
+    const url=new URL('https://openlibrary.org/api/books');url.search=new URLSearchParams({bibkeys:remaining.map(b=>'ISBN:'+normalizeISBNs(b.isbns)[0]).join(','),format:'json',jscmd:'data'});
+    const data=await fetchJSON('openlibrary-books',url,signal);
+    for(const b of remaining){const isbn=normalizeISBNs(b.isbns)[0],row=data['ISBN:'+isbn];if(!row){diagnose('openlibrary',[isbn],'missing','同一ISBNの書誌回答なし',0);continue;}const ids=normalizeISBNs([...(row.identifiers?.isbn_13||[]),...(row.identifiers?.isbn_10||[])]);if(!ids.includes(isbn)){diagnose('openlibrary',[isbn],'isbn-mismatch',ids.length?'ISBN不一致':'ISBN照合情報なし',0);continue;}if(titleParts(row.title).main!==titleParts(b.title).main){diagnose('openlibrary',[isbn],'title-mismatch','ISBNは一致するが書名本体が不一致',0);continue;}const image=trustedCoverURL(row.cover?.medium||row.cover?.small,'covers.openlibrary.org'),info=trustedCoverURL(row.url,'openlibrary.org');if(!row.cover){diagnose('openlibrary',[isbn],'missing','書誌に表紙なし',0);continue;}if(!/^\/books\/OL\d+M$/.test(row.key||'')||!image||!info||!(info.pathname===row.key||info.pathname.startsWith(row.key+'/'))){diagnose('openlibrary',[isbn],'edition-mismatch','版ID・出典URL・画像URLの整合性を確認できない',0);continue;}await acceptCover(b,image.href,{source:'openlibrary',isbn,edition:row.key,infoURL:info.href},signal);}
+
+});remaining=unresolved();
+if(remaining.length)await coverStage('google-dynamic',remaining,async signal=>{
+    const data=await dynamicLinks(remaining.map(b=>normalizeISBNs(b.isbns)[0]),signal);
+    for(const b of remaining){const isbn=normalizeISBNs(b.isbns)[0];for(const value of [isbn,equivalentISBN10(isbn)].filter(Boolean)){const key='ISBN:'+value,match=dynamicCover(data[key],key,isbn);if(!data[key]?.thumbnail_url)diagnose('google-dynamic',[isbn],'missing','一致ISBNのサムネイル回答なし',0);else if(!match)diagnose('google-dynamic',[isbn],'rejected','ISBN・画像と書誌のvolume ID・URLの不整合',0);if(match&&await acceptCover(b,match.image,match.proof,signal))break}}
+});remaining=unresolved();
+}
+async function runCoverQueue(){
+  if(coverRunning)return;coverRunning=true;for(const [key,b] of pendingCovers){const state=coverStates.get(key);if((safeImage(b.image)&&!rejectedImages.has(safeImage(b.image)))||(state&&state.expires>Date.now()&&!rejectedImages.has(state.image)))pendingCovers.delete(key)}
+  const batch=[...pendingCovers.values()].slice(0,20);for(const b of batch)pendingCovers.delete(coverKey(b));if(!batch.length){coverRunning=false;return}
+  if(results.size&&$('search-dialog').open)$('cover-message').textContent='表紙を確認中です。先に選択・登録できます。';
+
+  try{await discoverCovers(batch)}catch{}finally{
+    for(const b of batch){if(!coverFor(b))setCover(b,'',null)}saveCoverCache();coverRunning=false;if(detailCoverCheckId===activeId&&$('detail').open&&!manualBusy&&!manualDraft){const current=books.find(b=>b.id===activeId);updateManualPreview(false);$('manual-cover-status').textContent=current&&coverFor(current)?'同一ISBNの自動表紙を表示しました。':'同一ISBNの表紙を確認できませんでした。文字表紙を維持します。';detailCoverCheckId=null;}
+    if(results.size&&$('search-dialog').open){const loaded=[...results.values()].filter(b=>coverFor(b)?.proof?.width>10).length;$('cover-message').textContent=loaded?'表紙：'+loaded+'冊取得。ほかは文字で表示。':'表紙なしは文字で表示します。'}
+    if(pendingCovers.size)queueCovers([]);
+  }
+}
+function coverCredit(b){
+  const el=document.createElement('span');el.className='cover-credit';
+  const update=()=>{if(!el.isConnected)return false;el.replaceChildren();const found=coverFor(b),proof=found?.proof;if(proof?.source==='device'){el.textContent='手動表紙（端末の画像・書誌照合なし）';return true;}if(!proof?.infoURL)return true;
+    const link=document.createElement('a');link.target='_blank';link.rel='noopener noreferrer';link.href=safeImage(proof.infoURL);link.textContent=proof.source==='google-dynamic'?'表紙：Google Books':proof.source==='openlibrary'?'表紙：Open Library':'表紙：openBD';link.onclick=e=>e.stopPropagation();el.append(link);
+    if(proof.source==='google-dynamic'){const logo=document.createElement('img');logo.src='https://books.google.com/googlebooks/images/poweredby.png';logo.alt='Powered by Google';logo.width=88;logo.style.maxWidth='88px';el.append(logo)}return true};
+  setTimeout(update,0);listenForCover(b,update);return el;
+}
+
+function appendResult(b){
+ if([...results.values()].some(x=>sameBook(x,b)))return;
+ if(searchState?.author&&!textKey(b.author+' '+(b.authors||[]).join(' ')).includes(textKey(searchState.author)))return;
+ results.set(b.id,b);const label=document.createElement('label');label.className='result';label.dataset.bookId=b.id;const check=document.createElement('input');check.type='checkbox';check.setAttribute('aria-label',b.title+'を選択');const exists=books.some(x=>sameBook(x,b));check.disabled=exists;check.checked=selected.has(b.id);check.onchange=()=>{if(check.checked)selected.set(b.id,b);else selected.delete(b.id);updateSelection()};
+ const info=document.createElement('span');info.className='result-info';const title=document.createElement('strong');title.textContent=b.title;info.append(title);
+ for(const text of ['著者：'+b.author,(b.publisher||'出版社不明')+(b.published?' · '+b.published:'')+(b.edition?' · '+b.edition:''),b.isbns.length?'ISBN '+b.isbns.join(' / '):'ISBN情報なし',languageLabel(b)+' · '+providerName(b.source)+(exists?' · 登録済み':'')]){const row=document.createElement('small');row.textContent=text;info.append(row)}
+ const reason=document.createElement('small');reason.className='match-reason';reason.textContent=matchBook(b,searchState).reason;info.append(reason,coverCredit(b));label.append(check,cover(b),info);resultNodes.set(b.id,label);
+}
+
+function abortError(){return new DOMException('中断','AbortError')}
+function wait(ms,signal){return new Promise((resolve,reject)=>{if(signal.aborted)return reject(abortError());const stop=()=>{clearTimeout(timer);reject(abortError())};const timer=setTimeout(()=>{signal.removeEventListener('abort',stop);resolve()},ms);signal.addEventListener('abort',stop,{once:true})})}
+async function fetchJSON(provider,url,signal,retried=false){
+  const cached=cache.get(url.href);if(cached&&Date.now()-cached.time<(provider==='openbd'||provider==='openlibrary-books'?30000:600000))return cached.data;
+  if(Date.now()<(providerBlockedUntil.get(providerKey(provider))||0))throw Error('利用上限のため一時休止中');
+  const now=Date.now(),start=Math.max(now,nextRequest.get(provider.startsWith('openlibrary')?'openlibrary':provider)||0);
+  if(start>now)await wait(start-now,signal);
+  if(signal.aborted)throw abortError();
+  nextRequest.set(provider.startsWith('openlibrary')?'openlibrary':provider,Date.now()+(provider==='ndl'?1500:1100));
+  if(signal===controller?.signal){if(metadataRequests>=SEARCH_LIMITS.requests)throw Error('検索要求数の上限');metadataRequests++;}
+  const local=new AbortController(),stop=()=>local.abort();signal.addEventListener('abort',stop,{once:true});
+  const timeoutMs=provider==='ndl'?12000:8000;
+  let timedOut=false;const timer=setTimeout(()=>{timedOut=true;local.abort()},timeoutMs);
+  try{
+    const response=await fetch(url,{signal:local.signal,credentials:'omit'});
+    if(provider==='ndl'&&!retried&&[502,503,504].includes(response.status)){clearTimeout(timer);if(signal===controller?.signal)$('search-message').textContent='NDLサーチが一時的に応答できません。1回だけ再試行しています…';await wait(1500,signal);return await fetchJSON(provider,url,signal,true)}
+    if(!response.ok){
+      if(response.status===429){
+        const retry=response.headers.get('Retry-After');
+        const delay=retry&&/^\d+$/.test(retry)?Number(retry)*1000:Date.parse(retry||'')-Date.now();
+        providerBlockedUntil.set(providerKey(provider),Date.now()+Math.max(60000,Number.isFinite(delay)?delay:0));saveCooldowns();
+      }
+      throw Error(response.status===429?'利用上限（429）':'HTTP '+response.status);
+    }
+    const data=provider==='ndl'?await response.text():await response.json();
+    if(provider==='ndl'){parseNDL(data);}else if(!data||typeof data!=='object'||
+      (provider==='google'&&!(Array.isArray(data.items)||(data.items===undefined&&data.totalItems===0)))||
+      (provider==='openlibrary'&&!(url.pathname.endsWith('/editions.json')?Array.isArray(data.entries):Array.isArray(data.docs)))||
+      (provider==='openbd'&&!Array.isArray(data)))throw Error('応答形式エラー');
+    if(cache.size>=50)cache.delete(cache.keys().next().value);cache.set(url.href,{time:Date.now(),data});return data;
+  }catch(error){if(signal.aborted)throw abortError();if(timedOut)throw Error('タイムアウト（'+timeoutMs/1000+'秒）');if(error instanceof SyntaxError)throw Error('応答形式エラー');if(error instanceof TypeError)throw Error('通信エラー（接続またはCORS）');throw error}
+  finally{clearTimeout(timer);signal.removeEventListener('abort',stop)}
+}
+const originalFetchJSON=fetchJSON;
+fetchJSON=async function(provider,url,signal,retried=false){const t=performance.now();try{const data=await originalFetchJSON(provider,url,signal,retried);diagnose(provider,[], 'response','正常応答（キャッシュを含む）',Math.round(performance.now()-t));return data}catch(e){diagnose(provider,[],'error',e.message,Math.round(performance.now()-t));throw e}};
+let lastCoverRetry=0;
+$('retry-covers').onclick=()=>{if(coverRunning||Date.now()-lastCoverRetry<30000)return;lastCoverRetry=Date.now();requestCoverCheck([...results.values(),...books]);$('cover-message').textContent='未取得の表紙を再確認します。取得済み画像と休止時間は維持します。'};
+function cqlValue(text){return '"'+text.replace(/["\\]/g,' ').trim()+'"'}
+function ndlQuery(state){
+  const value=cqlValue(state.isbn||state.text);
+  const field={intitle:'title',inauthor:'creator',isbn:'isbn'}[state.kind]||'title';
+  const equals=/and|or/i.test(state.text)?' = ':'=';
+  const clause=(state.kind==='all'&&/\s/.test(state.text)?'anywhere':field)+equals+value+(state.author?' AND creator='+cqlValue(state.author):'');
+  return clause+' AND dpid="iss-ndl-opac" AND mediatype="books"';
+}
+async function resolveLibrary(data,state,signal){
+  const books=[];let expanded=0;
+  for(const work of data.docs){
+    const candidates=(work.editions?.docs||[]).map(e=>libraryBook(work,e)).filter(Boolean);
+    // lang=ja ranks editions; only the edition's own language establishes Japanese.
+    let usable=candidates.filter(b=>isJapanese(b)||state.includeOther);
+    if(!usable.some(isJapanese)&&expanded<3&&/^\/works\/OL\d+W$/.test(work.key||'')){
+      expanded++;
+      const url=new URL('https://openlibrary.org'+work.key+'/editions.json');url.search=new URLSearchParams({limit:'50'});
+      try{const details=await fetchJSON('openlibrary',url,signal);if(!Array.isArray(details.entries))throw Error('版情報の応答形式エラー');const editions=details.entries.map(e=>libraryBook(work,e)).filter(Boolean);const japanese=editions.filter(isJapanese);if(japanese.length)usable=japanese;else if(state.includeOther&&editions.length)usable=editions;}
+      catch(error){if(signal.aborted)throw error;}
+    }
+    books.push(...usable);
+  }
+  return books;
+}
+async function queryProvider(provider,state,pageOffset,signal){
+  if(Date.now()<(providerBlockedUntil.get(providerKey(provider))||0))throw Error('利用上限のため一時休止中');
+  let url,data;
+  if(provider==='ndl'){
+    url=new URL('https://ndlsearch.ndl.go.jp/api/sru');url.search=new URLSearchParams({operation:'searchRetrieve',query:ndlQuery(state),maximumRecords:String(Math.min(pageOffset===0?SEARCH_LIMITS.ndlFirstSize:SEARCH_LIMITS.ndlSize,500-pageOffset)),startRecord:String(pageOffset+1),recordSchema:'dcndl',recordPacking:'xml',onlyBib:'true'});
+    data=parseNDL(await fetchJSON(provider,url,signal));
+    if(state.kind==='all'&&data.total===0){url.searchParams.set('query',ndlQuery({...state,kind:'inauthor'}));data=parseNDL(await fetchJSON(provider,url,signal));}
+    const items=data.items.filter(b=>isJapanese(b)||state.includeOther);
+    return {items,next:pageOffset+data.rawCount,more:data.rawCount===Math.min(pageOffset===0?SEARCH_LIMITS.ndlFirstSize:SEARCH_LIMITS.ndlSize,500-pageOffset)&&pageOffset+data.rawCount<Math.min(data.total,500)};
+  }
+  if(provider==='google'){
+    url=new URL('https://www.googleapis.com/books/v1/volumes');
+    const prefix={intitle:'intitle:',inauthor:'inauthor:',isbn:'isbn:'}[state.kind]||'';
+    url.search=new URLSearchParams({q:prefix+(state.isbn||state.text),startIndex:String(pageOffset),maxResults:'20',printType:'books',...(!state.includeOther?{langRestrict:'ja'}:{})});
+    data=await fetchJSON(provider,url,signal);const raw=data.items||[];
+    return {items:raw.filter(i=>typeof i?.id==='string'&&i.id&&i.volumeInfo).map(googleBook).filter(b=>isJapanese(b)||state.includeOther),next:pageOffset+raw.length,more:raw.length===20&&pageOffset+raw.length<Number(data.totalItems||0)};
+  }
+  url=new URL('https://openlibrary.org/search.json');const field={intitle:'q',inauthor:'author',isbn:'isbn'}[state.kind]||'q';
+  url.search=new URLSearchParams({[field]:state.isbn||state.text,...(state.author?{author:state.author}:{}),offset:String(pageOffset),limit:String(SEARCH_LIMITS.librarySize),lang:'ja',fields:'key,title,editions,editions.key,editions.title,editions.language,editions.isbn,editions.cover_i,editions.by_statement,editions.author_name,editions.publishers,editions.publish_date'});
+  data=await fetchJSON(provider,url,signal);
+  const items=await resolveLibrary(data,state,signal);
+  return {items,next:pageOffset+data.docs.length,more:data.docs.length===20&&pageOffset+data.docs.length<Number(data.numFound??data.num_found??0)};
+}
+
+const SEARCH_CACHE_KEY='minna-no-hondana.v101.search';
+function searchCacheKey(state){return JSON.stringify([state.provider,state.kind,state.text,state.includeOther,state.author])}
+function cachedSearch(state){try{const entries=JSON.parse(localStorage.getItem(SEARCH_CACHE_KEY)||'[]');return Array.isArray(entries)?entries.find(e=>e.key===searchCacheKey(state)&&e.expires>Date.now()&&Array.isArray(e.items)&&e.items.every(b=>validBook(b)&&(state.includeOther||isJapanese(b)))):null}catch{return null}}
+function saveSearchCache(state,response,provider){try{const raw=JSON.parse(localStorage.getItem(SEARCH_CACHE_KEY)||'[]'),entries=Array.isArray(raw)?raw:[];const entry={key:searchCacheKey(state),expires:Date.now()+600000,items:response.items,next:response.next,more:response.more,provider,pages:searchPages};const next=[...entries.filter(e=>e.key!==entry.key&&e.expires>Date.now()),entry].slice(-6);const json=JSON.stringify(next);if(json.length<250000)localStorage.setItem(SEARCH_CACHE_KEY,json)}catch{}}
+function searchBusy(busy){$('cancel-search').hidden=!busy;$('more').disabled=busy}
+async function search(more=false){
+ const text=$('query').value.trim();if(!more&&!text)return;$('search-options').open=false;
+ if(more&&searchPages>=SEARCH_LIMITS.pages)return;
+ controller?.abort();const token=++requestId;controller=new AbortController();const signal=controller.signal;
+ if(!more){const isbn=isbn13(text),kind=$('search-kind').value;if(kind==='isbn'&&!isbn){$('search-message').textContent='有効なISBN-10またはISBN-13を入力してください。';$('more').hidden=true;searchBusy(false);return}
+ searchState={text:text.normalize('NFKC'),kind:isbn?'isbn':kind,isbn,provider:$('provider').value,author:$('author-filter').value.trim().normalize('NFKC'),includeOther:$('include-other').checked};offset=0;activeProvider=null;hasMore=false;searchPages=0;metadataRequests=0;selected.clear();results.clear();resultNodes.clear();$('results').replaceChildren();updateSelection();}
+ const state=searchState,cached=!more&&cachedSearch(state);if(cached){cached.items.forEach(appendResult);renderResults();activeProvider=cached.provider;offset=cached.next;hasMore=cached.more;searchPages=cached.pages||1;$('more').hidden=!hasMore||searchPages>=SEARCH_LIMITS.pages;$('search-message').textContent='保存した直近の検索結果：'+results.size+'件。一致度順で表示しています。';searchBusy(false);return}
+ const chain=state.provider==='auto'?['ndl','openlibrary']:[state.provider],order=more?[activeProvider]:chain;let timedOut=false;const failures=[];
+ const searchController=controller;const deadline=setTimeout(()=>{timedOut=true;searchController.abort()},SEARCH_LIMITS.timeMs);searchBusy(true);$('more').hidden=true;
+ try{for(const provider of order){if(!provider)continue;
+  while(searchPages<SEARCH_LIMITS.pages&&!signal.aborted){
+   $('search-message').textContent=failures.join(' / ')+(failures.length?' → ':'')+providerName(provider)+'で候補を確認中（'+(searchPages+1)+'/'+SEARCH_LIMITS.pages+'ページ）'+(results.size?'・'+results.size+'件表示済み。選択できます。':'…');
+   try{const response=await queryProvider(provider,state,provider===activeProvider?offset:0,signal);if(token!==requestId)return;
+    searchPages++;activeProvider=provider;offset=response.next;hasMore=response.more;response.items.forEach(appendResult);renderResults();
+    if(!hasMore||state.kind==='isbn'||[...results.values()].filter(b=>isJapanese(b)&&matchBook(b,state).score>=6000).length>=3)break;
+   }catch(e){if(!signal.aborted)failures.push(providerName(provider)+'：'+e.message);hasMore=false;break;}
+  }
+  if([...results.values()].some(b=>isJapanese(b)&&matchBook(b,state).high)||signal.aborted||searchPages>=SEARCH_LIMITS.pages)break;
+  // Keep the zero-result provider's cursor separate when trying the fallback.
+  offset=0;activeProvider=null;
+ }
+ if(token!==requestId)return;
+ if(results.size&&!signal.aborted&&([...results.values()].some(b=>matchBook(b,state).high)||(!failures.length&&!hasMore)))saveSearchCache(state,{items:[...results.values()],next:offset,more:hasMore},activeProvider);
+ const ending=timedOut?'30秒で候補の確認を終了しました。':signal.aborted?'検索を中止しました。':searchPages>=SEARCH_LIMITS.pages&&hasMore?'取得上限の3ページまで確認しました。':'';
+ $('search-message').textContent=(results.size?results.size+'件を一致度順で表示。'+ending+' 選択・登録できます。':ending||'見つかりませんでした。著者名またはISBNで絞って再検索できます。')+(failures.length?' '+failures.join(' / '):'');
+ $('more').hidden=!hasMore||searchPages>=SEARCH_LIMITS.pages;
+ }finally{clearTimeout(deadline);if(token===requestId)searchBusy(false)}
+}
+$('cancel-search').onclick=()=>controller?.abort();
+
+$('search-form').onsubmit=e=>{e.preventDefault();search()};$('more').onclick=()=>search(true);
+$('register').onclick=()=>{
+  const type=$('destination').value,next=[...books];let count=0;
+  for(const b of selected.values()){if(!next.some(x=>sameBook(x,b))){next.push(withReading({...b,type,favorite:false},Math.max(-1,...next.map(x=>x.reading.placement.registrationOrder))+1,true));count++}}
+  if(!count){message('選択した本は登録済みです。');return}
+  if(persist(next)){filter=type;selected.clear();updateSelection();closeSearch();$('results').replaceChildren();results.clear();resultNodes.clear();$('more').hidden=true;$('search-message').textContent='キーワードを入力して検索してください。';render();message(count+'冊を登録・保存しました。')}
+};
+
+loadCooldowns();loadCoverCache();matchMedia('(min-width:620px)').addEventListener('change',render);render();
+</script>
+</body></html>
