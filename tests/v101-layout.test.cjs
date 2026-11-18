@@ -24,7 +24,51 @@ test('synthetic touch movement before hold leaves scrolling unblocked and does n
 test('touch cancellation and two-finger movement abandon drag without changing order',async({page})=>{await setup(page);await mode(page);await alignShelf(page);const a=await center(page,'r0'),before=await draft(page);for(const type of ['touchcancel','multi']){await touchEvent(page,'r0','touchstart',a.x,a.y);await expect(page.locator('.drag-ghost')).toBeVisible();await touchEvent(page,'r0',type==='multi'?'touchmove':'touchcancel',a.x+10,a.y,type==='multi'?2:1);await expect(page.locator('.drag-ghost')).toHaveCount(0);expect(await draft(page)).toEqual(before)}await page.locator('#cancel-reorder').click();expect(await stored(page)).toBeNull();});
 test('dedicated handle uses PointerEvent touch path with touch-action none',async({page})=>{await setup(page);await mode(page);await alignShelf(page);const h=page.locator('.book-cell[data-book-id="r0"] .move-handle'),r=await h.boundingBox();expect(await h.evaluate(e=>getComputedStyle(e).touchAction)).toBe('none');await h.dispatchEvent('pointerdown',{pointerId:77,pointerType:'touch',isPrimary:true,button:0,clientX:r.x+10,clientY:r.y+10});await expect(page.locator('.drag-ghost')).toBeVisible();const b=await center(page,'r2');await page.locator('#case').dispatchEvent('pointermove',{pointerId:77,pointerType:'touch',clientX:b.x,clientY:b.y});await page.locator('#case').dispatchEvent('pointerup',{pointerId:77,pointerType:'touch',clientX:b.x,clientY:b.y});expect((await draft(page)).slice(0,3)).toEqual(['r1','r2','r0']);});
 test('Escape cancels a live drag, then cancels edit; arrow keys can move books',async({page})=>{await setup(page);await mode(page);await choose(page,'r0');await page.locator('.book[data-book-id="r0"]').press('ArrowRight');expect((await draft(page)).slice(0,2)).toEqual(['r1','r0']);await alignShelf(page);const a=await center(page,'r0');await page.mouse.move(a.x,a.y);await page.mouse.down();await expect(page.locator('.drag-ghost')).toBeVisible();await page.keyboard.press('Escape');await expect(page.locator('.drag-ghost')).toHaveCount(0);await expect(page.locator('#reorder-panel')).toBeVisible();await page.mouse.up();await page.keyboard.press('Escape');await expect(page.locator('#reorder-panel')).not.toBeVisible();expect(await stored(page)).toBeNull();expect((await ids(page))[0]).toBe('r0');});
-test('drag edge autoscroll can be canceled without persisting',async({page})=>{await setup(page,fixture(45,0));await mode(page);await alignShelf(page);const a=await center(page,'r0');await page.mouse.move(a.x,a.y);await page.mouse.down();await expect(page.locator('.drag-ghost')).toBeVisible();const initial=await page.evaluate(()=>scrollY);await page.mouse.move(a.x,await page.evaluate(()=>innerHeight-12),{steps:4});await expect.poll(()=>page.evaluate(()=>scrollY)).toBeGreaterThan(initial+20);await page.keyboard.press('Escape');await page.mouse.up();await page.locator('#cancel-reorder').click();expect(await stored(page)).toBeNull();});
+test('drag edge autoscroll can be canceled without persisting',async({page},testInfo)=>{
+  await setup(page,fixture(45,0));
+  const errors=[];
+  page.on('pageerror',error=>errors.push(error.message));
+  // Observe browser scheduling and cancellation without replacing product handlers.
+  await page.evaluate(()=>{
+    window.__autoscrollQA={frames:[],events:[],phases:[],maxFrameGap:0};
+    const qa=window.__autoscrollQA;
+    const snapshot=()=>({at:performance.now(),scrollY,innerHeight,focused:document.hasFocus(),hidden:document.hidden,
+      drag:dragState&&{active:dragState.active,x:dragState.x,y:dragState.y,targetId:dragState.targetId}});
+    qa.mark=name=>qa.phases.push({name,...snapshot()});
+    for(const type of ['blur','resize','visibilitychange','pointercancel','lostpointercapture'])
+      window.addEventListener(type,event=>qa.events.push({type,trusted:event.isTrusted,...snapshot()}),true);
+    let previous=performance.now();
+    function frame(){const now=performance.now();qa.maxFrameGap=Math.max(qa.maxFrameGap,now-previous);previous=now;
+      qa.frames.push(snapshot());if(qa.frames.length>80)qa.frames.shift();qa.raf=requestAnimationFrame(frame)}
+    qa.raf=requestAnimationFrame(frame);
+  });
+  try{
+    await mode(page);await alignShelf(page);
+    const a=await center(page,'r0');await page.mouse.move(a.x,a.y);await page.mouse.down();
+    await expect(page.locator('.drag-ghost')).toBeVisible();
+    const initial=await page.evaluate(()=>{__autoscrollQA.mark('hold-active');return scrollY});
+    await page.mouse.move(a.x,await page.evaluate(()=>innerHeight-12),{steps:4});
+    await page.evaluate(()=>__autoscrollQA.mark('pointer-at-edge'));
+    // Software-rendered mobile WebKit can pause rAF for seconds under CPU contention.
+    // Keep the 20px movement requirement and require a live edge hold throughout
+    // completion; the bounded wait is for browser scheduling, not a retry of the drag.
+    await expect.poll(()=>page.evaluate(initial=>({
+      active:!!dragState?.active,
+      atEdge:!!dragState&&dragState.y>innerHeight-75,
+      advanced:scrollY>initial+20
+    }),initial),{timeout:15000,message:'live edge hold must scroll more than 20px'}).toEqual({active:true,atEdge:true,advanced:true});
+    await page.evaluate(()=>__autoscrollQA.mark('scrolled'));
+    await page.keyboard.press('Escape');await expect(page.locator('.drag-ghost')).toHaveCount(0);
+    await page.mouse.up();await page.locator('#cancel-reorder').click();
+    await page.evaluate(()=>__autoscrollQA.mark('canceled'));
+    expect(await stored(page)).toBeNull();
+    expect(await page.evaluate(()=>reorderSession)).toBeNull();
+    expect(await ids(page)).toEqual(fixture(45,0).books.map(book=>book.id));
+  }finally{
+    const diagnostics=await page.evaluate(()=>{cancelAnimationFrame(__autoscrollQA.raf);const {frames,events,phases,maxFrameGap}=__autoscrollQA;return {frames,events,phases,maxFrameGap,active:!!dragState?.active,scrollY}});
+    await testInfo.attach('autoscroll-diagnostics',{body:JSON.stringify({...diagnostics,errors},null,2),contentType:'application/json'});
+  }
+});
 test('manual save failure preserves both persisted data and original lists',async({page})=>{await setup(page);await page.locator('#shelf-sort').selectOption('title');const before=await stored(page),order=await page.evaluate(()=>JSON.stringify(manualOrder));await mode(page);await page.locator('#move-after').click();await page.evaluate(key=>{const original=Storage.prototype.setItem;Storage.prototype.setItem=function(k,v){if(k===key)throw new DOMException('quota','QuotaExceededError');return original.call(this,k,v)}},KEY);await page.locator('#save-reorder').click();await expect(page.locator('#reorder-status')).toContainText('保存できません');expect(await stored(page)).toBe(before);expect(await page.evaluate(()=>JSON.stringify(manualOrder))).toBe(order);await page.locator('#cancel-reorder').click();await expect(page.locator('#shelf-sort')).toHaveValue('title');});
 test('status changes and deletion remove old memberships and append only to destination',async({page})=>{await setup(page);await mode(page);await page.locator('#move-after').click();await save(page);await page.locator('.book[data-book-id="r0"]').click();await page.locator('#book-type').selectOption('want');await page.locator('#save-detail').click();let order=JSON.parse(await stored(page)).manualOrder;expect(order.read).toEqual(['r1','r2','r3','r4','r5']);expect(order.want).toEqual(['w0','w1','w2','r0']);await page.locator('.book[data-book-id="r1"]').click();page.once('dialog',d=>d.accept());await page.locator('#delete-book').click();order=JSON.parse(await stored(page)).manualOrder;expect(order.read).toEqual(['r2','r3','r4','r5']);expect(order.want).toEqual(['w0','w1','w2','r0']);await page.getByRole('button',{name:'読みたい本',exact:true}).click();await page.locator('.book[data-book-id="r0"]').click();await expect(page.locator('#book-note')).toHaveValue('保存するメモ 0');await expect(page.getByRole('checkbox',{name:'自己成長',exact:true})).toBeChecked();});
 test('bulk registration appends new books once without changing custom or registration order',async({page})=>{await setup(page);await mode(page);await page.locator('#move-after').click();await save(page);const xml=`<s:searchRetrieveResponse xmlns:s="http://www.loc.gov/zing/srw/" xmlns:r="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:n="http://ndl.go.jp/dcndl/terms/" xmlns:d="http://purl.org/dc/terms/" xmlns:c="http://purl.org/dc/elements/1.1/"><s:numberOfRecords>2</s:numberOfRecords>${['9784422100517','9784761270438'].map((isbn,i)=>`<s:record><s:recordData><r:RDF><n:BibResource r:about="https://ndlsearch.ndl.go.jp/books/R100000002-Iadded${i}"><d:title>追加本${i}</d:title><c:creator>追加著者</c:creator><d:language>jpn</d:language><d:identifier r:datatype="http://ndl.go.jp/dcndl/terms/ISBN">${isbn}</d:identifier></n:BibResource></r:RDF></s:recordData></s:record>`).join('')}</s:searchRetrieveResponse>`;await page.route('https://ndlsearch.ndl.go.jp/api/sru?**',r=>r.fulfill({contentType:'application/xml',body:xml}));await page.locator('#open-search').click();await page.locator('#query').fill('追加本');await page.getByRole('button',{name:'検索',exact:true}).click();await expect(page.locator('.result')).toHaveCount(2);await page.getByRole('checkbox',{name:'追加本0を選択',exact:true}).check();await page.getByRole('checkbox',{name:'追加本1を選択',exact:true}).check();await page.locator('#register').click();const state=JSON.parse(await stored(page));expect(state.manualOrder.read.slice(0,6)).toEqual(['r1','r0','r2','r3','r4','r5']);expect(state.manualOrder.read.slice(-2)).toEqual(state.books.slice(-2).map(b=>b.id));expect(new Set(state.manualOrder.read).size).toBe(8);expect(state.books.slice(0,6).map(b=>b.reading.placement.registrationOrder)).toEqual([0,1,2,3,4,5]);});
