@@ -1,0 +1,439 @@
+{
+  "date": "2026-11-18",
+  "environment": "HTTPS Pages-origin simulation; HTML local only; real APIs and images; Linux WebKit 390x844",
+  "runs": [
+    {
+      "name": "title-search-second-book-failed",
+      "records": [
+        {
+          "engine": "webkit",
+          "searchMs": 1479,
+          "responses": [
+            {
+              "url": "https://ndlsearch.ndl.go.jp/api/sru?operation=searchRetrieve&query=title%3D%22%E3%82%A8%E3%83%83%E3%82%BB%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E6%80%9D%E8%80%83%22+AND+dpid%3D%22iss-ndl-opac%22+AND+mediatype%3D%22books%22&maximumRecords=20&startRecord=1&recordSchema=dcndl&recordPacking=xml&onlyBib=true",
+              "status": 200
+            },
+            {
+              "url": "https://api.openbd.jp/v1/get?isbn=9784761270438%2C9784761277802%2C9784761272463%2C9784904899236",
+              "status": 200
+            },
+            {
+              "url": "https://openlibrary.org/api/books?bibkeys=ISBN%3A9784761270438%2CISBN%3A9784761277802%2CISBN%3A9784761272463%2CISBN%3A9784904899236&format=json&jscmd=data",
+              "status": 200
+            },
+            {
+              "url": "https://books.google.com/books?jscmd=viewapi&bibkeys=ISBN%3A9784761270438%2CISBN%3A4761270438%2CISBN%3A9784761277802%2CISBN%3A4761277807%2CISBN%3A9784761272463%2CISBN%3A4761272465%2CISBN%3A9784904899236%2CISBN%3A4904899237&callback=__hondanaCover1",
+              "status": 200
+            },
+            {
+              "url": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+              "status": 200
+            },
+            {
+              "url": "https://books.google.com/googlebooks/images/poweredby.png",
+              "status": 200
+            },
+            {
+              "url": "https://books.google.com/books/content?id=XFAH0QEACAAJ&printsec=frontcover&img=1&zoom=5",
+              "status": 200
+            },
+            {
+              "url": "https://books.google.com/books/content?id=XpjbAQAACAAJ&printsec=frontcover&img=1&zoom=5",
+              "status": 200
+            },
+            {
+              "url": "https://books.google.com/books/content?id=IMqFtgAACAAJ&printsec=frontcover&img=1&zoom=5",
+              "status": 200
+            },
+            {
+              "url": "https://openlibrary.org/search.json?q=%E5%AB%8C%E3%82%8F%E3%82%8C%E3%82%8B%E5%8B%87%E6%B0%97&offset=0&limit=20&lang=ja&fields=key%2Ctitle%2Ceditions%2Ceditions.key%2Ceditions.title%2Ceditions.language%2Ceditions.isbn%2Ceditions.cover_i%2Ceditions.by_statement%2Ceditions.author_name%2Ceditions.publishers%2Ceditions.publish_date",
+              "status": 200
+            },
+            {
+              "url": "https://openlibrary.org/works/OL19744000W/editions.json?limit=50",
+              "status": 200
+            },
+            {
+              "url": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+              "status": 200
+            },
+            {
+              "url": "https://books.google.com/googlebooks/images/poweredby.png",
+              "status": 200
+            }
+          ],
+          "failures": [
+            {
+              "url": "https://ndlsearch.ndl.go.jp/api/sru?operation=searchRetrieve&query=title%3D%22%E5%AB%8C%E3%82%8F%E3%82%8C%E3%82%8B%E5%8B%87%E6%B0%97%22+AND+dpid%3D%22iss-ndl-opac%22+AND+mediatype%3D%22books%22&maximumRecords=20&startRecord=1&recordSchema=dcndl&recordPacking=xml&onlyBib=true",
+              "reason": "Load request cancelled"
+            }
+          ],
+          "searchMessage": "4件を一致度順で表示。 選択・登録できます。",
+          "found": {
+            "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025894653",
+            "source": "ndl",
+            "identifiers": {
+              "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I025894653"
+            },
+            "title": "エッセンシャル思考 : 最少の時間で成果を最大にする",
+            "authors": [
+              "グレッグ・マキューン 著",
+              "高橋璃子 訳"
+            ],
+            "author": "グレッグ・マキューン 著・高橋璃子 訳",
+            "isbns": [
+              "9784761270438"
+            ],
+            "languages": [
+              "jpn"
+            ],
+            "publisher": "かんき出版",
+            "published": "2014.11",
+            "edition": "",
+            "sourceURL": "https://ndlsearch.ndl.go.jp/books/R100000002-I025894653",
+            "description": "国立国会図書館蔵書の書誌情報（NDLサーチAPI・CC BY 4.0）。著者の責任表示を保持しています。",
+            "image": "",
+            "type": "read",
+            "favorite": false
+          },
+          "passed": true,
+          "image": {
+            "src": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+            "width": 128,
+            "height": 185
+          },
+          "secondSearch": {
+            "ms": 13498,
+            "found": null,
+            "message": "見つかりませんでした。著者名またはISBNで絞って再検索できます。 NDLサーチ：タイムアウト（12秒）"
+          },
+          "downloadName": "minna-no-hondana-2026-11-18.json",
+          "restored": {
+            "version": 10,
+            "books": [
+              {
+                "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025894653",
+                "source": "ndl",
+                "identifiers": {
+                  "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I025894653"
+                },
+                "title": "エッセンシャル思考 : 最少の時間で成果を最大にする",
+                "authors": [
+                  "グレッグ・マキューン 著",
+                  "高橋璃子 訳"
+                ],
+                "author": "グレッグ・マキューン 著・高橋璃子 訳",
+                "isbns": [
+                  "9784761270438"
+                ],
+                "languages": [
+                  "jpn"
+                ],
+                "publisher": "かんき出版",
+                "published": "2014.11",
+                "edition": "",
+                "sourceURL": "https://ndlsearch.ndl.go.jp/books/R100000002-I025894653",
+                "description": "国立国会図書館蔵書の書誌情報（NDLサーチAPI・CC BY 4.0）。著者の責任表示を保持しています。",
+                "image": "",
+                "type": "read",
+                "favorite": true,
+                "reading": {
+                  "recommendedTagIds": [
+                    "career",
+                    "habits"
+                  ],
+                  "review": {
+                    "text": "実API検証用メモ\nこのブラウザにだけ保存",
+                    "visibility": "private",
+                    "updatedAt": "2026-11-18T01:51:04.773Z"
+                  },
+                  "placement": {
+                    "registrationOrder": 0,
+                    "position": null
+                  },
+                  "addedAt": "2026-11-18T01:51:03.946Z"
+                }
+              }
+            ],
+            "settings": {
+              "sort": "favorite"
+            },
+            "manualOrder": {
+              "read": [
+                "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025894653"
+              ],
+              "want": []
+            }
+          },
+          "imageDisplayed": true,
+          "shelfImage": {
+            "src": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+            "width": 128,
+            "height": 185
+          }
+        }
+      ]
+    },
+    {
+      "name": "final-ISBN-two-book-manual-roundtrip",
+      "records": [
+        {
+          "engine": "webkit",
+          "searchMs": 1315,
+          "responses": [
+            {
+              "url": "https://ndlsearch.ndl.go.jp/api/sru?operation=searchRetrieve&query=title%3D%22%E3%82%A8%E3%83%83%E3%82%BB%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E6%80%9D%E8%80%83%22+AND+dpid%3D%22iss-ndl-opac%22+AND+mediatype%3D%22books%22&maximumRecords=20&startRecord=1&recordSchema=dcndl&recordPacking=xml&onlyBib=true",
+              "status": 200
+            },
+            {
+              "url": "https://api.openbd.jp/v1/get?isbn=9784761270438%2C9784761277802%2C9784761272463%2C9784904899236",
+              "status": 200
+            },
+            {
+              "url": "https://openlibrary.org/api/books?bibkeys=ISBN%3A9784761270438%2CISBN%3A9784761277802%2CISBN%3A9784761272463%2CISBN%3A9784904899236&format=json&jscmd=data",
+              "status": 200
+            },
+            {
+              "url": "https://books.google.com/books?jscmd=viewapi&bibkeys=ISBN%3A9784761270438%2CISBN%3A4761270438%2CISBN%3A9784761277802%2CISBN%3A4761277807%2CISBN%3A9784761272463%2CISBN%3A4761272465%2CISBN%3A9784904899236%2CISBN%3A4904899237&callback=__hondanaCover1",
+              "status": 200
+            },
+            {
+              "url": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+              "status": 200
+            },
+            {
+              "url": "https://books.google.com/googlebooks/images/poweredby.png",
+              "status": 200
+            },
+            {
+              "url": "https://books.google.com/books/content?id=XFAH0QEACAAJ&printsec=frontcover&img=1&zoom=5",
+              "status": 200
+            },
+            {
+              "url": "https://books.google.com/books/content?id=XpjbAQAACAAJ&printsec=frontcover&img=1&zoom=5",
+              "status": 200
+            },
+            {
+              "url": "https://books.google.com/books/content?id=IMqFtgAACAAJ&printsec=frontcover&img=1&zoom=5",
+              "status": 200
+            },
+            {
+              "url": "https://ndlsearch.ndl.go.jp/api/sru?operation=searchRetrieve&query=isbn%3D%229784478025819%22+AND+dpid%3D%22iss-ndl-opac%22+AND+mediatype%3D%22books%22&maximumRecords=20&startRecord=1&recordSchema=dcndl&recordPacking=xml&onlyBib=true",
+              "status": 200
+            },
+            {
+              "url": "https://api.openbd.jp/v1/get?isbn=9784478025819",
+              "status": 200
+            },
+            {
+              "url": "https://openlibrary.org/api/books?bibkeys=ISBN%3A9784478025819&format=json&jscmd=data",
+              "status": 200
+            },
+            {
+              "url": "https://books.google.com/books?jscmd=viewapi&bibkeys=ISBN%3A9784478025819%2CISBN%3A4478025819&callback=__hondanaCover2",
+              "status": 200
+            },
+            {
+              "url": "https://api.openbd.jp/v1/get?isbn=9784478025819",
+              "status": 200
+            },
+            {
+              "url": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+              "status": 200
+            },
+            {
+              "url": "https://openlibrary.org/api/books?bibkeys=ISBN%3A9784478025819&format=json&jscmd=data",
+              "status": 200
+            },
+            {
+              "url": "https://books.google.com/books?jscmd=viewapi&bibkeys=ISBN%3A9784478025819%2CISBN%3A4478025819&callback=__hondanaCover1",
+              "status": 200
+            },
+            {
+              "url": "https://books.google.com/googlebooks/images/poweredby.png",
+              "status": 200
+            }
+          ],
+          "failures": [],
+          "searchMessage": "4件を一致度順で表示。 選択・登録できます。",
+          "found": {
+            "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025894653",
+            "source": "ndl",
+            "identifiers": {
+              "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I025894653"
+            },
+            "title": "エッセンシャル思考 : 最少の時間で成果を最大にする",
+            "authors": [
+              "グレッグ・マキューン 著",
+              "高橋璃子 訳"
+            ],
+            "author": "グレッグ・マキューン 著・高橋璃子 訳",
+            "isbns": [
+              "9784761270438"
+            ],
+            "languages": [
+              "jpn"
+            ],
+            "publisher": "かんき出版",
+            "published": "2014.11",
+            "edition": "",
+            "sourceURL": "https://ndlsearch.ndl.go.jp/books/R100000002-I025894653",
+            "description": "国立国会図書館蔵書の書誌情報（NDLサーチAPI・CC BY 4.0）。著者の責任表示を保持しています。",
+            "image": "",
+            "type": "read",
+            "favorite": false
+          },
+          "passed": true,
+          "image": {
+            "src": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+            "width": 128,
+            "height": 185
+          },
+          "secondSearch": {
+            "query": "9784478025819",
+            "ms": 547,
+            "found": {
+              "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025056492",
+              "source": "ndl",
+              "identifiers": {
+                "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I025056492"
+              },
+              "title": "嫌われる勇気 : 自己啓発の源流「アドラー」の教え",
+              "authors": [
+                "岸見一郎, 古賀史健 著"
+              ],
+              "author": "岸見一郎, 古賀史健 著",
+              "isbns": [
+                "9784478025819"
+              ],
+              "languages": [
+                "jpn"
+              ],
+              "publisher": "ダイヤモンド社",
+              "published": "2013.12",
+              "edition": "",
+              "sourceURL": "https://ndlsearch.ndl.go.jp/books/R100000002-I025056492",
+              "description": "国立国会図書館蔵書の書誌情報（NDLサーチAPI・CC BY 4.0）。著者の責任表示を保持しています。",
+              "image": "",
+              "type": "read",
+              "favorite": false
+            },
+            "message": "1件を一致度順で表示。 選択・登録できます。"
+          },
+          "manualInteraction": "実APIの2冊を移動ボタンで並び替え、配置を保存",
+          "manualOrder": {
+            "read": [
+              "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025056492",
+              "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025894653"
+            ],
+            "want": []
+          },
+          "downloadName": "minna-no-hondana-2026-11-18.json",
+          "restored": {
+            "version": 10,
+            "books": [
+              {
+                "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025894653",
+                "source": "ndl",
+                "identifiers": {
+                  "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I025894653"
+                },
+                "title": "エッセンシャル思考 : 最少の時間で成果を最大にする",
+                "authors": [
+                  "グレッグ・マキューン 著",
+                  "高橋璃子 訳"
+                ],
+                "author": "グレッグ・マキューン 著・高橋璃子 訳",
+                "isbns": [
+                  "9784761270438"
+                ],
+                "languages": [
+                  "jpn"
+                ],
+                "publisher": "かんき出版",
+                "published": "2014.11",
+                "edition": "",
+                "sourceURL": "https://ndlsearch.ndl.go.jp/books/R100000002-I025894653",
+                "description": "国立国会図書館蔵書の書誌情報（NDLサーチAPI・CC BY 4.0）。著者の責任表示を保持しています。",
+                "image": "",
+                "type": "read",
+                "favorite": true,
+                "reading": {
+                  "recommendedTagIds": [
+                    "career",
+                    "habits"
+                  ],
+                  "review": {
+                    "text": "実API検証用メモ\nこのブラウザにだけ保存",
+                    "visibility": "private",
+                    "updatedAt": "2026-11-18T01:59:11.525Z"
+                  },
+                  "placement": {
+                    "registrationOrder": 0,
+                    "position": null
+                  },
+                  "addedAt": "2026-11-18T01:59:10.413Z"
+                }
+              },
+              {
+                "id": "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025056492",
+                "source": "ndl",
+                "identifiers": {
+                  "ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I025056492"
+                },
+                "title": "嫌われる勇気 : 自己啓発の源流「アドラー」の教え",
+                "authors": [
+                  "岸見一郎, 古賀史健 著"
+                ],
+                "author": "岸見一郎, 古賀史健 著",
+                "isbns": [
+                  "9784478025819"
+                ],
+                "languages": [
+                  "jpn"
+                ],
+                "publisher": "ダイヤモンド社",
+                "published": "2013.12",
+                "edition": "",
+                "sourceURL": "https://ndlsearch.ndl.go.jp/books/R100000002-I025056492",
+                "description": "国立国会図書館蔵書の書誌情報（NDLサーチAPI・CC BY 4.0）。著者の責任表示を保持しています。",
+                "image": "",
+                "type": "read",
+                "favorite": false,
+                "reading": {
+                  "recommendedTagIds": [],
+                  "review": {
+                    "text": "",
+                    "visibility": "private",
+                    "updatedAt": null
+                  },
+                  "placement": {
+                    "registrationOrder": 1,
+                    "position": null
+                  },
+                  "addedAt": "2026-11-18T01:59:12.426Z"
+                }
+              }
+            ],
+            "settings": {
+              "sort": "manual"
+            },
+            "manualOrder": {
+              "read": [
+                "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025056492",
+                "ndl:https://ndlsearch.ndl.go.jp/books/R100000002-I025894653"
+              ],
+              "want": []
+            }
+          },
+          "imageDisplayed": true,
+          "shelfImage": {
+            "src": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+            "width": 128,
+            "height": 185
+          }
+        }
+      ]
+    }
+  ]
+}
