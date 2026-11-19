@@ -1,0 +1,111 @@
+{
+  "retrievedAt": "2026-11-19T06:50:50Z",
+  "source": "https://api.openbd.jp/v1/get?isbn=9784478025819,9784761270438,9784422100517,9784863940246,9784478107829,9784478066119,9784023318786,9784478870576,9784478012031,9784834006519,9784866514809",
+  "records": [
+    {
+      "requestedIsbn": "9784478025819",
+      "summary": {
+        "isbn": "9784478025819",
+        "title": "嫌われる勇気 : 自己啓発の源流「アドラー」の教え",
+        "volume": "",
+        "series": "",
+        "publisher": "ダイヤモンド社",
+        "pubdate": "201312",
+        "cover": "",
+        "author": "岸見,一郎,1956- 古賀,史健,1973-"
+      }
+    },
+    {
+      "requestedIsbn": "9784761270438",
+      "summary": {
+        "isbn": "9784761270438",
+        "title": "エッセンシャル思考 : 最少の時間で成果を最大にする",
+        "volume": "",
+        "series": "",
+        "publisher": "かんき出版",
+        "pubdate": "201411",
+        "cover": "",
+        "author": "McKeown,Greg 高橋,璃子,1979-"
+      }
+    },
+    {
+      "requestedIsbn": "9784422100517",
+      "summary": {
+        "isbn": "9784422100517",
+        "title": "人を動かす",
+        "volume": "",
+        "series": "",
+        "publisher": "創元社",
+        "pubdate": "199910",
+        "cover": "",
+        "author": "Carnegie,Dale,1888-1955 山口,博,1913-"
+      }
+    },
+    {
+      "requestedIsbn": "9784863940246",
+      "summary": {
+        "isbn": "9784863940246",
+        "title": "完訳7つの習慣 : 人格主義の回復",
+        "volume": "",
+        "series": "",
+        "publisher": "キングベアー出版",
+        "pubdate": "201308",
+        "cover": "",
+        "author": "Covey,StephenR.,1932-2012 フランクリンコヴィージャパン株式会社"
+      }
+    },
+    {
+      "requestedIsbn": "9784478107829",
+      "summary": {
+        "isbn": "9784478107829",
+        "title": "苦しかったときの話をしようか : ビジネスマンの父が我が子のために書きためた「働くことの本質」",
+        "volume": "",
+        "series": "",
+        "publisher": "ダイヤモンド社",
+        "pubdate": "201904",
+        "cover": "",
+        "author": "森岡,毅,1972-"
+      }
+    },
+    {
+      "requestedIsbn": "9784478066119",
+      "summary": {
+        "isbn": "9784478066119",
+        "title": "幸せになる勇気",
+        "volume": "2",
+        "series": "自己啓発の源流「アドラー」の教え",
+        "publisher": "ダイヤモンド社",
+        "pubdate": "201602",
+        "cover": "",
+        "author": "岸見,一郎,1956- 古賀,史健,1973-"
+      }
+    },
+    {
+      "requestedIsbn": "9784023318786",
+      "summary": {
+        "isbn": "9784023318786",
+        "title": "本当の自由を手に入れるお金の大学",
+        "volume": "",
+        "series": "",
+        "publisher": "朝日新聞出版",
+        "pubdate": "202006",
+        "cover": "",
+        "author": "両@リベ大学長"
+      }
+    },
+    {
+      "requestedIsbn": "9784478012031",
+      "summary": {
+        "isbn": "9784478012031",
+        "title": "もし高校野球の女子マネージャーがドラッカーの『マネジメント』を読んだら",
+        "volume": "",
+        "series": "",
+        "publisher": "ダイヤモンド社",
+        "pubdate": "200912",
+        "cover": "",
+        "author": "岩崎,夏海"
+      }
+    }
+  ],
+  "additionalQuery": "https://api.openbd.jp/v1/get?isbn=9784834014738,9784569660236,9784569607385,9784478870571"
+}
