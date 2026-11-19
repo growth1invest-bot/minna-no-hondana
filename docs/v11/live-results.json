@@ -1,0 +1,25 @@
+{
+  "htmlTransport": "Local HTML supplied by route interception at the Pages HTTPS origin; not a deployed Pages page",
+  "browser": "Linux WebKit / iPhone 13 emulation",
+  "date": "2026-11-19T07:25:00.894Z",
+  "screenshots": {
+    "fixture": "Only verified static catalog entries plus a fictional local test profile. Text covers, no real user data.",
+    "previewChecked": true
+  },
+  "liveSearch": {
+    "query": "エッセンシャル思考",
+    "responses": [
+      {
+        "url": "https://openlibrary.org/search.json?q=%E3%82%A8%E3%83%83%E3%82%BB%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E6%80%9D%E8%80%83&offset=0&limit=20&lang=ja&fields=key%2Ctitle%2Ceditions%2Ceditions.key%2Ceditions.title%2Ceditions.language%2Ceditions.isbn%2Ceditions.cover_i%2Ceditions.by_statement%2Ceditions.author_name%2Ceditions.publishers%2Ceditions.publish_date",
+        "status": 200
+      }
+    ],
+    "elapsedMs": 13338,
+    "message": "見つかりませんでした。著者名またはISBNで絞って再検索できます。 NDLサーチ：タイムアウト（12秒）",
+    "books": [],
+    "realCoverVerification": "Not performed in this smoke. Automatic cover correctness is separately covered by mocked regressions.",
+    "failureInputRetained": true,
+    "newSessionStartsEmpty": true,
+    "pageErrors": []
+  }
+}

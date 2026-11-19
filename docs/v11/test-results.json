@@ -1,0 +1,117 @@
+{
+  "date": "2026-11-19",
+  "baseCommit": "e738aabd1b3f8ab4bb0e236243f45744dc5bcdae",
+  "playwrightVersion": "1.65.1",
+  "verificationMode": "Union of 462 completed Chromium cases from the interrupted full run, and all 462 iPhone/iPad WebKit + desktop cases rerun after server recovery. Same final source manifest. Not a single uninterrupted 924-pass run.",
+  "commands": [
+    "npx playwright test --config=playwright.v11.config.cjs --workers=1",
+    "npx playwright test --config=playwright.v11.config.cjs --workers=1 --project=iphone-webkit --project=ipad-webkit --project=desktop-chromium"
+  ],
+  "workers": 1,
+  "uniqueCasesVerifiedPassed": 924,
+  "unresolvedFailedCases": 0,
+  "finalCoverageSkipped": 0,
+  "automaticRetries": 0,
+  "byProject": {
+    "phone-chromium": 154,
+    "tablet-chromium": 154,
+    "small-chromium": 154,
+    "iphone-webkit": 154,
+    "ipad-webkit": 154,
+    "desktop-chromium": 154
+  },
+  "byFile": {
+    "tests/v11-discovery.test.cjs": 252,
+    "tests/v11-regression-improvements.test.cjs": 108,
+    "tests/v11-regression-layout.test.cjs": 156,
+    "tests/v11-regression-personal.test.cjs": 168,
+    "tests/v11-regression.test.cjs": 240
+  },
+  "verifiedRuns": [
+    {
+      "source": "interrupted full run / Chromium subset only",
+      "selectedPassed": 462,
+      "projects": [
+        "phone-chromium",
+        "small-chromium",
+        "tablet-chromium"
+      ],
+      "completeRunReportedDuration": "11.7m"
+    },
+    {
+      "source": "recovery rerun",
+      "passed": 462,
+      "failed": 0,
+      "skipped": 0,
+      "reportedDuration": "16.0m"
+    }
+  ],
+  "testedSourcesSha256": {
+    "index-v11.html": "2754edd5169d5fb9f6ca3cd9c48ca92097c18c13eef7de5b19380abb58db912d",
+    "playwright.v11.config.cjs": "f15283d5b68efa26b1c7a68f1f45c8af64da65306612700e44d14fa418600736",
+    "tests/v11-discovery.test.cjs": "fbb730ee56636db4e0c03a77ed2cfcf4541da6c8aa344c3903d7506558facc71",
+    "tests/v11-regression-improvements.test.cjs": "690f8c3b8a30cea46c40ce05504a4e9e7f6d9179f43e1d79c4aad8b6304e8e7d",
+    "tests/v11-regression-layout.test.cjs": "aa7ee8e52b4f9ce252543365bae9016c71f79e76ae418dc931397592ed34fe80",
+    "tests/v11-regression-personal.test.cjs": "ce940433ee3dc4fa418285aec2ada8ea60f4b6f2338bfc52a1394f021ddfe808",
+    "tests/v11-regression.test.cjs": "83005de5bc6dbb851c1f38909c2c0ea536b26cc3efa167c14c44e690d86f1625"
+  },
+  "logSha256": {
+    "interrupted": "9301084839051c75412757d9d1df42cc05ae31103edbd9b3213c29469ea2502e",
+    "recovery": "56e9f3f67c52281a21cfc2f21c64778116ed787c1bace2cac78921be593cb100"
+  },
+  "priorRuns": [
+    {
+      "scope": "Initial Chromium debug",
+      "passed": 149,
+      "failed": 1,
+      "duration": "1.8m",
+      "failure": "check() waited for checked state although quota failure correctly rolls it back. Test now clicks and verifies rollback."
+    },
+    {
+      "scope": "Targeted iPhone WebKit after quota-test correction",
+      "passed": 19,
+      "failed": 0,
+      "duration": "38.8s"
+    },
+    {
+      "scope": "First full suite",
+      "passed": 923,
+      "failed": 1,
+      "duration": "19.8m",
+      "failure": "Native tap center y=718.35 outside viewport height=664. Test scrolls into view and asserts center inside viewport."
+    },
+    {
+      "scope": "Native tap + ranking, iPhone WebKit, 3 repeats",
+      "passed": 6,
+      "failed": 0,
+      "duration": "21.4s"
+    },
+    {
+      "scope": "Second full suite / HTTP server lost response",
+      "passed": 586,
+      "failed": 169,
+      "interrupted": 1,
+      "didNotRun": 168,
+      "duration": "11.7m",
+      "primaryErrors": {
+        "page.goto: Connection terminated unexpectedly": 169
+      },
+      "independentProbe": "curl returned HTTP 000 / empty reply; server restart with output redirected to a file restored HTTP200. Exact cause of lost server output/connection was not proven."
+    }
+  ],
+  "liveApiScope": {
+    "bibliographicRecordsConfirmed": 8,
+    "source": "openBD",
+    "proof": "sample-bibliography.json",
+    "browserSearch": "エッセンシャル思考",
+    "browserSearchAcceptedResults": 0,
+    "browserSearchElapsedMs": 13338,
+    "browserSearchFailure": "NDL timeout at 12s; Open Library HTTP200 with no accepted results",
+    "realCoverSuccessClaimed": false,
+    "proofFile": "live-results.json"
+  },
+  "physicalIPhoneSafariTested": false,
+  "physicalIPadSafariTested": false,
+  "actuallyDeployedPagesTested": false,
+  "privacyScope": "Forbidden canaries, private ISBN/IDs and manual JPEG absent from entire allowlisted JSON. Profile/discovery/export request count zero in generated-image fixtures across all six projects. Existing automatic bibliography/cover APIs are separate."
+}
