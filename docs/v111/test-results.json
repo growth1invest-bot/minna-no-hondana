@@ -1,0 +1,69 @@
+{
+  "testDate": "2026-11-19",
+  "resumeAuditDate": "2026-11-24",
+  "command": "npx playwright test --config=playwright.v111.config.cjs --workers=1",
+  "passed": 522,
+  "failed": 0,
+  "skipped": 0,
+  "automaticRetries": 0,
+  "reportedDuration": "18.2m",
+  "byProject": {
+    "phone-chromium": 174,
+    "iphone-webkit": 174,
+    "ipad-webkit": 174
+  },
+  "byFile": {
+    "tests/v111-covers.test.cjs": 60,
+    "tests/v111-discovery.test.cjs": 126,
+    "tests/v111-regression-improvements.test.cjs": 54,
+    "tests/v111-regression-layout.test.cjs": 78,
+    "tests/v111-regression-personal.test.cjs": 84,
+    "tests/v111-regression.test.cjs": 120
+  },
+  "testedSourceSha256": {
+    "index-v111.html": "0fea9ec8ee1269e76072f4f48913d46a2feed575b501f699f6b3167f20ab6e7c",
+    "playwright.v111.config.cjs": "2ebbc3bb5eb7154c1515952cee22989f7f4ebf987561b79040781f58ad7680f3",
+    "tests/v111-covers.test.cjs": "770a81195a1403ad17a07d30a6cd879bb76f4f93a5849fed227c8be7f5a45ac6",
+    "tests/v111-discovery.test.cjs": "ae77ea4d85cc682e5f2cfd7e1281bdeb317c725dbe39fb92fada8b8955772e4a",
+    "tests/v111-regression-improvements.test.cjs": "4f1ebd9d9dd7069c14c2667a28bfdfe967d889d57a7a070fad04add60f3b8351",
+    "tests/v111-regression-layout.test.cjs": "cf46d508ef268962fce3b74d0fa4abb5fee13c08288919162cac2b0506d69636",
+    "tests/v111-regression-personal.test.cjs": "07e771f4ec94a5ddcfa0c73c0bc3669697314d15cd0d6acecbe45b9d1e8023ae",
+    "tests/v111-regression.test.cjs": "0b84b05745c95adfb7f104e06fd68e9ca2b041cf74b97bf0cd78a80ac2f5257d"
+  },
+  "fullLogSha256": "e85442dc0c857babe0e181daf9fa2c1226ed907c32fb4a09c4f4c8ed9c8dce7e",
+  "liveTestDate": "2026-11-19T09:08:32.163Z",
+  "realApiSuccessfulCovers": [
+    "9784761270438",
+    "9784422100517",
+    "9784478066119",
+    "9784023318786",
+    "9784478012031"
+  ],
+  "realApiUnresolvedCovers": [
+    "9784478025819",
+    "9784863940246",
+    "9784478107829"
+  ],
+  "liveLookupElapsedMs": 4825,
+  "deviceChecks": [
+    {
+      "name": "iphone-webkit",
+      "displayed": 5,
+      "fallback": 3
+    },
+    {
+      "name": "iphone-webkit-reload",
+      "displayed": 5,
+      "fallback": 3
+    },
+    {
+      "name": "ipad-webkit-cache",
+      "displayed": 5,
+      "fallback": 3
+    }
+  ],
+  "physicalIPhoneSafariTested": false,
+  "physicalIPadSafariTested": false,
+  "deployedPagesTested": false,
+  "scope": "Mock API suite and live API results are distinct. Resume audit verifies hashes and saved results; it is not a claim of rerunning the suite or live APIs on November 24."
+}
