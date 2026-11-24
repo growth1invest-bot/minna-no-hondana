@@ -1,0 +1,14 @@
+{
+  "name": "hondana-v12-validation",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/data.test.mjs tests/controller.test.mjs tests/transport.test.mjs",
+    "test:rules": "firebase emulators:exec --project demo-hondana-v12 --only firestore --config ../../firebase.v12.json 'node --test tests/firestore.test.mjs'"
+  },
+  "devDependencies": {
+    "firebase": "13.4.0",
+    "@firebase/rules-unit-testing": "6.0.0",
+    "firebase-tools": "15.37.0"
+  }
+}
