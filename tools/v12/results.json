@@ -1,0 +1,71 @@
+{
+  "issue": 16,
+  "dateJST": "2026-11-24",
+  "baseCommit": "ec49ad21995de2fd93671b535affdfa47205afc2",
+  "browser": {
+    "command": "npx playwright test --config=playwright.v12.config.cjs --workers=1",
+    "apiMode": "test-only Firebase stub and mocked book APIs/images; no live Firebase",
+    "passed": 582,
+    "failed": 0,
+    "skipped": 0,
+    "exitCode": 0,
+    "duration": "20.2m",
+    "projects": {
+      "phone-chromium": 194,
+      "iphone-webkit": 194,
+      "ipad-webkit": 194
+    }
+  },
+  "earlierFullAttempt": {
+    "passed": 296,
+    "failed": 1,
+    "interrupted": 1,
+    "notRun": 284,
+    "cause": "Legacy test expected Ver.1.1 in restore summary; correct product display was Ver.1.2. Updated test expectation only, then reran all 582 cases."
+  },
+  "sourceSha256": {
+    "index-v12.html": "b24a07b5d79594428470a0f65828d947a93ebe5e3f6919031b960ead7fadab2a",
+    "firestore.rules": "c781944d584eb4fc5b7c2fa70ac2b05ae5fb88a3633800f5b611485c85794b27",
+    "firebase.v12.json": "e3662382415719f4c6cd2375b79cf9aadc56aa6aa8ed83186f7380ad0cdbadde",
+    "firebase-v12-config.mjs": "5edd853a4f148b1a02a75a1aa8c37a9b6a11c56c5c772989b32bf3e79ca7f0aa",
+    "playwright.v12.config.cjs": "0efa58c420b5c2917394bdc6b6dbb7b4fe0beae769f2d675002a70304d62f294",
+    "cloud/v12-controller.mjs": "42ed3f531989599b66eadcefa91381616ec5aa043742ed12e0af347e10ec280a",
+    "cloud/v12-firebase.mjs": "552f804eb90d545c3313c1632110977ea0190b3e2afb777ec00c70e5197cb33a",
+    "cloud/v12-data.mjs": "c07226ea6ffe672b28b0633dbc27b2fbe6ea8536d97059bdd15bfee5865eb8c7",
+    "cloud/v12-ui.mjs": "94f44d8d20e0c73b65109c9e042eebfa9c1dab51ac521aeb3833d8247d014641",
+    "tests/v12-discovery.test.cjs": "d4cbce8e8e6be94c30c34895df4b8b1c9e0929c6270d0af846f80c4fe937e5a2",
+    "tests/v12-regression-improvements.test.cjs": "50cafec60f0d8e4428fd5173d193c7538771471088425c9a1a0eab0d2e873a93",
+    "tests/v12-cloud.test.cjs": "a19122f62161073291b96c88f4a2a1151b44e11e0442280f9623ba9b2722e7cd",
+    "tests/v12-regression-personal.test.cjs": "9c7a07eb766af8d8e00a0da6b6a9a6d7c55aeb8d3e3d01b417b21d472231e6a2",
+    "tests/v12-covers.test.cjs": "b0cbe0452a292e12314d6cd6d0e03fa2aa6e8f04935868c9097a9ba3f7e8ae46",
+    "tests/v12-regression.test.cjs": "3e56521e261b370e6bc27c2b95f70c076ae95749cce2c5b13f34615dbd1d521c",
+    "tests/v12-regression-layout.test.cjs": "b7d1aa1778760b23e2c42d06f6b90ba3318b1f4afe6d99af20a522f6df9e0480",
+    "tests/v12/firebase-stub.mjs": "94678b50206c7486ab190f0a8b05855d69fccbb1a6c9643ce4db90e1100348ed",
+    "tools/v12/tests/helpers.mjs": "6a1a1dd497c445bfdad78efbeb68754819bb26eee619c0e4aff2e4d89b9366f4",
+    "tools/v12/tests/controller.test.mjs": "10743a9446a0fa5fb45996be8437dfd09a9fc0e368f7dfc01381ca917cb91275",
+    "tools/v12/tests/data.test.mjs": "5f5eab8392212c32bcfd2ed6387f5fe766ce9dcd979bf30e8dede783988852b8",
+    "tools/v12/tests/transport.test.mjs": "a87cb3069b4e22b175277034f3eb39997518b2cc7d9f485e47825cb0a1dd4dc4",
+    "tools/v12/tests/firestore.test.mjs": "3f35c7e51bd0c53f30a6cd785065b1e9e6c00cb4ac7cdf0bbfd1a4876828eaa6",
+    "tools/v12/package.json": "0577d78940ca0b71cb4c19e7b890d582b0acc565e9ee74ccb24c0b9a394728e6",
+    "tools/v12/package-lock.json": "31982cfc40a3f20f480bc6dfa72fa41a2f229ca3e438449ba8c7ed1fde071776"
+  },
+  "notPerformed": [
+    "Real Firebase project/plan/configuration",
+    "Real Firebase Authentication signup/login/verification/reset mail",
+    "Production Firestore reads/writes and rules deployment",
+    "Real iPhone/iPad Safari and Files app",
+    "New live book API/cover verification in this PR"
+  ],
+  "logic": {
+    "passed": 39,
+    "failed": 0,
+    "testDurationMs": 291.926585,
+    "mode": "mocked transport and local fixtures"
+  },
+  "firestoreEmulator": {
+    "passed": 32,
+    "failed": 0,
+    "testDurationMs": 7128.855492,
+    "mode": "Firestore Emulator with real Firebase 13.4.0 SDK; synthetic authenticatedContext claims, not live Auth"
+  }
+}

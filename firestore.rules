@@ -1,0 +1,44 @@
+rules_version = '2';
+service cloud.firestore {
+ match /databases/{database}/documents {
+  function owner(uid) { return request.auth != null && request.auth.uid == uid && request.auth.token.email_verified == true; }
+  function headPath(uid) { return /databases/$(database)/documents/users/$(uid)/sync/head; }
+  function snapshotPath(uid,gen) { return /databases/$(database)/documents/users/$(uid)/snapshots/$(gen); }
+  function revision(uid) { return exists(headPath(uid)) ? get(headPath(uid)).data.revision : 0; }
+  function generation(gen) { return gen.matches('^[a-f0-9]{32}$'); }
+  function isbn(v) { return v is string && v.matches('^97[89][0-9]{10}$'); }
+  function isbns(v) { return v is list && v.size() <= 5 && v.toSet().size() == v.size() && (v.size()<1||isbn(v[0])) && (v.size()<2||isbn(v[1])) && (v.size()<3||isbn(v[2])) && (v.size()<4||isbn(v[3])) && (v.size()<5||isbn(v[4])); }
+  function lang(v) { return v is string && v.matches('^[a-z]{3}$'); }
+  function languages(v) { return v is list && v.size()<=5 && v.toSet().size()==v.size() && (v.size()<1||lang(v[0])) && (v.size()<2||lang(v[1])) && (v.size()<3||lang(v[2])) && (v.size()<4||lang(v[3])) && (v.size()<5||lang(v[4])); }
+  function book(d) {
+   return d.keys().hasAll(['schemaVersion','title','author','isbns','languages','publisher','published','status','favorite','tagIds','registrationOrder','manualPosition']) && d.keys().hasOnly(['schemaVersion','title','author','isbns','languages','publisher','published','status','favorite','tagIds','registrationOrder','manualPosition'])
+    && d.schemaVersion==1 && d.title is string && d.title.size()>0 && d.title.size()<=2000 && d.author is string && d.author.size()>0 && d.author.size()<=4000 && d.publisher is string && d.publisher.size()<=1000 && d.published is string && d.published.size()<=1000 && isbns(d.isbns) && languages(d.languages)
+    && d.status in ['read','want'] && d.favorite is bool && (d.status=='read'||d.favorite==false) && d.tagIds is list && d.tagIds.size()<=8 && d.tagIds.toSet().size()==d.tagIds.size() && d.tagIds.hasOnly(['career','relationships','growth','money','habits','psychology','leadership','parenting'])
+    && d.registrationOrder is int && d.registrationOrder>=0 && d.registrationOrder<200 && d.manualPosition is int && d.manualPosition>=0 && d.manualPosition<200;
+  }
+  function manifest(d) { return d.keys().hasAll(['schemaVersion','baseRevision','bookCount','createdAt','state']) && d.keys().hasOnly(['schemaVersion','baseRevision','bookCount','createdAt','state']) && d.schemaVersion==1 && d.baseRevision is int && d.baseRevision>=0 && d.bookCount is int && d.bookCount>=0 && d.bookCount<=200 && d.createdAt is timestamp && d.state in ['staging','committed']; }
+  function validHead(d) { return d.keys().hasAll(['schemaVersion','revision','generation','bookCount','updatedAt']) && d.keys().hasOnly(['schemaVersion','revision','generation','bookCount','updatedAt']) && d.schemaVersion==1 && d.revision is int && d.revision>0 && d.revision<2147483647 && d.generation is string && generation(d.generation) && d.bookCount is int && d.bookCount>=0 && d.bookCount<=200 && d.updatedAt==request.time; }
+  function published(uid,d,base) { return getAfter(snapshotPath(uid,d.generation)).data.state=='committed' && getAfter(snapshotPath(uid,d.generation)).data.baseRevision==base && getAfter(snapshotPath(uid,d.generation)).data.bookCount==d.bookCount; }
+  match /users/{uid}/sync/head {
+   allow get: if owner(uid);
+   allow list, delete: if false;
+   allow create: if owner(uid) && validHead(request.resource.data) && request.resource.data.revision==1 && published(uid,request.resource.data,0);
+   allow update: if owner(uid) && validHead(request.resource.data) && request.resource.data.revision==resource.data.revision+1 && request.resource.data.generation!=resource.data.generation && published(uid,request.resource.data,resource.data.revision);
+  }
+  match /users/{uid}/snapshots/{gen} {
+   allow get: if owner(uid);
+   allow list: if false;
+   allow create: if owner(uid) && generation(gen) && manifest(request.resource.data) && request.resource.data.state=='staging' && request.resource.data.createdAt==request.time && request.resource.data.baseRevision==revision(uid);
+   allow update: if owner(uid) && manifest(request.resource.data) && resource.data.state=='staging' && request.resource.data.state=='committed' && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['state']) && getAfter(headPath(uid)).data.generation==gen && getAfter(headPath(uid)).data.revision==resource.data.baseRevision+1;
+   allow delete: if owner(uid) && resource.data.state=='staging' && (!exists(headPath(uid))||get(headPath(uid)).data.generation!=gen);
+   match /books/{key} {
+    allow get: if owner(uid);
+    allow list: if owner(uid) && request.query.limit != null && request.query.limit<=201;
+    allow create: if owner(uid) && key.matches('^[a-f0-9]{64}$') && book(request.resource.data) && get(snapshotPath(uid,gen)).data.state=='staging' && get(snapshotPath(uid,gen)).data.baseRevision==revision(uid) && request.resource.data.registrationOrder<get(snapshotPath(uid,gen)).data.bookCount;
+    allow update: if false;
+    allow delete: if owner(uid) && get(snapshotPath(uid,gen)).data.state=='staging' && (!exists(headPath(uid))||get(headPath(uid)).data.generation!=gen);
+   }
+  }
+  match /{document=**} { allow read,write: if false; }
+ }
+}
