@@ -1,0 +1,2 @@
+const base=require('./playwright.v101.config.cjs');
+module.exports={...base,projects:base.projects.filter(p=>['phone-chromium','iphone-webkit','ipad-webkit'].includes(p.name)),testMatch:'**/v111*.test.cjs',use:{...base.use,baseURL:'http://127.0.0.1:8773'},webServer:{command:'python3 -m http.server 8773 --bind 127.0.0.1',url:'http://127.0.0.1:8773/index-v111.html',reuseExistingServer:!process.env.CI}};

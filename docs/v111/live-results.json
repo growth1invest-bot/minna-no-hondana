@@ -1,0 +1,982 @@
+{
+  "date": "2026-11-19T09:08:32.163Z",
+  "htmlTransport": "Local HTML at intercepted Pages HTTPS origin, not deployed Pages",
+  "apiMode": "Real network; no mocked API or image responses",
+  "books": [
+    {
+      "title": "嫌われる勇気 : 自己啓発の源流「アドラー」の教え",
+      "author": "岸見一郎・古賀史健",
+      "isbn": "9784478025819",
+      "automaticCover": null,
+      "events": [
+        {
+          "time": "2026-11-19T09:08:33.208Z",
+          "provider": "openbd",
+          "isbns": [
+            "9784478025819"
+          ],
+          "result": "missing",
+          "reason": "coverが空、または画像URLが利用不可",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:33.208Z",
+          "provider": "openbd",
+          "isbns": [
+            "9784478025819"
+          ],
+          "result": "unavailable",
+          "reason": "一致画像なし・書誌不一致・画像読込失敗",
+          "ms": 453
+        },
+        {
+          "time": "2026-11-19T09:08:34.304Z",
+          "provider": "openlibrary",
+          "isbns": [
+            "9784478025819"
+          ],
+          "result": "title-mismatch",
+          "reason": "ISBNは一致するが書名本体が不一致",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:35.913Z",
+          "provider": "openlibrary",
+          "isbns": [
+            "9784478025819"
+          ],
+          "result": "unavailable",
+          "reason": "一致画像なし・書誌不一致・画像読込失敗",
+          "ms": 2704
+        },
+        {
+          "time": "2026-11-19T09:08:36.325Z",
+          "provider": "google-dynamic",
+          "isbns": [
+            "9784478025819"
+          ],
+          "result": "missing",
+          "reason": "一致ISBNのサムネイル回答なし",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:36.325Z",
+          "provider": "google-dynamic",
+          "isbns": [
+            "9784478025819"
+          ],
+          "result": "missing",
+          "reason": "一致ISBNのサムネイル回答なし",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:37.290Z",
+          "provider": "google-dynamic",
+          "isbns": [
+            "9784478025819"
+          ],
+          "result": "unavailable",
+          "reason": "一致画像なし・書誌不一致・画像読込失敗",
+          "ms": 1377
+        }
+      ]
+    },
+    {
+      "title": "エッセンシャル思考 : 最少の時間で成果を最大にする",
+      "author": "Greg McKeown・高橋璃子",
+      "isbn": "9784761270438",
+      "automaticCover": {
+        "image": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+        "proof": {
+          "source": "google-dynamic",
+          "isbn": "9784761270438",
+          "bibKey": "ISBN:9784761270438",
+          "volumeId": "XlDMrQEACAAJ",
+          "infoURL": "https://books.google.com/books?id=XlDMrQEACAAJ&source=gbs_ViewAPI",
+          "width": 128,
+          "height": 185
+        }
+      },
+      "events": [
+        {
+          "time": "2026-11-19T09:08:33.208Z",
+          "provider": "openbd",
+          "isbns": [
+            "9784761270438"
+          ],
+          "result": "missing",
+          "reason": "coverが空、または画像URLが利用不可",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:33.208Z",
+          "provider": "openbd",
+          "isbns": [
+            "9784761270438"
+          ],
+          "result": "unavailable",
+          "reason": "一致画像なし・書誌不一致・画像読込失敗",
+          "ms": 453
+        },
+        {
+          "time": "2026-11-19T09:08:34.304Z",
+          "provider": "openlibrary",
+          "isbns": [
+            "9784761270438"
+          ],
+          "result": "missing",
+          "reason": "同一ISBNの書誌回答なし",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:35.913Z",
+          "provider": "openlibrary",
+          "isbns": [
+            "9784761270438"
+          ],
+          "result": "unavailable",
+          "reason": "一致画像なし・書誌不一致・画像読込失敗",
+          "ms": 2704
+        },
+        {
+          "time": "2026-11-19T09:08:36.736Z",
+          "provider": "google-dynamic",
+          "isbns": [
+            "9784761270438"
+          ],
+          "result": "decoded",
+          "reason": "画像デコード成功",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:37.290Z",
+          "provider": "google-dynamic",
+          "isbns": [
+            "9784761270438"
+          ],
+          "result": "available",
+          "reason": "同一ISBNの画像を確認",
+          "ms": 1377
+        }
+      ]
+    },
+    {
+      "title": "人を動かす",
+      "author": "Dale Carnegie・山口博",
+      "isbn": "9784422100517",
+      "automaticCover": {
+        "image": "https://covers.openlibrary.org/b/id/11932305-M.jpg",
+        "proof": {
+          "source": "openlibrary",
+          "isbn": "9784422100517",
+          "edition": "/books/OL27116041M",
+          "infoURL": "https://openlibrary.org/books/OL27116041M/%E4%BA%BA%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99",
+          "width": 180,
+          "height": 269
+        }
+      },
+      "events": [
+        {
+          "time": "2026-11-19T09:08:33.208Z",
+          "provider": "openbd",
+          "isbns": [
+            "9784422100517"
+          ],
+          "result": "missing",
+          "reason": "coverが空、または画像URLが利用不可",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:33.208Z",
+          "provider": "openbd",
+          "isbns": [
+            "9784422100517"
+          ],
+          "result": "unavailable",
+          "reason": "一致画像なし・書誌不一致・画像読込失敗",
+          "ms": 453
+        },
+        {
+          "time": "2026-11-19T09:08:35.912Z",
+          "provider": "openlibrary",
+          "isbns": [
+            "9784422100517"
+          ],
+          "result": "decoded",
+          "reason": "画像デコード成功",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:35.913Z",
+          "provider": "openlibrary",
+          "isbns": [
+            "9784422100517"
+          ],
+          "result": "available",
+          "reason": "同一ISBNの画像を確認",
+          "ms": 2704
+        }
+      ]
+    },
+    {
+      "title": "完訳7つの習慣 : 人格主義の回復",
+      "author": "Stephen R. Covey・フランクリンコヴィージャパン",
+      "isbn": "9784863940246",
+      "automaticCover": null,
+      "events": [
+        {
+          "time": "2026-11-19T09:08:33.208Z",
+          "provider": "openbd",
+          "isbns": [
+            "9784863940246"
+          ],
+          "result": "missing",
+          "reason": "coverが空、または画像URLが利用不可",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:33.209Z",
+          "provider": "openbd",
+          "isbns": [
+            "9784863940246"
+          ],
+          "result": "unavailable",
+          "reason": "一致画像なし・書誌不一致・画像読込失敗",
+          "ms": 453
+        },
+        {
+          "time": "2026-11-19T09:08:35.913Z",
+          "provider": "openlibrary",
+          "isbns": [
+            "9784863940246"
+          ],
+          "result": "missing",
+          "reason": "同一ISBNの書誌回答なし",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:35.913Z",
+          "provider": "openlibrary",
+          "isbns": [
+            "9784863940246"
+          ],
+          "result": "unavailable",
+          "reason": "一致画像なし・書誌不一致・画像読込失敗",
+          "ms": 2704
+        },
+        {
+          "time": "2026-11-19T09:08:36.736Z",
+          "provider": "google-dynamic",
+          "isbns": [
+            "9784863940246"
+          ],
+          "result": "missing",
+          "reason": "一致ISBNのサムネイル回答なし",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:36.736Z",
+          "provider": "google-dynamic",
+          "isbns": [
+            "9784863940246"
+          ],
+          "result": "missing",
+          "reason": "一致ISBNのサムネイル回答なし",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:37.290Z",
+          "provider": "google-dynamic",
+          "isbns": [
+            "9784863940246"
+          ],
+          "result": "unavailable",
+          "reason": "一致画像なし・書誌不一致・画像読込失敗",
+          "ms": 1377
+        }
+      ]
+    },
+    {
+      "title": "苦しかったときの話をしようか : ビジネスマンの父が我が子のために書きためた「働くことの本質」",
+      "author": "森岡毅",
+      "isbn": "9784478107829",
+      "automaticCover": null,
+      "events": [
+        {
+          "time": "2026-11-19T09:08:33.208Z",
+          "provider": "openbd",
+          "isbns": [
+            "9784478107829"
+          ],
+          "result": "missing",
+          "reason": "coverが空、または画像URLが利用不可",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:33.209Z",
+          "provider": "openbd",
+          "isbns": [
+            "9784478107829"
+          ],
+          "result": "unavailable",
+          "reason": "一致画像なし・書誌不一致・画像読込失敗",
+          "ms": 453
+        },
+        {
+          "time": "2026-11-19T09:08:35.913Z",
+          "provider": "openlibrary",
+          "isbns": [
+            "9784478107829"
+          ],
+          "result": "missing",
+          "reason": "同一ISBNの書誌回答なし",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:35.913Z",
+          "provider": "openlibrary",
+          "isbns": [
+            "9784478107829"
+          ],
+          "result": "unavailable",
+          "reason": "一致画像なし・書誌不一致・画像読込失敗",
+          "ms": 2704
+        },
+        {
+          "time": "2026-11-19T09:08:36.736Z",
+          "provider": "google-dynamic",
+          "isbns": [
+            "9784478107829"
+          ],
+          "result": "missing",
+          "reason": "一致ISBNのサムネイル回答なし",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:36.736Z",
+          "provider": "google-dynamic",
+          "isbns": [
+            "9784478107829"
+          ],
+          "result": "missing",
+          "reason": "一致ISBNのサムネイル回答なし",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:37.290Z",
+          "provider": "google-dynamic",
+          "isbns": [
+            "9784478107829"
+          ],
+          "result": "unavailable",
+          "reason": "一致画像なし・書誌不一致・画像読込失敗",
+          "ms": 1378
+        }
+      ]
+    },
+    {
+      "title": "幸せになる勇気",
+      "author": "岸見一郎・古賀史健",
+      "isbn": "9784478066119",
+      "automaticCover": {
+        "image": "https://books.google.com/books/content?id=YegBkAEACAAJ&printsec=frontcover&img=1&zoom=5",
+        "proof": {
+          "source": "google-dynamic",
+          "isbn": "9784478066119",
+          "bibKey": "ISBN:9784478066119",
+          "volumeId": "YegBkAEACAAJ",
+          "infoURL": "https://books.google.com/books?id=YegBkAEACAAJ&source=gbs_ViewAPI",
+          "width": 128,
+          "height": 186
+        }
+      },
+      "events": [
+        {
+          "time": "2026-11-19T09:08:33.208Z",
+          "provider": "openbd",
+          "isbns": [
+            "9784478066119"
+          ],
+          "result": "missing",
+          "reason": "coverが空、または画像URLが利用不可",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:33.209Z",
+          "provider": "openbd",
+          "isbns": [
+            "9784478066119"
+          ],
+          "result": "unavailable",
+          "reason": "一致画像なし・書誌不一致・画像読込失敗",
+          "ms": 453
+        },
+        {
+          "time": "2026-11-19T09:08:35.913Z",
+          "provider": "openlibrary",
+          "isbns": [
+            "9784478066119"
+          ],
+          "result": "title-mismatch",
+          "reason": "ISBNは一致するが書名本体が不一致",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:35.913Z",
+          "provider": "openlibrary",
+          "isbns": [
+            "9784478066119"
+          ],
+          "result": "unavailable",
+          "reason": "一致画像なし・書誌不一致・画像読込失敗",
+          "ms": 2704
+        },
+        {
+          "time": "2026-11-19T09:08:36.947Z",
+          "provider": "google-dynamic",
+          "isbns": [
+            "9784478066119"
+          ],
+          "result": "decoded",
+          "reason": "画像デコード成功",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:37.290Z",
+          "provider": "google-dynamic",
+          "isbns": [
+            "9784478066119"
+          ],
+          "result": "available",
+          "reason": "同一ISBNの画像を確認",
+          "ms": 1378
+        }
+      ]
+    },
+    {
+      "title": "本当の自由を手に入れるお金の大学",
+      "author": "両@リベ大学長",
+      "isbn": "9784023318786",
+      "automaticCover": {
+        "image": "https://books.google.com/books/content?id=Ng-hzQEACAAJ&printsec=frontcover&img=1&zoom=5",
+        "proof": {
+          "source": "google-dynamic",
+          "isbn": "9784023318786",
+          "bibKey": "ISBN:9784023318786",
+          "volumeId": "Ng-hzQEACAAJ",
+          "infoURL": "https://books.google.com/books?id=Ng-hzQEACAAJ&source=gbs_ViewAPI",
+          "width": 128,
+          "height": 182
+        }
+      },
+      "events": [
+        {
+          "time": "2026-11-19T09:08:33.208Z",
+          "provider": "openbd",
+          "isbns": [
+            "9784023318786"
+          ],
+          "result": "missing",
+          "reason": "coverが空、または画像URLが利用不可",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:33.209Z",
+          "provider": "openbd",
+          "isbns": [
+            "9784023318786"
+          ],
+          "result": "unavailable",
+          "reason": "一致画像なし・書誌不一致・画像読込失敗",
+          "ms": 453
+        },
+        {
+          "time": "2026-11-19T09:08:35.913Z",
+          "provider": "openlibrary",
+          "isbns": [
+            "9784023318786"
+          ],
+          "result": "missing",
+          "reason": "同一ISBNの書誌回答なし",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:35.913Z",
+          "provider": "openlibrary",
+          "isbns": [
+            "9784023318786"
+          ],
+          "result": "unavailable",
+          "reason": "一致画像なし・書誌不一致・画像読込失敗",
+          "ms": 2704
+        },
+        {
+          "time": "2026-11-19T09:08:37.116Z",
+          "provider": "google-dynamic",
+          "isbns": [
+            "9784023318786"
+          ],
+          "result": "decoded",
+          "reason": "画像デコード成功",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:37.290Z",
+          "provider": "google-dynamic",
+          "isbns": [
+            "9784023318786"
+          ],
+          "result": "available",
+          "reason": "同一ISBNの画像を確認",
+          "ms": 1378
+        }
+      ]
+    },
+    {
+      "title": "もし高校野球の女子マネージャーがドラッカーの『マネジメント』を読んだら",
+      "author": "岩崎夏海",
+      "isbn": "9784478012031",
+      "automaticCover": {
+        "image": "https://books.google.com/books/content?id=AC2hXMnyr0wC&printsec=frontcover&img=1&zoom=5",
+        "proof": {
+          "source": "google-dynamic",
+          "isbn": "9784478012031",
+          "bibKey": "ISBN:9784478012031",
+          "volumeId": "AC2hXMnyr0wC",
+          "infoURL": "https://books.google.com/books?id=AC2hXMnyr0wC&source=gbs_ViewAPI",
+          "width": 128,
+          "height": 185
+        }
+      },
+      "events": [
+        {
+          "time": "2026-11-19T09:08:33.208Z",
+          "provider": "openbd",
+          "isbns": [
+            "9784478012031"
+          ],
+          "result": "missing",
+          "reason": "coverが空、または画像URLが利用不可",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:33.209Z",
+          "provider": "openbd",
+          "isbns": [
+            "9784478012031"
+          ],
+          "result": "unavailable",
+          "reason": "一致画像なし・書誌不一致・画像読込失敗",
+          "ms": 453
+        },
+        {
+          "time": "2026-11-19T09:08:35.913Z",
+          "provider": "openlibrary",
+          "isbns": [
+            "9784478012031"
+          ],
+          "result": "title-mismatch",
+          "reason": "ISBNは一致するが書名本体が不一致",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:35.913Z",
+          "provider": "openlibrary",
+          "isbns": [
+            "9784478012031"
+          ],
+          "result": "unavailable",
+          "reason": "一致画像なし・書誌不一致・画像読込失敗",
+          "ms": 2704
+        },
+        {
+          "time": "2026-11-19T09:08:37.290Z",
+          "provider": "google-dynamic",
+          "isbns": [
+            "9784478012031"
+          ],
+          "result": "decoded",
+          "reason": "画像デコード成功",
+          "ms": 0
+        },
+        {
+          "time": "2026-11-19T09:08:37.290Z",
+          "provider": "google-dynamic",
+          "isbns": [
+            "9784478012031"
+          ],
+          "result": "available",
+          "reason": "同一ISBNの画像を確認",
+          "ms": 1378
+        }
+      ]
+    }
+  ],
+  "devices": [
+    {
+      "name": "iphone-webkit",
+      "images": [
+        {
+          "isbn": "9784478107829",
+          "displayed": false,
+          "fallbackText": "苦しかったときの話をしようか : ビジネスマンの父が我が子のために書きためた「働くことの本質」\n森岡毅"
+        },
+        {
+          "isbn": "9784761270438",
+          "displayed": true,
+          "width": 128,
+          "height": 185,
+          "source": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "objectFit": "contain"
+        },
+        {
+          "isbn": "9784422100517",
+          "displayed": true,
+          "width": 180,
+          "height": 269,
+          "source": "https://covers.openlibrary.org/b/id/11932305-M.jpg",
+          "objectFit": "contain"
+        },
+        {
+          "isbn": "9784478012031",
+          "displayed": true,
+          "width": 128,
+          "height": 185,
+          "source": "https://books.google.com/books/content?id=AC2hXMnyr0wC&printsec=frontcover&img=1&zoom=5",
+          "objectFit": "contain"
+        },
+        {
+          "isbn": "9784478025819",
+          "displayed": false,
+          "fallbackText": "嫌われる勇気 : 自己啓発の源流「アドラー」の教え\n岸見一郎・古賀史健"
+        },
+        {
+          "isbn": "9784478066119",
+          "displayed": true,
+          "width": 128,
+          "height": 186,
+          "source": "https://books.google.com/books/content?id=YegBkAEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "objectFit": "contain"
+        },
+        {
+          "isbn": "9784863940246",
+          "displayed": false,
+          "fallbackText": "完訳7つの習慣 : 人格主義の回復\nStephen R. Covey・フランクリンコヴィージャパン"
+        },
+        {
+          "isbn": "9784023318786",
+          "displayed": true,
+          "width": 128,
+          "height": 182,
+          "source": "https://books.google.com/books/content?id=Ng-hzQEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "iphone-webkit-reload",
+      "images": [
+        {
+          "isbn": "9784478107829",
+          "displayed": false,
+          "fallbackText": "苦しかったときの話をしようか : ビジネスマンの父が我が子のために書きためた「働くことの本質」\n森岡毅"
+        },
+        {
+          "isbn": "9784761270438",
+          "displayed": true,
+          "width": 128,
+          "height": 185,
+          "source": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "objectFit": "contain"
+        },
+        {
+          "isbn": "9784422100517",
+          "displayed": true,
+          "width": 180,
+          "height": 269,
+          "source": "https://covers.openlibrary.org/b/id/11932305-M.jpg",
+          "objectFit": "contain"
+        },
+        {
+          "isbn": "9784478012031",
+          "displayed": true,
+          "width": 128,
+          "height": 185,
+          "source": "https://books.google.com/books/content?id=AC2hXMnyr0wC&printsec=frontcover&img=1&zoom=5",
+          "objectFit": "contain"
+        },
+        {
+          "isbn": "9784478025819",
+          "displayed": false,
+          "fallbackText": "嫌われる勇気 : 自己啓発の源流「アドラー」の教え\n岸見一郎・古賀史健"
+        },
+        {
+          "isbn": "9784478066119",
+          "displayed": true,
+          "width": 128,
+          "height": 186,
+          "source": "https://books.google.com/books/content?id=YegBkAEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "objectFit": "contain"
+        },
+        {
+          "isbn": "9784863940246",
+          "displayed": false,
+          "fallbackText": "完訳7つの習慣 : 人格主義の回復\nStephen R. Covey・フランクリンコヴィージャパン"
+        },
+        {
+          "isbn": "9784023318786",
+          "displayed": true,
+          "width": 128,
+          "height": 182,
+          "source": "https://books.google.com/books/content?id=Ng-hzQEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "ipad-webkit-cache",
+      "images": [
+        {
+          "isbn": "9784478107829",
+          "displayed": false,
+          "fallbackText": "苦しかったときの話をしようか : ビジネスマンの父が我が子のために書きためた「働くことの本質」\n森岡毅"
+        },
+        {
+          "isbn": "9784761270438",
+          "displayed": true,
+          "width": 128,
+          "height": 185,
+          "source": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "objectFit": "contain"
+        },
+        {
+          "isbn": "9784422100517",
+          "displayed": true,
+          "width": 180,
+          "height": 269,
+          "source": "https://covers.openlibrary.org/b/id/11932305-M.jpg",
+          "objectFit": "contain"
+        },
+        {
+          "isbn": "9784478012031",
+          "displayed": true,
+          "width": 128,
+          "height": 185,
+          "source": "https://books.google.com/books/content?id=AC2hXMnyr0wC&printsec=frontcover&img=1&zoom=5",
+          "objectFit": "contain"
+        },
+        {
+          "isbn": "9784478025819",
+          "displayed": false,
+          "fallbackText": "嫌われる勇気 : 自己啓発の源流「アドラー」の教え\n岸見一郎・古賀史健"
+        },
+        {
+          "isbn": "9784478066119",
+          "displayed": true,
+          "width": 128,
+          "height": 186,
+          "source": "https://books.google.com/books/content?id=YegBkAEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "objectFit": "contain"
+        },
+        {
+          "isbn": "9784863940246",
+          "displayed": false,
+          "fallbackText": "完訳7つの習慣 : 人格主義の回復\nStephen R. Covey・フランクリンコヴィージャパン"
+        },
+        {
+          "isbn": "9784023318786",
+          "displayed": true,
+          "width": 128,
+          "height": 182,
+          "source": "https://books.google.com/books/content?id=Ng-hzQEACAAJ&printsec=frontcover&img=1&zoom=5",
+          "objectFit": "contain"
+        }
+      ]
+    }
+  ],
+  "lookupElapsedMs": 4825,
+  "responses": [
+    {
+      "url": "https://api.openbd.jp/v1/get?isbn=9784478025819%2C9784761270438%2C9784422100517%2C9784863940246%2C9784478107829%2C9784478066119%2C9784023318786%2C9784478012031",
+      "status": 200
+    },
+    {
+      "url": "https://openlibrary.org/api/books?bibkeys=ISBN%3A9784478025819%2CISBN%3A9784761270438%2CISBN%3A9784422100517%2CISBN%3A9784863940246%2CISBN%3A9784478107829%2CISBN%3A9784478066119%2CISBN%3A9784023318786%2CISBN%3A9784478012031&format=json&jscmd=data",
+      "status": 200
+    },
+    {
+      "url": "https://covers.openlibrary.org/b/id/11932305-M.jpg",
+      "status": 302
+    },
+    {
+      "url": "https://archive.org/download/m_covers_0011/m_covers_0011_93.zip/0011932305-M.jpg",
+      "status": 302
+    },
+    {
+      "url": "https://ia800505.us.archive.org/view_archive.php?archive=/10/items/m_covers_0011/m_covers_0011_93.zip&file=0011932305-M.jpg",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books?jscmd=viewapi&bibkeys=ISBN%3A9784478025819%2CISBN%3A4478025819%2CISBN%3A9784761270438%2CISBN%3A4761270438%2CISBN%3A9784863940246%2CISBN%3A4863940246%2CISBN%3A9784478107829%2CISBN%3A4478107823%2CISBN%3A9784478066119%2CISBN%3A4478066116%2CISBN%3A9784023318786%2CISBN%3A4023318787%2CISBN%3A9784478012031%2CISBN%3A4478012032&callback=__hondanaCover1",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books/content?id=YegBkAEACAAJ&printsec=frontcover&img=1&zoom=5",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books/content?id=Ng-hzQEACAAJ&printsec=frontcover&img=1&zoom=5",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books/content?id=AC2hXMnyr0wC&printsec=frontcover&img=1&zoom=5",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/googlebooks/images/poweredby.png",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+      "status": 200
+    },
+    {
+      "url": "https://api.openbd.jp/v1/get?isbn=9784478107829",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books/content?id=AC2hXMnyr0wC&printsec=frontcover&img=1&zoom=5",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/googlebooks/images/poweredby.png",
+      "status": 200
+    },
+    {
+      "url": "https://openlibrary.org/api/books?bibkeys=ISBN%3A9784478107829&format=json&jscmd=data",
+      "status": 200
+    },
+    {
+      "url": "https://covers.openlibrary.org/b/id/11932305-M.jpg",
+      "status": 302
+    },
+    {
+      "url": "https://archive.org/download/m_covers_0011/m_covers_0011_93.zip/0011932305-M.jpg",
+      "status": 302
+    },
+    {
+      "url": "https://books.google.com/books?jscmd=viewapi&bibkeys=ISBN%3A9784478107829%2CISBN%3A4478107823&callback=__hondanaCover1",
+      "status": 200
+    },
+    {
+      "url": "https://ia800505.us.archive.org/view_archive.php?archive=/10/items/m_covers_0011/m_covers_0011_93.zip&file=0011932305-M.jpg",
+      "status": 200
+    },
+    {
+      "url": "https://api.openbd.jp/v1/get?isbn=9784478025819%2C9784863940246",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books/content?id=YegBkAEACAAJ&printsec=frontcover&img=1&zoom=5",
+      "status": 200
+    },
+    {
+      "url": "https://openlibrary.org/api/books?bibkeys=ISBN%3A9784478025819%2CISBN%3A9784863940246&format=json&jscmd=data",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books?jscmd=viewapi&bibkeys=ISBN%3A9784478025819%2CISBN%3A4478025819%2CISBN%3A9784863940246%2CISBN%3A4863940246&callback=__hondanaCover2",
+      "status": 200
+    },
+    {
+      "url": "https://books.google.com/books/content?id=Ng-hzQEACAAJ&printsec=frontcover&img=1&zoom=5",
+      "status": 200
+    }
+  ],
+  "requestFailures": [],
+  "persistedCache": [
+    [
+      "9784422100517|人を動かす",
+      {
+        "image": "https://covers.openlibrary.org/b/id/11932305-M.jpg",
+        "proof": {
+          "source": "openlibrary",
+          "isbn": "9784422100517",
+          "edition": "/books/OL27116041M",
+          "infoURL": "https://openlibrary.org/books/OL27116041M/%E4%BA%BA%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99",
+          "width": 180,
+          "height": 269
+        },
+        "expires": 1795079915912
+      }
+    ],
+    [
+      "9784761270438|エッセンシャル思考",
+      {
+        "image": "https://books.google.com/books/content?id=XlDMrQEACAAJ&printsec=frontcover&img=1&zoom=5",
+        "proof": {
+          "source": "google-dynamic",
+          "isbn": "9784761270438",
+          "bibKey": "ISBN:9784761270438",
+          "volumeId": "XlDMrQEACAAJ",
+          "infoURL": "https://books.google.com/books?id=XlDMrQEACAAJ&source=gbs_ViewAPI",
+          "width": 128,
+          "height": 185
+        },
+        "expires": 1795079916736
+      }
+    ],
+    [
+      "9784478066119|幸せになる勇気",
+      {
+        "image": "https://books.google.com/books/content?id=YegBkAEACAAJ&printsec=frontcover&img=1&zoom=5",
+        "proof": {
+          "source": "google-dynamic",
+          "isbn": "9784478066119",
+          "bibKey": "ISBN:9784478066119",
+          "volumeId": "YegBkAEACAAJ",
+          "infoURL": "https://books.google.com/books?id=YegBkAEACAAJ&source=gbs_ViewAPI",
+          "width": 128,
+          "height": 186
+        },
+        "expires": 1795079916947
+      }
+    ],
+    [
+      "9784023318786|本当の自由を手に入れるお金の大学",
+      {
+        "image": "https://books.google.com/books/content?id=Ng-hzQEACAAJ&printsec=frontcover&img=1&zoom=5",
+        "proof": {
+          "source": "google-dynamic",
+          "isbn": "9784023318786",
+          "bibKey": "ISBN:9784023318786",
+          "volumeId": "Ng-hzQEACAAJ",
+          "infoURL": "https://books.google.com/books?id=Ng-hzQEACAAJ&source=gbs_ViewAPI",
+          "width": 128,
+          "height": 182
+        },
+        "expires": 1795079917116
+      }
+    ],
+    [
+      "9784478012031|もし高校野球の女子マネージャーがドラッカーのマネジメントを読んだら",
+      {
+        "image": "https://books.google.com/books/content?id=AC2hXMnyr0wC&printsec=frontcover&img=1&zoom=5",
+        "proof": {
+          "source": "google-dynamic",
+          "isbn": "9784478012031",
+          "bibKey": "ISBN:9784478012031",
+          "volumeId": "AC2hXMnyr0wC",
+          "infoURL": "https://books.google.com/books?id=AC2hXMnyr0wC&source=gbs_ViewAPI",
+          "width": 128,
+          "height": 185
+        },
+        "expires": 1795079917290
+      }
+    ]
+  ]
+}
