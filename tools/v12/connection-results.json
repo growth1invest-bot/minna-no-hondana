@@ -1,0 +1,115 @@
+{
+  "clientDate": "2026-11-25",
+  "baseCommit": "c07030a4870026432a97666d381e6fcfca4d8706",
+  "projectId": "minna-no-hondana-e936b",
+  "verifiedAppId": "1:750942409516:web:9b90598e435d9531685289",
+  "tests": {
+    "logic": {
+      "passed": 39,
+      "failed": 0,
+      "backend": "mock"
+    },
+    "rules": {
+      "passed": 32,
+      "failed": 0,
+      "backend": "Firestore Emulator, synthetic claims"
+    },
+    "cloudUI": {
+      "passed": 60,
+      "failed": 0,
+      "backend": "mock Firebase",
+      "projects": 3
+    },
+    "realSDKEmulators": {
+      "passed": 9,
+      "failed": 0,
+      "backend": "real Firebase 13.4.0 SDK with local Auth + Firestore emulators",
+      "projects": 3
+    },
+    "liveReads": {
+      "passed": 2,
+      "failed": 1,
+      "failedProject": "phone-chromium",
+      "failure": "net::ERR_CERT_AUTHORITY_INVALID",
+      "verification": "read-only live Firebase APIs; native WebKit requests; candidate files and pinned real SDK supplied by test routes",
+      "evidence": [
+        {
+          "project": "iphone-webkit",
+          "registrationStatus": 200,
+          "registration": {
+            "projectId": "minna-no-hondana-e936b",
+            "appId": "1:750942409516:web:9b90598e435d9531685289",
+            "authDomain": "minna-no-hondana-e936b.firebaseapp.com"
+          },
+          "authStatus": 200,
+          "authProject": "750942409516",
+          "authorizedDomains": [
+            "localhost",
+            "minna-no-hondana-e936b.firebaseapp.com",
+            "minna-no-hondana-e936b.web.app"
+          ],
+          "anonymousCode": "permission-denied",
+          "loggedIn": false,
+          "appOptions": {
+            "projectId": "minna-no-hondana-e936b",
+            "appId": "1:750942409516:web:9b90598e435d9531685289"
+          },
+          "origin": "https://growth1invest-bot.github.io",
+          "pagesDomainAuthorized": false,
+          "note": "Local candidate served at Pages origin; not a deployed page. Anonymous reads only; no real login, mail or writes."
+        },
+        {
+          "project": "ipad-webkit",
+          "registrationStatus": 200,
+          "registration": {
+            "projectId": "minna-no-hondana-e936b",
+            "appId": "1:750942409516:web:9b90598e435d9531685289",
+            "authDomain": "minna-no-hondana-e936b.firebaseapp.com"
+          },
+          "authStatus": 200,
+          "authProject": "750942409516",
+          "authorizedDomains": [
+            "localhost",
+            "minna-no-hondana-e936b.firebaseapp.com",
+            "minna-no-hondana-e936b.web.app"
+          ],
+          "anonymousCode": "permission-denied",
+          "loggedIn": false,
+          "appOptions": {
+            "projectId": "minna-no-hondana-e936b",
+            "appId": "1:750942409516:web:9b90598e435d9531685289"
+          },
+          "origin": "https://growth1invest-bot.github.io",
+          "pagesDomainAuthorized": false,
+          "note": "Local candidate served at Pages origin; not a deployed page. Anonymous reads only; no real login, mail or writes."
+        }
+      ]
+    }
+  },
+  "pending": [
+    "Add growth1invest-bot.github.io to Firebase Auth authorized domains",
+    "Real iPhone/iPad Safari signup, email verification and cloud save/load",
+    "Read deployed Rules text using authorized management access",
+    "Independent verification of Spark plan / billing state"
+  ],
+  "changesNotMade": [
+    "Firestore document writes/deletes in production",
+    "Authentication user creation/login/mail in production",
+    "Rules deployment or relaxation",
+    "Billing/service changes",
+    "Old HTML/data keys"
+  ],
+  "sourceSha256": {
+    "V12.md": "e419a60c9c8411f765698da5615297c0a8c6e90e2bfc71a9faa10b45defaea33",
+    "cloud/v12-controller.mjs": "518b9c790f95aae7924ae3d89f70825accbdebadd8e16e7ade2c8ebe2e286f0f",
+    "firebase-v12-config.mjs": "f2a11a4255462134f15aeb56fdaca5c0ed740cb32f62b852aac630ca28c15ff5",
+    "firebase.v12.connection.json": "5cd83c1e8290af340697d1d5405a23f87dd5036ff3c811549a785ad2cc252d2d",
+    "playwright.v12-connection.config.cjs": "d8ee8099609ec9410ee762250b8da36037f65af58832e5a93327635b4aac0e5f",
+    "playwright.v12-live.config.cjs": "394e2e5aac4f5abf45c90a067615dfc825e7fc69d871d1aed1b93ba2ae0f1f8e",
+    "tests/v12-cloud.test.cjs": "c598738b9ee89c604cc9a48b1ca5c0f025ff01ab37e11b804fd5693e60eec286",
+    "tests/v12-connection.live.cjs": "a9180d1489ff8f21f51f3a77cc5a77365caca639d4dd478e60b1916c39f6f16e",
+    "tests/v12-connection.real.cjs": "2ac9db6ccde50f0c9a23a6dbe4c357c53f6149c3fe2f7bded8080025018d0355",
+    "tools/v12/package.json": "533b1998af1be6b4629a0502e213ce32f07bb66af0d0c6acfe5014789a41d0fd",
+    "tools/v12/scripts/cache-sdk.py": "37cca3c18433dea312191071d1f937cb4301ba4904a5d0fd4b95c86bda95a471"
+  }
+}
